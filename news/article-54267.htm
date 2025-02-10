@@ -1,0 +1,205 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnamerica.github.io/news/article-54267.htm" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>为什么HTTP/3要基于UDP？可靠吗？</title>
+        <meta name="description" content="目录  前言 为什么转用UDP？  HTTP/3解决了那些问题？ 队头阻塞问题 QPACK编码   IOT 参考   推荐阅读：  计算机网络汇总  HTTP/3竟然是基于UDP的！开始我也很疑惑，U" />
+        <link rel="icon" href="/assets/website/img/clashforios/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN美国 节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnamerica.github.io/news/article-54267.htm" />
+    <meta property="og:site_name" content="VPN美国 节点官网" />
+    <meta property="og:title" content="为什么HTTP/3要基于UDP？可靠吗？" />
+    <meta property="og:image" content="https://vpnamerica.github.io/uploads/20240922-1/fe4c711ead34d2ee561adbc2f5cb1a0b.webp" />
+        <meta property="og:release_date" content="2025-02-10T07:38:39" />
+    <meta property="og:updated_time" content="2025-02-10T07:38:39" />
+        <meta property="og:description" content="目录  前言 为什么转用UDP？  HTTP/3解决了那些问题？ 队头阻塞问题 QPACK编码   IOT 参考   推荐阅读：  计算机网络汇总  HTTP/3竟然是基于UDP的！开始我也很疑惑，U" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="为什么HTTP/3要基于UDP？可靠吗？">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/bootstrap.min.css">
+    <!-- Slick Silder CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/slick.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/fontawesome.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/style.css">
+    <!-- Theme Element CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/responsivemenu.css">
+    <!-- Theme Element CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/elements.css">
+    <!-- Color CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/color.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PB3ZYWX2H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5PB3ZYWX2H');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+    
+</head>
+
+<body data-page="detail">
+    <!-- Main Wrapper Start -->
+    <div class="main-wrapper">
+                <header id="header-1" class="header-2">
+            <div class="sticky-header">
+                <div class="container">
+                                        <a href="/" class="logo float-left">
+                        <span>
+                            VPN美国                        </span>
+                    </a>
+                                        <!-- /.logo End -->
+                    <div class="navigation-wrap float-right">
+                        <div class="menu-holder">
+                            <div class="mobile-menu"></div>
+                            <!-- /.mobile-menu End -->
+                            <div class="main-menu navigation">
+                                <nav>
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                            <!-- /.navigation End -->
+                        </div>
+                        <!-- /.menu-holder End -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- /.header-2 End -->
+        <!-- Sub Banner Start -->
+        <div class="sub-banner">
+            <div class="container">
+                <div class="text text-right">
+                    <h1 class="title">为什么HTTP/3要基于UDP？可靠吗？</h1>
+                </div>
+                <nav class="breadcrumb-outer" aria-label="breadcrumb">
+                    <ol class="breadcrumb d-inline-flex">
+                        <li class="breadcrumb-item"><a href="/">首页</a></li>
+                        <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">正文</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Sub Banner End -->
+        <!-- Main Content Start -->
+        <div class="main-content">
+            <!-- About us Section Start -->
+            <section class="about-us mb-30">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                                            <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div class="toc"> <div class="toc-container-header">目录</div> <ul> <li><a href="#%E5%89%8D%E8%A8%80" rel="nofollow">前言</a></li> <li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BD%AC%E7%94%A8udp" rel="nofollow">为什么转用UDP？</a> <ul> <li><a href="#http3%E8%A7%A3%E5%86%B3%E4%BA%86%E9%82%A3%E4%BA%9B%E9%97%AE%E9%A2%98" rel="nofollow">HTTP/3解决了那些问题？</a></li> <li><a href="#%E9%98%9F%E5%A4%B4%E9%98%BB%E5%A1%9E%E9%97%AE%E9%A2%98" rel="nofollow">队头阻塞问题</a></li> <li><a href="#qpack%E7%BC%96%E7%A0%81" rel="nofollow">QPACK编码</a></li> </ul> </li> <li><a href="#iot" rel="nofollow">IOT</a></li> <li><a href="#%E5%8F%82%E8%80%83" rel="nofollow">参考</a></li> </ul> </div> <p>推荐阅读：</p> <ul> <li><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.cnblogs.com/zwtblog/tag/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"  target="_blank" rel="nofollow">计算机网络汇总</a></li> </ul> <p><code>HTTP/3</code>竟然是基于<code>UDP</code>的！开始我也很疑惑，<code>UDP</code>传输不可靠，没有拥塞机制，究竟怎么操作呢？</p> <p>先说解决方案：</p> <p><mark>QUIC</mark>（Quick UDP Internet Connection）是谷歌制定的一种基于UDP的低时延的互联网传输层协议 ！</p> <blockquote> <p>QUIC很好地解决了当今传输层和应用层面临的各种需求，包括处理更多的连接，安全性，和低延迟。</p> </blockquote> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/f02b51538eede7e570f152539db9ef3d.jpg" alt="为什么HTTP/3要基于UDP？可靠吗？"></p> </h1> <p>有关于 TCP 和 UDP “连接”这个词，是一个逻辑中的“虚拟”的概念，是为了方便我们的学习理解。</p> <p>UDP的无连接，TCP的连接，唯区别是，UDP把只管发送，TCP每次都对发送的数据进行ACK确认。</p> <p>这部分代码是放在传输层，还是放在应用层，这都关系不大。</p> <p>QUIC是可以独立于操作系统发行的，避免了操作系统缓慢的更新换代问题。</p> <p>QUIC依然要面对消息的可靠性、滑动窗口、拥塞控制等问题，你可以认为它就是一个TCP（但是本质不一样）。</p> <hr/> <p>Chromium 官方宣布 Chrome正在部署到 HTTP/3 与IETF QUIC。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/3c0ed9807c47664474131477e8f1266a.jpg" alt="为什么HTTP/3要基于UDP？可靠吗？"></p> </h1> <p>因为TCP本身非常复杂，并且有太多历史遗留的包袱。</p> <p>TCP协议，目前已经被编码到了操作系统，不论是协议升级，还是Bug修复，都是一个大工程。</p> <p>选择了<code>UDP</code>， UDP是一张白纸，它只是IP协议的一个编程接口。</p> <ul> <li> <p>HTTP3创造出Connection ID概念实现了连接迁移，通过融合传输层、表示层，既缩短了握手时长，也加密了传输层中的绝大部分字段，提升了网络安全性。</p> </li> <li> <p>HTTP3在Packet层保障了连接的可靠性，在QUIC Frame层实现了有序字节流，在HTTP3 Frame层实现了HTTP语义，这彻底解开了队头阻塞问题，真正实现了应用层的多路复用。</p> </li> <li> <p>QPACK使用独立的单向Stream分别传输动态表编码、解码信息，这样乱序、并发传输HTTP消息的Stream既不会出现队头阻塞，也能基于时序性大幅压缩HTTP Header的体积。</p> </li> </ul> <h2 id="http3解决了那些问题">HTTP/3解决了那些问题？</h2> <ul> <li> <p>HTTP3基于UDP协议重新定义了连接，在QUIC层实现了无序、并发字节流的传输，解决了队头阻塞问题（包括基于QPACK解决了动态表的队头阻塞）；</p> </li> <li> <p>HTTP3重新定义了TLS协议加密QUIC头部的方式，既提高了网络攻击成本，又降低了建立连接的速度（仅需1个RTT就可以同时完成建链与密钥协商）；</p> </li> <li> <p>HTTP3 将Packet、QUIC Frame、HTTP3 Frame分离，实现了连接迁移功能，降低了5G环境下高速移动设备的连接维护成本。</p> </li> </ul> <h2 id="队头阻塞问题">队头阻塞问题</h2> <p>HTTP2协议基于TCP有序字节流实现，因此应用层的多路复用并不能做到无序地并发，在丢包场景下会出现队头阻塞问题。</p> <p>HTTP3采用UDP作为传输层协议，重新实现了无序连接，并在此基础上通过有序的QUIC Stream提供了多路复用。</p> <h2 id="qpack编码">QPACK编码</h2> <p>与HTTP2中的HPACK编码方式相似，HTTP3中的QPACK也采用了静态表、动态表及Huffman编码。</p> <p>HTTP/2 没使⽤常⻅的 gzip 压缩⽅式来压缩头部，⽽是开发了<mark>HPACK</mark> 算法，HPACK 算法主要包含：</p> <ul> <li>静态字典；（高频头部或者字段，共61种，QPACK中，则上升为98个静态表项）</li> <li>动态字典；（自行构建。Index 62 起步）<mark>动态表编解码方式差距很大</mark></li> <li><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://baike.baidu.com/item/%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/1719730"  target="_blank" rel="nofollow"> Huffman  编码</a> 编码（压缩算法）；</li> </ul> <p>客户端和服务器两端都会建⽴和维护「字典」，⽤⻓度较⼩的索引号表示重复的字符串，再⽤ Huffman 编码压缩数据，可达到 50%~90% 的⾼压缩率。</p> <hr/> <p>动态表就是将未包含在静态表中的Header项，在首次出现时加入动态表，这样后续传输时仅用数字表示，大大提升了编码效率。</p> <p>因此，动态表是天然具备时序性的，如果首次出现的请求出现了丢包，后续请求解码HPACK头部时，会被阻塞。</p> <p>QPACK将动态表的编码、解码独立在单向Stream中传输，仅当单向Stream中的动态表编码成功后，接收端才能解码双向Stream上HTTP消息里的动态表索引。</p> </h1> <p>物联网时代，移动设备接入的网络会频繁变动，从而导致设备IP地址改变。</p> <p>对于通过四元组（源IP、源端口、目的IP、目的端口）定位连接的TCP协议来说，这意味着连接需要断开重连。</p> <p>而HTTP3的QUIC层允许移动设备更换IP地址后，只要仍保有上下文信息（比如连接ID、TLS密钥等），就可以复用原连接。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/2a636944a4a68126fad0d2822bbfb7e2.jpg" alt="为什么HTTP/3要基于UDP？可靠吗？"></p> <ul> <li> <p>Packet Header实现了可靠的连接。</p> </li> <li> <p>QUIC Frame Header在无序的Packet报文中，基于QUIC Stream概念实现了有序的字节流，这允许HTTP消息可以像在TCP连接上一样传输；</p> </li> <li> <p>HTTP3 Frame Header定义了HTTP Header、Body的格式，以及服务器推送、QPACK编解码流等功能。</p> </li> </ul> <p>为了进一步提升网络传输效率，Packet Header又可以细分为两种：</p> <ul> <li> <p>Long Packet Header用于首次建立连接；</p> </li> <li> <p>Short Packet Header用于日常传输数据。</p> </li> </ul> </h1> <ul> <li><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://tools.ietf.org/html/draft-ietf-quic-http-34"  target="_blank" rel="nofollow">https://tools.ietf.org/html/draft-ietf-quic-http-34</a></li> <li><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://tools.ietf.org/html/draft-ietf-quic-transport-34#section-17"  target="_blank" rel="nofollow">https://tools.ietf.org/html/draft-ietf-quic-transport-34#section-17</a></li> <li><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://ably.com/topic/http3?amp%3Butm_campaign=evergreen&amp;%3Butm_source=reddit&amp;utm_medium=referral"  target="_blank" rel="nofollow">https://ably.com/topic/http3?amp%3Butm_campaign=evergreen&amp;%3Butm_source=reddit&amp;utm_medium=referral</a></li> <li><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.nginx.org.cn/article/detail/422"  target="_blank" rel="nofollow">https://www.nginx.org.cn/article/detail/422</a></li> <li><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.chinaz.com/2020/1009/1192436.shtml"  target="_blank" rel="nofollow">https://www.chinaz.com/2020/1009/1192436.shtml</a></li> </ul> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-53716.htm">动物疫苗接种禁忌症和注意事项图片视频讲解（动物疫苗接种禁忌症和注意事项图片视频讲解）</a></p>
+                                        <p>下一个：<a href="/news/article-54268.htm">佳雯宠物医院总部地址电话（佳雯宠物医院营业时间）</a></p>
+                                    </div>
+                                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-52308.htm" title="动物医院英语短语怎么写的 动物医院英语短语怎么写的呀">动物医院英语短语怎么写的 动物医院英语短语怎么写的呀</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-6-node-share-links.htm" title="VPN美国 | 2月6日22M/S|免费VPN/V2ray/SSR/Clash/Shadowrocket免费节点链接地址">VPN美国 | 2月6日22M/S|免费VPN/V2ray/SSR/Clash/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-53188.htm" title="让猫挠了轻微出血有事吗猫打了狂犬疫苗 让猫挠了轻微出血有事吗猫打了狂犬疫苗会怎么样">让猫挠了轻微出血有事吗猫打了狂犬疫苗 让猫挠了轻微出血有事吗猫打了狂犬疫苗会怎么样</a></li>
+                        <li class="py-2"><a href="/news/article-54267.htm" title="为什么HTTP/3要基于UDP？可靠吗？">为什么HTTP/3要基于UDP？可靠吗？</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-10-node-share.htm" title="VPN美国 | 2月10日19.1M/S|免费VPN/V2ray/Clash/SSR/Shadowrocket免费节点链接地址">VPN美国 | 2月10日19.1M/S|免费VPN/V2ray/Clash/SSR/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-54268.htm" title="佳雯宠物医院总部地址电话（佳雯宠物医院营业时间）">佳雯宠物医院总部地址电话（佳雯宠物医院营业时间）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-8-free-node-subscribe.htm" title="VPN美国 | 2月8日21.4M/S|免费VPN/Clash/Shadowrocket/V2ray/SSR免费节点链接地址">VPN美国 | 2月8日21.4M/S|免费VPN/Clash/Shadowrocket/V2ray/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-53716.htm" title="动物疫苗接种禁忌症和注意事项图片视频讲解（动物疫苗接种禁忌症和注意事项图片视频讲解）">动物疫苗接种禁忌症和注意事项图片视频讲解（动物疫苗接种禁忌症和注意事项图片视频讲解）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-9-node-share-links.htm" title="VPN美国 | 2月9日21.3M/S|免费VPN/SSR/Shadowrocket/V2ray/Clash免费节点链接地址">VPN美国 | 2月9日21.3M/S|免费VPN/SSR/Shadowrocket/V2ray/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-52307.htm" title="基于Linux下openssl交叉编译详解">基于Linux下openssl交叉编译详解</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">12</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About us Section End -->
+        </div>
+        <!-- Main Content End -->
+                <!-- Copyright Start -->
+        <div class="copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+            <p>
+                <a href="/">VPN美国 节点官网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+        <!-- Copyright End -->
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="/assets/website/js/frontend/clashforios/jquery.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/responsivemenu.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/slick.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/masonry.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/custom.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!-- Main Wrapper End -->
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnamerica.github.io/news/article-57033.htm" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>toString() 和 new String()用法区别</title>
+        <meta name="description" content="@[TOC](toString() 和 new String()用法区别) 本文讨论的是在加密解密的过程中其2者使用的区别  先上源码 /**      * &lt;p&gt;      * The " />
+        <link rel="icon" href="/assets/website/img/clashforios/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN美国 节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnamerica.github.io/news/article-57033.htm" />
+    <meta property="og:site_name" content="VPN美国 节点官网" />
+    <meta property="og:title" content="toString() 和 new String()用法区别" />
+    <meta property="og:image" content="https://vpnamerica.github.io/uploads/20240922-1/c875c402fd48d6a3ac3d1e0ee96b8029.webp" />
+        <meta property="og:release_date" content="2025-02-15T05:22:53" />
+    <meta property="og:updated_time" content="2025-02-15T05:22:53" />
+        <meta property="og:description" content="@[TOC](toString() 和 new String()用法区别) 本文讨论的是在加密解密的过程中其2者使用的区别  先上源码 /**      * &lt;p&gt;      * The " />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="toString() 和 new String()用法区别">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/bootstrap.min.css">
+    <!-- Slick Silder CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/slick.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/fontawesome.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/style.css">
+    <!-- Theme Element CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/responsivemenu.css">
+    <!-- Theme Element CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/elements.css">
+    <!-- Color CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/color.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PB3ZYWX2H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5PB3ZYWX2H');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+    
+</head>
+
+<body data-page="detail">
+    <!-- Main Wrapper Start -->
+    <div class="main-wrapper">
+                <header id="header-1" class="header-2">
+            <div class="sticky-header">
+                <div class="container">
+                                        <a href="/" class="logo float-left">
+                        <span>
+                            VPN美国                        </span>
+                    </a>
+                                        <!-- /.logo End -->
+                    <div class="navigation-wrap float-right">
+                        <div class="menu-holder">
+                            <div class="mobile-menu"></div>
+                            <!-- /.mobile-menu End -->
+                            <div class="main-menu navigation">
+                                <nav>
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                            <!-- /.navigation End -->
+                        </div>
+                        <!-- /.menu-holder End -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- /.header-2 End -->
+        <!-- Sub Banner Start -->
+        <div class="sub-banner">
+            <div class="container">
+                <div class="text text-right">
+                    <h1 class="title">toString() 和 new String()用法区别</h1>
+                </div>
+                <nav class="breadcrumb-outer" aria-label="breadcrumb">
+                    <ol class="breadcrumb d-inline-flex">
+                        <li class="breadcrumb-item"><a href="/">首页</a></li>
+                        <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">正文</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Sub Banner End -->
+        <!-- Main Content Start -->
+        <div class="main-content">
+            <!-- About us Section Start -->
+            <section class="about-us mb-30">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                                            <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p>@[TOC](toString() 和 new String()用法区别)<br /> 本文讨论的是在加密解密的过程中其2者使用的区别</p> </h1> <p>先上源码</p> <pre><code class="prism language-javascript"><span class="token comment">/**      * &lt;p&gt;      * The {@code toString} method for class {@code Object}      * returns a string consisting of the name of the class of which the      * object is an instance, the at-sign character `{@code @}', and      * the unsigned hexadecimal representation of the hash code of the      * object. In other words, this method returns a string equal to the      * value of:      * &lt;blockquote&gt;      * &lt;pre&gt;      * getClass().getName() + '@' + Integer.toHexString(hashCode())      * &lt;/pre&gt;&lt;/blockquote&gt;      *      * @return  a string representation of the object.      */</span><span class="token keyword">public</span> String<span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">return</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">"@"</span><span class="token operator">+</span> Integer<span class="token punctuation">.</span><span class="token function">toHexString</span><span class="token punctuation">(</span><span class="token function">hashCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220820/e0184cd9432304c6baa30e5504bc5a79.jpg" alt="toString() 和 new String()用法区别"><br /> getClass().getName() + ‘@’ + Integer.toHexString(hashCode())<br /> 通俗的说：toString()返回的是其实例类名+@+对象的哈希码</p> </h1> <p>继续上源码</p> <h2><a id="_32" rel="nofollow"></a>如何插入一段漂亮的代码片</h2> <p>去<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://mp.csdn.net/console/configBlog"  rel="nofollow">博客设置</a>页面，选择一款你喜欢的代码片高亮样式，下面展示同样高亮的<code>代码片</code>.</p> <pre><code class="prism language-javascript"><span class="token comment">/**      * Constructs a new {@code String} by decoding the specified array of bytes      * using the platform's default charset.  The length of the new {@code      * String} is a function of the charset, and hence may not be equal to the      * length of the byte array.      *      * &lt;p&gt; The behavior of this constructor when the given bytes are not valid      * in the default charset is unspecified.  The {@link      * java.nio.charset.CharsetDecoder} class should be used when more control      * over the decoding process is required.      *      * @param  bytes      *         The bytes to be decoded into characters      *      * @since  JDK1.1      */</span><span class="token keyword">public</span><span class="token function">String</span><span class="token punctuation">(</span><span class="token parameter">byte bytes<span class="token punctuation">[</span><span class="token punctuation">]</span></span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">this</span><span class="token punctuation">(</span>bytes<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span> bytes<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220820/47a4a8d06d81e2a19ef30c492537dde8.jpg" alt="toString() 和 new String()用法区别"><br /> 通俗的说：new String()返回的是一串通过<strong>平台默认字符集解码</strong>后得到的<strong>字符串</strong>且长度可能会与原字符串不等</p> <h3><a id="_61" rel="nofollow"></a>举个例子：</h3> <pre><code class="prism language-java"><span class="token annotation punctuation">@Test</span><span class="token keyword">public</span><span class="token keyword">void</span><span class="token class-name">Test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token keyword">throws</span><span class="token class-name">Exception</span><span class="token punctuation">{<!-- --></span><span class="token class-name">String</span> str<span class="token operator">=</span><span class="token string">"TU0jV0xBTiNVYys5bEdiUjZlNU45aHJ0bTdDQStBPT0jNjQ2NDY1Njk4IzM5OTkwMDAwMzAwMA=="</span><span class="token punctuation">;</span><span class="token class-name">String</span> rlt1<span class="token operator">=</span><span class="token keyword">new</span><span class="token class-name">String</span><span class="token punctuation">(</span><span class="token class-name">Base64</span><span class="token punctuation">.</span><span class="token function">decode</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token class-name">String</span> rlt2<span class="token operator">=</span><span class="token class-name">Base64</span><span class="token punctuation">.</span><span class="token function">decode</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>rlt1<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>rlt2<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220820/21f13cca2747381fbdef7a25df631c8a.jpg" alt="toString() 和 new String()用法区别"><br /> 那什么时候用什么方法呢？</p> <p>new String（）一般使用字符转码的时候,byte[]数组的时候用</p> <p>toString（）对象打印的时候使用</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-57032.htm">Spring-Gateway 路由配置</a></p>
+                                        <p>下一个：<a href="/news/article-57595.htm">青岛南京路动物防疫站宠物医院在哪里（青岛市南京路动物防疫站）</a></p>
+                                    </div>
+                                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-58168.htm" title="长沙宠物猫领养中心有哪些 长沙宠物猫领养中心有哪些地方">长沙宠物猫领养中心有哪些 长沙宠物猫领养中心有哪些地方</a></li>
+                        <li class="py-2"><a href="/news/article-54817.htm" title="床上快速找到跳蚤的方法（跳蚤咬的包什么样图片）">床上快速找到跳蚤的方法（跳蚤咬的包什么样图片）</a></li>
+                        <li class="py-2"><a href="/news/article-57033.htm" title="toString() 和 new String()用法区别">toString() 和 new String()用法区别</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-9-node-share-links.htm" title="VPN美国 | 2月9日21.3M/S|免费VPN/SSR/Shadowrocket/V2ray/Clash免费节点链接地址">VPN美国 | 2月9日21.3M/S|免费VPN/SSR/Shadowrocket/V2ray/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-54816.htm" title="win11系统怎么清理c盘垃圾文件">win11系统怎么清理c盘垃圾文件</a></li>
+                        <li class="py-2"><a href="/news/article-57596.htm" title="不宜养猫的4个属相男人图片大全（不宜养猫的4个属相男人图片大全及名字）">不宜养猫的4个属相男人图片大全（不宜养猫的4个属相男人图片大全及名字）</a></li>
+                        <li class="py-2"><a href="/news/article-55365.htm" title="C语言读取和存储bmp格式图片">C语言读取和存储bmp格式图片</a></li>
+                        <li class="py-2"><a href="/news/article-55366.htm" title="MySQL 获取系统时间/系统日期/日期时间的函数">MySQL 获取系统时间/系统日期/日期时间的函数</a></li>
+                        <li class="py-2"><a href="/news/article-56467.htm" title="领养宠物协议买狗粮合法吗（领养宠物的协议）">领养宠物协议买狗粮合法吗（领养宠物的协议）</a></li>
+                        <li class="py-2"><a href="/news/article-57032.htm" title="Spring-Gateway 路由配置">Spring-Gateway 路由配置</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">33</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About us Section End -->
+        </div>
+        <!-- Main Content End -->
+                <!-- Copyright Start -->
+        <div class="copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+            <p>
+                <a href="/">VPN美国 节点官网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+        <!-- Copyright End -->
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="/assets/website/js/frontend/clashforios/jquery.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/responsivemenu.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/slick.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/masonry.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/custom.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!-- Main Wrapper End -->
+</body>
+
+</html>

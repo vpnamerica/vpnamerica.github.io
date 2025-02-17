@@ -2,23 +2,23 @@
 <html xml:lang="zh-CN" lang="zh-CN">
 
 <head>
-        <link rel="canonical" href="https://vpnamerica.github.io/news/article-55925.htm" />
+        <link rel="canonical" href="https://vpnamerica.github.io/news/article-57032.htm" />
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>python中repr()函数用法详解</title>
-        <meta name="description" content="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在 Python 中要将某一类型的变量或者常量转换为字符串对象通常有两种方法，即str()&nbsp;或" />
+    <title>Spring-Gateway 路由配置</title>
+        <meta name="description" content="pring:   cloud:     gateway:       routes:       - id: before_route         uri: http://localhost:80" />
         <link rel="icon" href="/assets/website/img/clashforios/favicon.ico" type="image/x-icon"/>
 
     <meta name="author" content="VPN美国 节点官网">
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://vpnamerica.github.io/news/article-55925.htm" />
+    <meta property="og:url" content="https://vpnamerica.github.io/news/article-57032.htm" />
     <meta property="og:site_name" content="VPN美国 节点官网" />
-    <meta property="og:title" content="python中repr()函数用法详解" />
-    <meta property="og:image" content="https://vpnamerica.github.io/uploads/20240922-1/c875c402fd48d6a3ac3d1e0ee96b8029.webp" />
-        <meta property="og:release_date" content="2025-02-13T03:10:30" />
-    <meta property="og:updated_time" content="2025-02-13T03:10:30" />
-        <meta property="og:description" content="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在 Python 中要将某一类型的变量或者常量转换为字符串对象通常有两种方法，即str()&nbsp;或" />
+    <meta property="og:title" content="Spring-Gateway 路由配置" />
+    <meta property="og:image" content="https://vpnamerica.github.io/uploads/20240922-1/7619a75e0c34e3cff335df8d42c8ac14.webp" />
+        <meta property="og:release_date" content="2025-02-15T05:22:53" />
+    <meta property="og:updated_time" content="2025-02-15T05:22:53" />
+        <meta property="og:description" content="pring:   cloud:     gateway:       routes:       - id: before_route         uri: http://localhost:80" />
         
     <meta name="applicable-device" content="pc,mobile" />
     <meta name="renderer" content="webkit" />
@@ -27,7 +27,7 @@
     <meta name="robots" content="max-image-preview:large" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="python中repr()函数用法详解">
+    <meta name="apple-mobile-web-app-title" content="Spring-Gateway 路由配置">
     <meta name="format-detection" content="telephone=no">
 
     <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
@@ -105,7 +105,7 @@
         <div class="sub-banner">
             <div class="container">
                 <div class="text text-right">
-                    <h1 class="title">python中repr()函数用法详解</h1>
+                    <h1 class="title">Spring-Gateway 路由配置</h1>
                 </div>
                 <nav class="breadcrumb-outer" aria-label="breadcrumb">
                     <ol class="breadcrumb d-inline-flex">
@@ -125,10 +125,10 @@
                     <div class="row">
                         <div class="col-md-9">
                                             <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
-                  				  				  				<div id="content_views" class="htmledit_views"> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在 Python 中要将某一类型的变量或者常量转换为字符串对象通常有两种方法，即<code>str()</code>&nbsp;或者&nbsp;<code>repr()</code>&nbsp;。</p> <p>str()和repr()区别：</p> <ul> <li>函数str( )将其转化成为适于人阅读的前端样式文本</li> <li>函数repr(object)将对象转化为供解释器读取的形式。返回一个对象的 string 格式。</li> </ul> <p><strong>示例代码1：</strong></p> <pre><code class="language-python">s = 'python' a = str(s) b = repr(s)  print(a) print(b) print(type(a)) print(type(b)) print(eval(b))  print("-" * 100)  print(a == b)</code></pre> <p>运行结果：</p> <p><img fetchpriority="high" decoding="async" alt="" height="262" src="http://img.555519.xyz/uploads/20230210/0fdf9a1c8a7d0d6bde2f6e76d8c4fd27.jpg"></p> <p><span style="color:#fe2c24;">注意：</span>对于字符串类型，repr转换后外层会多一对引号，这一特性有时候在eval操作时有用。&nbsp;</p> <p><strong>示例代码2：</strong></p> <pre><code class="language-python">n = 123456  a = str(n) b = repr(n) print(a) print(b) print(type(a)) print(type(b))  print('-' * 100) print(len(a)) print(len(b)) </code></pre> <p>运行结果：</p> <p><img decoding="async" alt="" height="265" src="http://img.555519.xyz/uploads/20230210/94e7cec49c320feeeb947ad9ea266bf7.jpg"></p> <p>示例代码3：<strong><span style="color:#fe2c24;">【命令行下print和直接输出的对比】</span></strong></p> <pre><code class="language-python">class A(object):     def __repr__(self):         return 'repr'      def __str__(self):         return 'str'   a = A() # a    #直接输出调用的是repr方法 print(a)  # print调用的是str方法 </code></pre> <p>运行结果：</p> <p><img decoding="async" alt="" height="129" src="http://img.555519.xyz/uploads/20230210/d9acfd5b4e2091b0ce4a11c6344f73f1.jpg"></p> <p><img loading="lazy" decoding="async" alt="" height="350" src="http://img.555519.xyz/uploads/20230210/304a98e8facb2fd4fa510172f9a57ac2.jpg"></p> <p><span style="color:#fe2c24;">&nbsp;注意：</span>命令行下直接输出对象调用的是对象的repr方法，而print输出调用的是str方法</p> </p></div> 			                <div class="clearfix"></div>
+                  				  				  				<div id="content_views" class="htmledit_views"> <pre><code>pring:   cloud:     gateway:       routes:       - id: before_route         uri: http://localhost:8001         predicates:       # 在某个时间之前的请求才会被转发到 http://localhost:8001,           - Before=2017-01-20T17:42:47.789-07:00[America/Denver]       # 在某个时间之后的请求才会被转发       #   - After=2017-01-20T17:42:47.789-07:00[America/Denver]       # 在某个时间段之间的才会被转发       #   - Between=2017-01-20T17:42:47.789-07:00[America/Denver], 2017-01-21T17:42:47.789-07:00[America/Denver]        # 名为chocolate的表单或者满足正则ch.p的表单才会被匹配到进行请求转发       #   - Cookie=chocolate, ch.p            # 携带参数X-Request-Id或者满足\d+的请求头才会匹配       #   - Header=X-Request-Id, \d+        # 按Host主机名匹配       #   - Host=qiying.com:8080 	       # 按请求方法进行匹配，只有GET方法才会匹配       #   - Method=GET       # 按请求路径进行匹配       #   - Path=/app/{path} 	         filters:       # 在请求路径前加上自定义的路径       #   - PrefixPath=/app       # 重写请求路径       # 访问localhost:8080/test, 请求会转发到localhost:8001/app/test       #   - RewritePath=/test, /app/test       #   - RewritePath=(?&lt;oldPath&gt;^/), /app$\{oldPath}       # 通过模板设置路径       #   - SetPath=/app/{path}</code></pre> </div> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
-                                        <p>上一个：<a href="/news/article-55366.htm">MySQL 获取系统时间/系统日期/日期时间的函数</a></p>
-                                        <p>下一个：<a href="/news/article-55926.htm">es6操作数组方法</a></p>
+                                        <p>上一个：<a href="/news/article-56468.htm">宠物流浪狗免费领养（流浪狗领养小程序）</a></p>
+                                        <p>下一个：<a href="/news/article-57033.htm">toString() 和 new String()用法区别</a></p>
                                     </div>
                                         </div>
                         <div class="col-md-3">
@@ -138,16 +138,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/news/article-55926.htm" title="es6操作数组方法">es6操作数组方法</a></li>
-                        <li class="py-2"><a href="/news/article-54267.htm" title="为什么HTTP/3要基于UDP？可靠吗？">为什么HTTP/3要基于UDP？可靠吗？</a></li>
-                        <li class="py-2"><a href="/news/article-56467.htm" title="领养宠物协议买狗粮合法吗（领养宠物的协议）">领养宠物协议买狗粮合法吗（领养宠物的协议）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-2-12-node-share-links.htm" title="VPN美国 | 2月12日20.3M/S|免费VPN/Shadowrocket/Clash/SSR/V2ray免费节点链接地址">VPN美国 | 2月12日20.3M/S|免费VPN/Shadowrocket/Clash/SSR/V2ray免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-54268.htm" title="佳雯宠物医院总部地址电话（佳雯宠物医院营业时间）">佳雯宠物医院总部地址电话（佳雯宠物医院营业时间）</a></li>
-                        <li class="py-2"><a href="/news/article-54816.htm" title="win11系统怎么清理c盘垃圾文件">win11系统怎么清理c盘垃圾文件</a></li>
-                        <li class="py-2"><a href="/news/article-57032.htm" title="Spring-Gateway 路由配置">Spring-Gateway 路由配置</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-9-node-share-links.htm" title="VPN美国 | 2月9日21.3M/S|免费VPN/SSR/Shadowrocket/V2ray/Clash免费节点链接地址">VPN美国 | 2月9日21.3M/S|免费VPN/SSR/Shadowrocket/V2ray/Clash免费节点链接地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-2-14-free-node-subscribe-links.htm" title="VPN美国 | 2月14日21.9M/S|免费VPN/Shadowrocket/V2ray/Clash/SSR免费节点链接地址">VPN美国 | 2月14日21.9M/S|免费VPN/Shadowrocket/V2ray/Clash/SSR免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-56468.htm" title="宠物流浪狗免费领养（流浪狗领养小程序）">宠物流浪狗免费领养（流浪狗领养小程序）</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-2-13-free-node-subscribe-links.htm" title="VPN美国 | 2月13日18.1M/S|免费VPN/V2ray/SSR/Clash/Shadowrocket免费节点链接地址">VPN美国 | 2月13日18.1M/S|免费VPN/V2ray/SSR/Clash/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-8-free-node-subscribe.htm" title="VPN美国 | 2月8日21.4M/S|免费VPN/Clash/Shadowrocket/V2ray/SSR免费节点链接地址">VPN美国 | 2月8日21.4M/S|免费VPN/Clash/Shadowrocket/V2ray/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-58168.htm" title="长沙宠物猫领养中心有哪些 长沙宠物猫领养中心有哪些地方">长沙宠物猫领养中心有哪些 长沙宠物猫领养中心有哪些地方</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-17-free-high-speed-nodes.htm" title="VPN美国 | 2月17日19.1M/S|免费VPN/Shadowrocket/V2ray/SSR/Clash免费节点链接地址">VPN美国 | 2月17日19.1M/S|免费VPN/Shadowrocket/V2ray/SSR/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-56468.htm" title="宠物流浪狗免费领养（流浪狗领养小程序）">宠物流浪狗免费领养（流浪狗领养小程序）</a></li>
+                        <li class="py-2"><a href="/news/article-53715.htm" title="生产动物疫苗的上市公司有哪些股票（生产动物疫苗的上市公司有哪些股票名称）">生产动物疫苗的上市公司有哪些股票（生产动物疫苗的上市公司有哪些股票名称）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-15-free-node-subscribe.htm" title="VPN美国 | 2月15日20.3M/S|免费VPN/Clash/SSR/Shadowrocket/V2ray免费节点链接地址">VPN美国 | 2月15日20.3M/S|免费VPN/Clash/SSR/Shadowrocket/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-54816.htm" title="win11系统怎么清理c盘垃圾文件">win11系统怎么清理c盘垃圾文件</a></li>
                     </ul>
     </div>
 </div>
@@ -159,7 +159,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+                <h4><span class="badge" style="float: right;">33</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
             </li>
                     </ul>
     </div>

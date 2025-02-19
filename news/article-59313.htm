@@ -1,0 +1,205 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnamerica.github.io/news/article-59313.htm" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TensorFlow 模型保存/载入的两种方法</title>
+        <meta name="description" content="我们在上线使用一个算法模型的时候，首先必须将已经训练好的模型保存下来。tensorflow保存模型的方式与sklearn不太一样，sklearn很直接，一个sklearn.externals.jobl" />
+        <link rel="icon" href="/assets/website/img/clashforios/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN美国 节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnamerica.github.io/news/article-59313.htm" />
+    <meta property="og:site_name" content="VPN美国 节点官网" />
+    <meta property="og:title" content="TensorFlow 模型保存/载入的两种方法" />
+    <meta property="og:image" content="https://vpnamerica.github.io/uploads/20240922-1/ecccfa3dd5d74e627effdc07ff2899bf.webp" />
+        <meta property="og:release_date" content="2025-02-19T06:37:12" />
+    <meta property="og:updated_time" content="2025-02-19T06:37:12" />
+        <meta property="og:description" content="我们在上线使用一个算法模型的时候，首先必须将已经训练好的模型保存下来。tensorflow保存模型的方式与sklearn不太一样，sklearn很直接，一个sklearn.externals.jobl" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="TensorFlow 模型保存/载入的两种方法">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/bootstrap.min.css">
+    <!-- Slick Silder CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/slick.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/fontawesome.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/style.css">
+    <!-- Theme Element CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/responsivemenu.css">
+    <!-- Theme Element CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/elements.css">
+    <!-- Color CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/color.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PB3ZYWX2H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5PB3ZYWX2H');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+    
+</head>
+
+<body data-page="detail">
+    <!-- Main Wrapper Start -->
+    <div class="main-wrapper">
+                <header id="header-1" class="header-2">
+            <div class="sticky-header">
+                <div class="container">
+                                        <a href="/" class="logo float-left">
+                        <span>
+                            VPN美国                        </span>
+                    </a>
+                                        <!-- /.logo End -->
+                    <div class="navigation-wrap float-right">
+                        <div class="menu-holder">
+                            <div class="mobile-menu"></div>
+                            <!-- /.mobile-menu End -->
+                            <div class="main-menu navigation">
+                                <nav>
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                            <!-- /.navigation End -->
+                        </div>
+                        <!-- /.menu-holder End -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- /.header-2 End -->
+        <!-- Sub Banner Start -->
+        <div class="sub-banner">
+            <div class="container">
+                <div class="text text-right">
+                    <h1 class="title">TensorFlow 模型保存/载入的两种方法</h1>
+                </div>
+                <nav class="breadcrumb-outer" aria-label="breadcrumb">
+                    <ol class="breadcrumb d-inline-flex">
+                        <li class="breadcrumb-item"><a href="/">首页</a></li>
+                        <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">正文</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Sub Banner End -->
+        <!-- Main Content Start -->
+        <div class="main-content">
+            <!-- About us Section Start -->
+            <section class="about-us mb-30">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                                            <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> </h1> <p>我们在上线使用一个算法模型的时候，首先必须将已经训练好的模型保存下来。tensorflow保存模型的方式与sklearn不太一样，sklearn很直接，一个sklearn.externals.joblib的dump与load方法就可以保存与载入使用。而tensorflow由于有graph, operation 这些概念，保存与载入模型稍显麻烦。</p> <h3 id="一基本方法">一、基本方法</h3> <p>网上搜索tensorflow模型保存，搜到的大多是基本的方法。即</p> <h4 id="保存">保存</h4> <ol> <li>定义变量 </li> <li>使用saver.save()方法保存 </li> </ol> <h4 id="载入">载入</h4> <ol> <li>定义变量</li> <li>使用saver.restore()方法载入</li> </ol> <p>如 <strong>保存</strong> 代码如下</p> <pre class="prettyprint"><code class="language-python hljs"> <span class="hljs-keyword">import</span> tensorflow <span class="hljs-keyword">as</span> tf   <span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np    W = tf.Variable([[<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">2</span>]],dtype = tf.float32,name=<span class="hljs-string">'w'</span>)   b = tf.Variable([[<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>]],dtype = tf.float32,name=<span class="hljs-string">'b'</span>)    init = tf.initialize_all_variables()   saver = tf.train.Saver()   <span class="hljs-keyword">with</span> tf.Session() <span class="hljs-keyword">as</span> sess:           sess.run(init)           save_path = saver.save(sess,<span class="hljs-string">"save/model.ckpt"</span>)  </code></pre> <p><strong>载入</strong>代码如下</p> <pre class="prettyprint"><code class="language-python hljs"><span class="hljs-keyword">import</span> tensorflow <span class="hljs-keyword">as</span> tf   <span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np    W = tf.Variable(tf.truncated_normal(shape=(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>)),dtype = tf.float32,name=<span class="hljs-string">'w'</span>)   b = tf.Variable(tf.truncated_normal(shape=(<span class="hljs-number">1</span>,<span class="hljs-number">3</span>)),dtype = tf.float32,name=<span class="hljs-string">'b'</span>)    saver = tf.train.Saver()   <span class="hljs-keyword">with</span> tf.Session() <span class="hljs-keyword">as</span> sess:           saver.restore(sess,<span class="hljs-string">"save/model.ckpt"</span>)  </code></pre> <p>这种方法不方便的在于，在使用模型的时候，必须把模型的结构重新定义一遍，然后载入对应名字的变量的值。但是很多时候我们都更希望能够读取一个文件然后就直接使用模型，而不是还要把模型重新定义一遍。所以就需要使用另一种方法。</p> <h3 id="二不需重新定义网络结构的方法">二、不需重新定义网络结构的方法</h3> <h3 id="tftrainimportmetagraph">tf.train.import_meta_graph</h3> <pre class="prettyprint"><code class="language-python hljs">import_meta_graph(     meta_graph_or_file,     clear_devices=<span class="hljs-keyword">False</span>,     import_scope=<span class="hljs-keyword">None</span>,     **kwargs )</code></pre> <p>这个方法可以从文件中将保存的graph的所有节点加载到当前的default graph中，并返回一个saver。也就是说，我们在保存的时候，除了将变量的值保存下来，其实还有将对应graph中的各种节点保存下来，所以模型的结构也同样被保存下来了。</p> <p>比如我们想要保存计算最后预测结果的<code>y</code>，则应该在训练阶段将它添加到collection中。具体代码如下 </p> <h4 id="保存-1">保存</h4> <pre class="prettyprint"><code class="language-python hljs"><span class="hljs-comment">### 定义模型</span> input_x = tf.placeholder(tf.float32, shape=(<span class="hljs-keyword">None</span>, in_dim), name=<span class="hljs-string">'input_x'</span>) input_y = tf.placeholder(tf.float32, shape=(<span class="hljs-keyword">None</span>, out_dim), name=<span class="hljs-string">'input_y'</span>)  w1 = tf.Variable(tf.truncated_normal([in_dim, h1_dim], stddev=<span class="hljs-number">0.1</span>), name=<span class="hljs-string">'w1'</span>) b1 = tf.Variable(tf.zeros([h1_dim]), name=<span class="hljs-string">'b1'</span>) w2 = tf.Variable(tf.zeros([h1_dim, out_dim]), name=<span class="hljs-string">'w2'</span>) b2 = tf.Variable(tf.zeros([out_dim]), name=<span class="hljs-string">'b2'</span>) keep_prob = tf.placeholder(tf.float32, name=<span class="hljs-string">'keep_prob'</span>) hidden1 = tf.nn.relu(tf.matmul(self.input_x, w1) + b1) hidden1_drop = tf.nn.dropout(hidden1, self.keep_prob) <span class="hljs-comment">### 定义预测目标</span> y = tf.nn.softmax(tf.matmul(hidden1_drop, w2) + b2) <span class="hljs-comment"># 创建saver</span> saver = tf.train.Saver(...variables...) <span class="hljs-comment"># 假如需要保存y，以便在预测时使用</span> tf.add_to_collection(<span class="hljs-string">'pred_network'</span>, y) sess = tf.Session() <span class="hljs-keyword">for</span> step <span class="hljs-keyword">in</span> xrange(<span class="hljs-number">1000000</span>):     sess.run(train_op)     <span class="hljs-keyword">if</span> step % <span class="hljs-number">1000</span> == <span class="hljs-number">0</span>:         <span class="hljs-comment"># 保存checkpoint, 同时也默认导出一个meta_graph</span>         <span class="hljs-comment"># graph名为'my-model-{global_step}.meta'.</span>         saver.save(sess, <span class="hljs-string">'my-model'</span>, global_step=step)</code></pre> <h4 id="载入-1">载入</h4> <pre class="prettyprint"><code class="language-python hljs"><span class="hljs-keyword">with</span> tf.Session() <span class="hljs-keyword">as</span> sess:   new_saver = tf.train.import_meta_graph(<span class="hljs-string">'my-save-dir/my-model-10000.meta'</span>)   new_saver.restore(sess, <span class="hljs-string">'my-save-dir/my-model-10000'</span>)   <span class="hljs-comment"># tf.get_collection() 返回一个list. 但是这里只要第一个参数即可</span>   y = tf.get_collection(<span class="hljs-string">'pred_network'</span>)[<span class="hljs-number">0</span>]    graph = tf.get_default_graph()    <span class="hljs-comment"># 因为y中有placeholder，所以sess.run(y)的时候还需要用实际待预测的样本以及相应的参数来填充这些placeholder，而这些需要通过graph的get_operation_by_name方法来获取。</span>   input_x = graph.get_operation_by_name(<span class="hljs-string">'input_x'</span>).outputs[<span class="hljs-number">0</span>]   keep_prob = graph.get_operation_by_name(<span class="hljs-string">'keep_prob'</span>).outputs[<span class="hljs-number">0</span>]    <span class="hljs-comment"># 使用y进行预测  </span>   sess.run(y, feed_dict={input_x:....,  keep_prob:<span class="hljs-number">1.0</span>})</code></pre> <p><strong>这里有两点需要注意的：</strong> <br /> 一、 saver.restore()时填的文件名，因为在saver.save的时候，每个checkpoint会保存三个文件，如 <br /><code>my-model-10000.meta</code>, <code>my-model-10000.index</code>, <code>my-model-10000.data-00000-of-00001</code> <br /> 在<code>import_meta_graph</code>时填的就是meta文件名，我们知道权值都保存在<code>my-model-10000.data-00000-of-00001</code>这个文件中，但是如果在restore方法中填这个文件名，就会报错，应该填的是<strong>前缀</strong>，这个前缀可以使用<code>tf.train.latest_checkpoint(checkpoint_dir)</code>这个方法获取。</p> <p>二、模型的y中有用到placeholder，在sess.run()的时候肯定要feed对应的数据，因此还要根据具体placeholder的名字，从graph中使用<code>get_operation_by_name</code>方法获取。</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-58810.htm">为MySQL创建高性能索引_Mysql_</a></p>
+                                        <p>下一个：<a href="/news/article-59314.htm">宠物医院好评语30字通用句子 宠物医院好评语30字通用句子怎么写</a></p>
+                                    </div>
+                                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-52308.htm" title="动物医院英语短语怎么写的 动物医院英语短语怎么写的呀">动物医院英语短语怎么写的 动物医院英语短语怎么写的呀</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-14-free-node-subscribe-links.htm" title="VPN美国 | 2月14日21.9M/S|免费VPN/Shadowrocket/V2ray/Clash/SSR免费节点链接地址">VPN美国 | 2月14日21.9M/S|免费VPN/Shadowrocket/V2ray/Clash/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-55925.htm" title="python中repr()函数用法详解">python中repr()函数用法详解</a></li>
+                        <li class="py-2"><a href="/news/article-53716.htm" title="动物疫苗接种禁忌症和注意事项图片视频讲解（动物疫苗接种禁忌症和注意事项图片视频讲解）">动物疫苗接种禁忌症和注意事项图片视频讲解（动物疫苗接种禁忌症和注意事项图片视频讲解）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-9-node-share-links.htm" title="VPN美国 | 2月9日21.3M/S|免费VPN/SSR/Shadowrocket/V2ray/Clash免费节点链接地址">VPN美国 | 2月9日21.3M/S|免费VPN/SSR/Shadowrocket/V2ray/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-54816.htm" title="win11系统怎么清理c盘垃圾文件">win11系统怎么清理c盘垃圾文件</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-17-free-high-speed-nodes.htm" title="VPN美国 | 2月17日19.1M/S|免费VPN/Shadowrocket/V2ray/SSR/Clash免费节点链接地址">VPN美国 | 2月17日19.1M/S|免费VPN/Shadowrocket/V2ray/SSR/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-58167.htm" title="【厦门宠物狗领养】 厦门宠物狗领养中心">【厦门宠物狗领养】 厦门宠物狗领养中心</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-19-free-subscribe-node.htm" title="VPN美国 | 2月19日18.9M/S|免费VPN/V2ray/Shadowrocket/SSR/Clash免费节点链接地址">VPN美国 | 2月19日18.9M/S|免费VPN/V2ray/Shadowrocket/SSR/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-58809.htm" title="JAVA时间戳类Instant">JAVA时间戳类Instant</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">39</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About us Section End -->
+        </div>
+        <!-- Main Content End -->
+                <!-- Copyright Start -->
+        <div class="copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+            <p>
+                <a href="/">VPN美国 节点官网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+        <!-- Copyright End -->
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="/assets/website/js/frontend/clashforios/jquery.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/responsivemenu.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/slick.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/masonry.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/custom.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!-- Main Wrapper End -->
+</body>
+
+</html>

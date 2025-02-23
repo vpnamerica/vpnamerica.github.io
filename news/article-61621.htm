@@ -1,0 +1,205 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnamerica.github.io/news/article-61621.htm" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>eslint在vue中如何使用</title>
+        <meta name="description" content="eslint帮助我们检查代码的是否规范，本文使用Prettier规则（还有standardjs、airbnb等规则），如果你想用eslint默认规则或者自行定义规则，可以不下载prettier相关依赖" />
+        <link rel="icon" href="/assets/website/img/clashforios/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN美国 节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnamerica.github.io/news/article-61621.htm" />
+    <meta property="og:site_name" content="VPN美国 节点官网" />
+    <meta property="og:title" content="eslint在vue中如何使用" />
+    <meta property="og:image" content="https://vpnamerica.github.io/uploads/20240922-1/356d629cd87fa9098075d1c33e32211d.webp" />
+        <meta property="og:release_date" content="2025-02-23T09:46:50" />
+    <meta property="og:updated_time" content="2025-02-23T09:46:50" />
+        <meta property="og:description" content="eslint帮助我们检查代码的是否规范，本文使用Prettier规则（还有standardjs、airbnb等规则），如果你想用eslint默认规则或者自行定义规则，可以不下载prettier相关依赖" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="eslint在vue中如何使用">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/bootstrap.min.css">
+    <!-- Slick Silder CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/slick.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/fontawesome.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/style.css">
+    <!-- Theme Element CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/responsivemenu.css">
+    <!-- Theme Element CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/elements.css">
+    <!-- Color CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/color.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PB3ZYWX2H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5PB3ZYWX2H');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+    
+</head>
+
+<body data-page="detail">
+    <!-- Main Wrapper Start -->
+    <div class="main-wrapper">
+                <header id="header-1" class="header-2">
+            <div class="sticky-header">
+                <div class="container">
+                                        <a href="/" class="logo float-left">
+                        <span>
+                            VPN美国                        </span>
+                    </a>
+                                        <!-- /.logo End -->
+                    <div class="navigation-wrap float-right">
+                        <div class="menu-holder">
+                            <div class="mobile-menu"></div>
+                            <!-- /.mobile-menu End -->
+                            <div class="main-menu navigation">
+                                <nav>
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                            <!-- /.navigation End -->
+                        </div>
+                        <!-- /.menu-holder End -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- /.header-2 End -->
+        <!-- Sub Banner Start -->
+        <div class="sub-banner">
+            <div class="container">
+                <div class="text text-right">
+                    <h1 class="title">eslint在vue中如何使用</h1>
+                </div>
+                <nav class="breadcrumb-outer" aria-label="breadcrumb">
+                    <ol class="breadcrumb d-inline-flex">
+                        <li class="breadcrumb-item"><a href="/">首页</a></li>
+                        <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">正文</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Sub Banner End -->
+        <!-- Main Content Start -->
+        <div class="main-content">
+            <!-- About us Section Start -->
+            <section class="about-us mb-30">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                                            <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> </h1> <p style="text-indent:33px;">eslint帮助我们检查代码的是否规范，本文使用Prettier规则（还有<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://standardjs.com/readme-zhcn.html"  rel="nofollow">standardjs</a>、<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://github.com/airbnb/javascript"  rel="nofollow">airbnb</a>等规则），如果你想用eslint默认规则或者自行定义规则，可以不下载prettier相关依赖包（同时在.eslintrc.js删掉带‘prettier’的相关配置，不删除配置又没有下载prettier项目启动会报错）。我在vscode环境下载eslint插件可以在保存时根据rules格式化不规范的代码。</p> </h1> <p style="text-indent:33px;">&nbsp;"eslint"</p> <p style="text-indent:33px;">&nbsp;"babel-eslint"</p> <p style="text-indent:33px;">&nbsp;&nbsp;"eslint-config-prettier"</p> <p style="text-indent:33px;">&nbsp;&nbsp;"eslint-loader"</p> <p style="text-indent:33px;">&nbsp;&nbsp;"eslint-plugin-prettier"</p> <p style="text-indent:33px;">&nbsp;&nbsp;&nbsp;"eslint-plugin-vue"</p> </h1> <p style="text-indent:33px;">在项目根目录新建文件.eslintrc.js，内容如下（可根据自己的需求配置）：</p> <pre><code class="language-javascript">module.exports = {   root: true, // 只将当前项目应用此规则   parserOptions: {     "parser": "babel-eslint",     "sourceType": 'module', // 设置为  "module" ，"script" (默认)     // "ecmaVersion": 6 // 启用es6语法，不自动启用es6全局变量   },   parser: "vue-eslint-parser", // 识别.vue文件 需下载eslint-plugin-vue   // 想启用的环境   env: {     "browser": true,     "node": true,     "es6": true   },    //继承插件的规则   extends: [     "eslint:recommended", // 启动被标记为 “√” 默认规则     "plugin:prettier/recommended" // 别人写好的规则，依赖包eslint-config-***，这里用的是prettier规则   ],   // 配置插件名字的列表。插件名称可以省略 ‘eslint-plugin- ’前缀。   plugins: [      'vue', // eslint-plugin-vue     'prettier' // eslint-plugin-prettier   ],   // 自定义规则 优先级最高   "rules": {     "no-console": 0   } }</code></pre> <p style="text-indent:33px;"> </h1> <p style="text-indent:33px;">vscode下载插件eslint,打开settings.json文件，添加：</p> <p style="text-indent:33px;">"editor.codeActionsOnSave":&nbsp;{<!-- --></p> <p style="text-indent:33px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"source.fixAll.eslint":&nbsp;true</p> <p style="text-indent:33px;">&nbsp;&nbsp;&nbsp;&nbsp;},</p> <p style="text-align:center;"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220609/6fe1cdf918a2e31209575411b72410f5.jpg"></p> <p>其他版本配置或略有不同，比如在版本1.36.1上如图配置方可生效</p> <p style="text-align:center;"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220609/31792b6daa2151744b09e407466e3d36.jpg"></p> </h1> <p>&nbsp;"eslint":&nbsp;"eslint&nbsp;--fix&nbsp;--ext&nbsp;.js,.vue&nbsp;--ignore-path&nbsp;.eslintignore&nbsp;."</p> <p>&nbsp; eslintignore是配置检测时忽略的文件</p> <p style="text-align:center;"><img fetchpriority="high" decoding="async" alt="" height="153" src="http://img.555519.xyz/uploads3/20220609/42d851e3412a352701fd733e6fa02a14.jpg"></p> </h1> <p style="text-indent:33px;">这里以vue-cli3及以上版本为例，只需在vue.config.js中添加如下配置</p> <p>&nbsp; &nbsp; &nbsp; &nbsp; lintOnSave: false</p> </h1> <p style="text-indent:33px;"><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://eslint.bootcss.com/docs/user-guide/getting-started"  rel="nofollow">https://eslint.bootcss.com/docs/user-guide/getting-started</a></p> <p style="text-indent:33px;"> <p>有问题欢迎留言。</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-61030.htm">vue elementui点击按钮新增输入框</a></p>
+                                        <p>下一个：<a href="/news/article-61622.htm">中国农大动物医院哪个医生好 中国农大动物医院哪个医生好一点</a></p>
+                                    </div>
+                                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-57596.htm" title="不宜养猫的4个属相男人图片大全（不宜养猫的4个属相男人图片大全及名字）">不宜养猫的4个属相男人图片大全（不宜养猫的4个属相男人图片大全及名字）</a></li>
+                        <li class="py-2"><a href="/news/article-52307.htm" title="基于Linux下openssl交叉编译详解">基于Linux下openssl交叉编译详解</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-10-node-share.htm" title="VPN美国 | 2月10日19.1M/S|免费VPN/V2ray/Clash/SSR/Shadowrocket免费节点链接地址">VPN美国 | 2月10日19.1M/S|免费VPN/V2ray/Clash/SSR/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-55365.htm" title="C语言读取和存储bmp格式图片">C语言读取和存储bmp格式图片</a></li>
+                        <li class="py-2"><a href="/news/article-59883.htm" title="一片枫叶的句子唯美（一片枫叶 意境）">一片枫叶的句子唯美（一片枫叶 意境）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-14-free-node-subscribe-links.htm" title="VPN美国 | 2月14日21.9M/S|免费VPN/Shadowrocket/V2ray/Clash/SSR免费节点链接地址">VPN美国 | 2月14日21.9M/S|免费VPN/Shadowrocket/V2ray/Clash/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-53715.htm" title="生产动物疫苗的上市公司有哪些股票（生产动物疫苗的上市公司有哪些股票名称）">生产动物疫苗的上市公司有哪些股票（生产动物疫苗的上市公司有哪些股票名称）</a></li>
+                        <li class="py-2"><a href="/news/article-60459.htm" title="Linux源码安装RabbitMQ高可用集群">Linux源码安装RabbitMQ高可用集群</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-16-free-v2ray-subscribe.htm" title="VPN美国 | 2月16日18.3M/S|免费VPN/Shadowrocket/SSR/Clash/V2ray免费节点链接地址">VPN美国 | 2月16日18.3M/S|免费VPN/Shadowrocket/SSR/Clash/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-12-node-share-links.htm" title="VPN美国 | 2月12日20.3M/S|免费VPN/Shadowrocket/Clash/SSR/V2ray免费节点链接地址">VPN美国 | 2月12日20.3M/S|免费VPN/Shadowrocket/Clash/SSR/V2ray免费节点链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">51</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About us Section End -->
+        </div>
+        <!-- Main Content End -->
+                <!-- Copyright Start -->
+        <div class="copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+            <p>
+                <a href="/">VPN美国 节点官网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+        <!-- Copyright End -->
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="/assets/website/js/frontend/clashforios/jquery.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/responsivemenu.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/slick.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/masonry.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/custom.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!-- Main Wrapper End -->
+</body>
+
+</html>

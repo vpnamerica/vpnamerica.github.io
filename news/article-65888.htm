@@ -2,19 +2,23 @@
 <html xml:lang="zh-CN" lang="zh-CN">
 
 <head>
-        <link rel="canonical" href="https://vpnamerica.github.io/free-nodes/page-3.htm" />
+        <link rel="canonical" href="https://vpnamerica.github.io/news/article-65888.htm" />
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>免费节点 - VPN美国 节点官网 - 第2页</title>
+    <title>@RequestBody接收实体类时，部分字段丢失的问题</title>
+        <meta name="description" content="问题： 1.@RequestBody注解的实体类里，如果存在首字母为小写，第二个字母大写的字段时，此字段会传为null的bug。 private String tUser;  public Strin" />
         <link rel="icon" href="/assets/website/img/clashforios/favicon.ico" type="image/x-icon"/>
 
     <meta name="author" content="VPN美国 节点官网">
-    <meta property="og:type" content="webpage" />
-    <meta property="og:url" content="https://vpnamerica.github.io/free-nodes/page-3.htm" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnamerica.github.io/news/article-65888.htm" />
     <meta property="og:site_name" content="VPN美国 节点官网" />
-    <meta property="og:title" content="免费节点 - VPN美国 节点官网 - 第2页" />
-    <meta property="og:image" content="/assets/website/img/clashforios/favicon.ico" />
+    <meta property="og:title" content="@RequestBody接收实体类时，部分字段丢失的问题" />
+    <meta property="og:image" content="https://vpnamerica.github.io/uploads/20240922-1/d40fdca270516c15a0d4024409bcb77c.webp" />
+        <meta property="og:release_date" content="2025-03-02T09:37:58" />
+    <meta property="og:updated_time" content="2025-03-02T09:37:58" />
+        <meta property="og:description" content="问题： 1.@RequestBody注解的实体类里，如果存在首字母为小写，第二个字母大写的字段时，此字段会传为null的bug。 private String tUser;  public Strin" />
         
     <meta name="applicable-device" content="pc,mobile" />
     <meta name="renderer" content="webkit" />
@@ -23,7 +27,7 @@
     <meta name="robots" content="max-image-preview:large" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="免费节点 - VPN美国 节点官网 - 第2页">
+    <meta name="apple-mobile-web-app-title" content="@RequestBody接收实体类时，部分字段丢失的问题">
     <meta name="format-detection" content="telephone=no">
 
     <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
@@ -63,7 +67,7 @@
     
 </head>
 
-<body data-page="category">
+<body data-page="detail">
     <!-- Main Wrapper Start -->
     <div class="main-wrapper">
                 <header id="header-1" class="header-2">
@@ -101,12 +105,13 @@
         <div class="sub-banner">
             <div class="container">
                 <div class="text text-right">
-                    <h1 class="title">免费节点</h1>
+                    <h1 class="title">@RequestBody接收实体类时，部分字段丢失的问题</h1>
                 </div>
                 <nav class="breadcrumb-outer" aria-label="breadcrumb">
                     <ol class="breadcrumb d-inline-flex">
                         <li class="breadcrumb-item"><a href="/">首页</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">免费节点</li>
+                        <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">正文</li>
                     </ol>
                 </nav>
             </div>
@@ -119,62 +124,13 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-9">
-                            <div class="xcblog-blog-list">
-                                                                <div class="row item xcblog-blog-item" data-date="2025-02-10">
-                                    <div class="col-md-3">
-                                        <a href="/free-nodes/2025-2-10-node-share.htm" class="xcblog-blog-url">
-                                            <img src="/uploads/20240922-1/0add7f9adb820b293238573aec5aeb5a.webp" alt="VPN美国 | 2月10日19.1M/S|免费VPN/V2ray/Clash/SSR/Shadowrocket免费节点链接地址" style="width: 100%;">
-                                        </a>
+                                            <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <h3>问题：</h3> <p>1.@RequestBody注解的实体类里，如果存在首字母为小写，第二个字母大写的字段时，此字段会传为null的bug。</p> <pre><code class="language-java">private String tUser;  public String getTUser() { 	return tUser; } public void setTUser(String tUser) { 	this.tUser = tUser; }</code></pre> <p>2.在IDEA中，布尔类型boolean/Boolean的isXXX变量，在自动生成getter和setter方法时，会去除is标识，如图所示。</p> <pre><code class="language-java">private Boolean isSignUpAudit;  public Boolean getSignUpAudit() {     return isSignUpAudit; }  public void setSignUpAudit(Boolean signUpAudit) {     isSignUpAudit = signUpAudit; }</code></pre> <h3></h3> <h3>问题1解决方法：</h3> <p>&nbsp;1、修改字段名</p> <p>2、使用@JsonProperty注解，手动写get和set方法</p> <pre><code class="language-java">@JsonProperty(value = "tUser") private String tUser;  public String getTUser() { 	return tUser; }  public void setTUser(String tUser) { 	this.tUser = tUser; }</code></pre> <p>或</p> <pre><code class="language-java">private String tUser;  @JsonProperty(value = "tUser") public String getTUser() { 	return tUser; }  @JsonProperty(value = "tUser") public void setTUser(String tUser) { 	this.tUser = tUser; }</code></pre> <p>3、重写get和set方法，第一个字母小写开头</p> <pre><code class="language-java">private String tUser;  public String gettUser() {     return tUser; }  public void settUser(String tUser) {     this.tUser = tUser; }</code></pre> <h3>问题2解决方法：</h3> <p>1、修改字段名</p> <p>2、使用@JsonProperty注解，手动写get和set方法</p> <pre><code class="language-java">@JsonProperty(value = "isSignUpAudit") private Boolean isSignUpAudit;  public Boolean getSignUpAudit() {     return isSignUpAudit; }  public void setSignUpAudit(Boolean signUpAudit) {     isSignUpAudit = signUpAudit; }</code></pre> <p>或</p> <pre><code class="language-java">private Boolean isSignUpAudit;  @JsonProperty(value = "isSignUpAudit") public Boolean getSignUpAudit() {     return isSignUpAudit; }  @JsonProperty(value = "isSignUpAudit") public void setSignUpAudit(Boolean signUpAudit) {     isSignUpAudit = signUpAudit; }</code></pre> <p>3、重写get和set方法，带上is开头</p> <pre><code class="language-java">private Boolean isSignUpAudit;  public Boolean getIsSignUpAudit() { 	return isSignUpAudit; }  public void setIsSignUpAudit(Boolean isSignUpAudit) { 	this.isSignUpAudit = isSignUpAudit; } </code></pre> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-65271.htm">动物疫苗行业龙头股票（动物疫苗相关股票）</a></p>
+                                        <p>下一个：<a href="/news/article-65889.htm">河南动物疫苗厂家有哪些（河南动物疫苗厂家有哪些名字）</a></p>
                                     </div>
-                                    <div class="col-md-9">
-                                        <a href="/free-nodes/2025-2-10-node-share.htm" class="xcblog-blog-url">
-                                            <h3 class="xcblog-blog-title">VPN美国 | 2月10日19.1M/S|免费VPN/V2ray/Clash/SSR/Shadowrocket免费节点链接地址</h3>
-                                        </a>
-                                        <p>这一次的节点更新覆盖了美国、日本、欧洲、加拿大、新加坡、香港、韩国等地区,最高速度可达19.1 M/S。只需复制下方的Clash/v2ray订阅链接,在客户端添加后即可正常使用。</p>
-                                    </div>
-                                </div>
-                                                                <div class="row item xcblog-blog-item" data-date="2025-02-09">
-                                    <div class="col-md-3">
-                                        <a href="/free-nodes/2025-2-9-node-share-links.htm" class="xcblog-blog-url">
-                                            <img src="/uploads/20240922-1/f0146261c92882776ab6bb31fd02013b.webp" alt="VPN美国 | 2月9日21.3M/S|免费VPN/SSR/Shadowrocket/V2ray/Clash免费节点链接地址" style="width: 100%;">
-                                        </a>
-                                    </div>
-                                    <div class="col-md-9">
-                                        <a href="/free-nodes/2025-2-9-node-share-links.htm" class="xcblog-blog-url">
-                                            <h3 class="xcblog-blog-title">VPN美国 | 2月9日21.3M/S|免费VPN/SSR/Shadowrocket/V2ray/Clash免费节点链接地址</h3>
-                                        </a>
-                                        <p>这一次的节点更新覆盖了美国、欧洲、香港、日本、韩国、新加坡、加拿大等地区,最高速度可达21.3 M/S。只需复制下方的Clash/v2ray订阅链接,在客户端添加后即可正常使用。</p>
-                                    </div>
-                                </div>
-                                                                <div class="row item xcblog-blog-item" data-date="2025-02-08">
-                                    <div class="col-md-3">
-                                        <a href="/free-nodes/2025-2-8-free-node-subscribe.htm" class="xcblog-blog-url">
-                                            <img src="/uploads/20240922-1/fe4c711ead34d2ee561adbc2f5cb1a0b.webp" alt="VPN美国 | 2月8日21.4M/S|免费VPN/Clash/Shadowrocket/V2ray/SSR免费节点链接地址" style="width: 100%;">
-                                        </a>
-                                    </div>
-                                    <div class="col-md-9">
-                                        <a href="/free-nodes/2025-2-8-free-node-subscribe.htm" class="xcblog-blog-url">
-                                            <h3 class="xcblog-blog-title">VPN美国 | 2月8日21.4M/S|免费VPN/Clash/Shadowrocket/V2ray/SSR免费节点链接地址</h3>
-                                        </a>
-                                        <p>这一次的节点更新覆盖了日本、加拿大、欧洲、新加坡、香港、美国、韩国等地区,最高速度可达21.4 M/S。只需复制下方的Clash/v2ray订阅链接,在客户端添加后即可正常使用。</p>
-                                    </div>
-                                </div>
-                                                                <div class="row item xcblog-blog-item" data-date="2025-02-06">
-                                    <div class="col-md-3">
-                                        <a href="/free-nodes/2025-2-6-node-share-links.htm" class="xcblog-blog-url">
-                                            <img src="/uploads/20240922-1/1220af49365955a86004bd0581a3744a.webp" alt="VPN美国 | 2月6日22M/S|免费VPN/V2ray/SSR/Clash/Shadowrocket免费节点链接地址" style="width: 100%;">
-                                        </a>
-                                    </div>
-                                    <div class="col-md-9">
-                                        <a href="/free-nodes/2025-2-6-node-share-links.htm" class="xcblog-blog-url">
-                                            <h3 class="xcblog-blog-title">VPN美国 | 2月6日22M/S|免费VPN/V2ray/SSR/Clash/Shadowrocket免费节点链接地址</h3>
-                                        </a>
-                                        <p>这一次的节点更新覆盖了香港、加拿大、新加坡、日本、美国、韩国、欧洲等地区,最高速度可达22 M/S。只需复制下方的Clash/v2ray订阅链接,在客户端添加后即可正常使用。</p>
-                                    </div>
-                                </div>
-                                
-                                <ul class="pagination"><li><a href="/free-nodes/page-2.htm">&laquo;</a></li> <li><a href="/free-nodes/">1</a></li><li><a href="/free-nodes/page-2.htm">2</a></li><li class="active"><span>3</span></li> <li class="disabled"><span>&raquo;</span></li></ul>                            </div>
-                        </div>
+                                        </div>
                         <div class="col-md-3">
                             <div class="panel panel-default">
     <div class="panel-heading">
@@ -182,16 +138,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/news/article-62234.htm" title="合肥哪里可以领养狗狗狗（合肥哪里有领养狗狗的地方）">合肥哪里可以领养狗狗狗（合肥哪里有领养狗狗的地方）</a></li>
                         <li class="py-2"><a href="/news/article-63419.htm" title="学宠物医生报考哪个学校好呢女生（学宠物医生报考哪个学校好呢女生多吗）">学宠物医生报考哪个学校好呢女生（学宠物医生报考哪个学校好呢女生多吗）</a></li>
-                        <li class="py-2"><a href="/news/article-54267.htm" title="为什么HTTP/3要基于UDP？可靠吗？">为什么HTTP/3要基于UDP？可靠吗？</a></li>
-                        <li class="py-2"><a href="/news/article-55365.htm" title="C语言读取和存储bmp格式图片">C语言读取和存储bmp格式图片</a></li>
-                        <li class="py-2"><a href="/news/article-62235.htm" title="做宠物粮生意赚钱吗现在 做宠物粮生意赚钱吗现在怎么样">做宠物粮生意赚钱吗现在 做宠物粮生意赚钱吗现在怎么样</a></li>
-                        <li class="py-2"><a href="/news/article-60459.htm" title="Linux源码安装RabbitMQ高可用集群">Linux源码安装RabbitMQ高可用集群</a></li>
-                        <li class="py-2"><a href="/news/article-52307.htm" title="基于Linux下openssl交叉编译详解">基于Linux下openssl交叉编译详解</a></li>
-                        <li class="py-2"><a href="/news/article-57032.htm" title="Spring-Gateway 路由配置">Spring-Gateway 路由配置</a></li>
-                        <li class="py-2"><a href="/news/article-59314.htm" title="宠物医院好评语30字通用句子 宠物医院好评语30字通用句子怎么写">宠物医院好评语30字通用句子 宠物医院好评语30字通用句子怎么写</a></li>
-                        <li class="py-2"><a href="/news/article-55925.htm" title="python中repr()函数用法详解">python中repr()函数用法详解</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-12-node-share-links.htm" title="VPN美国 | 2月12日20.3M/S|免费VPN/Shadowrocket/Clash/SSR/V2ray免费节点链接地址">VPN美国 | 2月12日20.3M/S|免费VPN/Shadowrocket/Clash/SSR/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-61030.htm" title="vue elementui点击按钮新增输入框">vue elementui点击按钮新增输入框</a></li>
+                        <li class="py-2"><a href="/news/article-64649.htm" title="动物诊疗许可证在哪里办（动物诊疗许可证办理流程）">动物诊疗许可证在哪里办（动物诊疗许可证办理流程）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-19-free-subscribe-node.htm" title="VPN美国 | 2月19日18.9M/S|免费VPN/V2ray/Shadowrocket/SSR/Clash免费节点链接地址">VPN美国 | 2月19日18.9M/S|免费VPN/V2ray/Shadowrocket/SSR/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-15-free-node-subscribe.htm" title="VPN美国 | 2月15日20.3M/S|免费VPN/Clash/SSR/Shadowrocket/V2ray免费节点链接地址">VPN美国 | 2月15日20.3M/S|免费VPN/Clash/SSR/Shadowrocket/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-54817.htm" title="床上快速找到跳蚤的方法（跳蚤咬的包什么样图片）">床上快速找到跳蚤的方法（跳蚤咬的包什么样图片）</a></li>
+                        <li class="py-2"><a href="/news/article-55926.htm" title="es6操作数组方法">es6操作数组方法</a></li>
+                        <li class="py-2"><a href="/news/article-53715.htm" title="生产动物疫苗的上市公司有哪些股票（生产动物疫苗的上市公司有哪些股票名称）">生产动物疫苗的上市公司有哪些股票（生产动物疫苗的上市公司有哪些股票名称）</a></li>
+                        <li class="py-2"><a href="/news/article-62819.htm" title="非专业怎么考兽医资格证（非专业如何考兽医）">非专业怎么考兽医资格证（非专业如何考兽医）</a></li>
                     </ul>
     </div>
 </div>

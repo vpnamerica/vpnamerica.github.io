@@ -2,23 +2,19 @@
 <html xml:lang="zh-CN" lang="zh-CN">
 
 <head>
-        <link rel="canonical" href="https://vpnamerica.github.io/news/article-65888.htm" />
+        <link rel="canonical" href="https://vpnamerica.github.io/news/page-6.htm" />
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>@RequestBody接收实体类时，部分字段丢失的问题</title>
-        <meta name="description" content="问题： 1.@RequestBody注解的实体类里，如果存在首字母为小写，第二个字母大写的字段时，此字段会传为null的bug。 private String tUser;  public Strin" />
+    <title>新闻资讯 - VPN美国 节点官网 - 第5页</title>
         <link rel="icon" href="/assets/website/img/clashforios/favicon.ico" type="image/x-icon"/>
 
     <meta name="author" content="VPN美国 节点官网">
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://vpnamerica.github.io/news/article-65888.htm" />
+    <meta property="og:type" content="webpage" />
+    <meta property="og:url" content="https://vpnamerica.github.io/news/page-6.htm" />
     <meta property="og:site_name" content="VPN美国 节点官网" />
-    <meta property="og:title" content="@RequestBody接收实体类时，部分字段丢失的问题" />
-    <meta property="og:image" content="https://vpnamerica.github.io/uploads/20240922-1/d40fdca270516c15a0d4024409bcb77c.webp" />
-        <meta property="og:release_date" content="2025-03-02T09:37:58" />
-    <meta property="og:updated_time" content="2025-03-02T09:37:58" />
-        <meta property="og:description" content="问题： 1.@RequestBody注解的实体类里，如果存在首字母为小写，第二个字母大写的字段时，此字段会传为null的bug。 private String tUser;  public Strin" />
+    <meta property="og:title" content="新闻资讯 - VPN美国 节点官网 - 第5页" />
+    <meta property="og:image" content="/assets/website/img/clashforios/favicon.ico" />
         
     <meta name="applicable-device" content="pc,mobile" />
     <meta name="renderer" content="webkit" />
@@ -27,7 +23,7 @@
     <meta name="robots" content="max-image-preview:large" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="@RequestBody接收实体类时，部分字段丢失的问题">
+    <meta name="apple-mobile-web-app-title" content="新闻资讯 - VPN美国 节点官网 - 第5页">
     <meta name="format-detection" content="telephone=no">
 
     <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
@@ -67,7 +63,7 @@
     
 </head>
 
-<body data-page="detail">
+<body data-page="category">
     <!-- Main Wrapper Start -->
     <div class="main-wrapper">
                 <header id="header-1" class="header-2">
@@ -105,13 +101,12 @@
         <div class="sub-banner">
             <div class="container">
                 <div class="text text-right">
-                    <h1 class="title">@RequestBody接收实体类时，部分字段丢失的问题</h1>
+                    <h1 class="title">新闻资讯</h1>
                 </div>
                 <nav class="breadcrumb-outer" aria-label="breadcrumb">
                     <ol class="breadcrumb d-inline-flex">
                         <li class="breadcrumb-item"><a href="/">首页</a></li>
-                        <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">正文</li>
+                        <li class="breadcrumb-item active" aria-current="page">新闻资讯</li>
                     </ol>
                 </nav>
             </div>
@@ -124,13 +119,36 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-9">
-                                            <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
-                  				  				  				<div id="content_views" class="htmledit_views"> <h3>问题：</h3> <p>1.@RequestBody注解的实体类里，如果存在首字母为小写，第二个字母大写的字段时，此字段会传为null的bug。</p> <pre><code class="language-java">private String tUser;  public String getTUser() { 	return tUser; } public void setTUser(String tUser) { 	this.tUser = tUser; }</code></pre> <p>2.在IDEA中，布尔类型boolean/Boolean的isXXX变量，在自动生成getter和setter方法时，会去除is标识，如图所示。</p> <pre><code class="language-java">private Boolean isSignUpAudit;  public Boolean getSignUpAudit() {     return isSignUpAudit; }  public void setSignUpAudit(Boolean signUpAudit) {     isSignUpAudit = signUpAudit; }</code></pre> <h3></h3> <h3>问题1解决方法：</h3> <p>&nbsp;1、修改字段名</p> <p>2、使用@JsonProperty注解，手动写get和set方法</p> <pre><code class="language-java">@JsonProperty(value = "tUser") private String tUser;  public String getTUser() { 	return tUser; }  public void setTUser(String tUser) { 	this.tUser = tUser; }</code></pre> <p>或</p> <pre><code class="language-java">private String tUser;  @JsonProperty(value = "tUser") public String getTUser() { 	return tUser; }  @JsonProperty(value = "tUser") public void setTUser(String tUser) { 	this.tUser = tUser; }</code></pre> <p>3、重写get和set方法，第一个字母小写开头</p> <pre><code class="language-java">private String tUser;  public String gettUser() {     return tUser; }  public void settUser(String tUser) {     this.tUser = tUser; }</code></pre> <h3>问题2解决方法：</h3> <p>1、修改字段名</p> <p>2、使用@JsonProperty注解，手动写get和set方法</p> <pre><code class="language-java">@JsonProperty(value = "isSignUpAudit") private Boolean isSignUpAudit;  public Boolean getSignUpAudit() {     return isSignUpAudit; }  public void setSignUpAudit(Boolean signUpAudit) {     isSignUpAudit = signUpAudit; }</code></pre> <p>或</p> <pre><code class="language-java">private Boolean isSignUpAudit;  @JsonProperty(value = "isSignUpAudit") public Boolean getSignUpAudit() {     return isSignUpAudit; }  @JsonProperty(value = "isSignUpAudit") public void setSignUpAudit(Boolean signUpAudit) {     isSignUpAudit = signUpAudit; }</code></pre> <p>3、重写get和set方法，带上is开头</p> <pre><code class="language-java">private Boolean isSignUpAudit;  public Boolean getIsSignUpAudit() { 	return isSignUpAudit; }  public void setIsSignUpAudit(Boolean isSignUpAudit) { 	this.isSignUpAudit = isSignUpAudit; } </code></pre> </p></div> 			                <div class="clearfix"></div>
-                <div class="col-md-12 mt-5">
-                                        <p>上一个：<a href="/news/article-65271.htm">动物疫苗行业龙头股票（动物疫苗相关股票）</a></p>
-                                        <p>下一个：<a href="/news/article-65889.htm">河南动物疫苗厂家有哪些（河南动物疫苗厂家有哪些名字）</a></p>
+                            <div class="xcblog-blog-list">
+                                                                <div class="row item xcblog-blog-item" data-date="2025-02-06">
+                                    <div class="col-md-3">
+                                        <a href="/news/article-52308.htm" class="xcblog-blog-url">
+                                            <img src="/uploads/20240922-1/3bf02002e25d0b0fbd8fd075a723c658.webp" alt="动物医院英语短语怎么写的 动物医院英语短语怎么写的呀" style="width: 100%;">
+                                        </a>
                                     </div>
-                                        </div>
+                                    <div class="col-md-9">
+                                        <a href="/news/article-52308.htm" class="xcblog-blog-url">
+                                            <h3 class="xcblog-blog-title">动物医院英语短语怎么写的 动物医院英语短语怎么写的呀</h3>
+                                        </a>
+                                        <p>摘要：       大家好，今天小编关注到一个比较有意思的话题，就是关于动物医院英语短语怎么写的的问题，于是小编就整理了3个相关介绍动物医院英语短语怎么写的的解答，让我们一起看看吧。宠物实习生?宠物医</p>
+                                    </div>
+                                </div>
+                                                                <div class="row item xcblog-blog-item" data-date="2025-02-06">
+                                    <div class="col-md-3">
+                                        <a href="/news/article-52307.htm" class="xcblog-blog-url">
+                                            <img src="/uploads/20240922-1/356d629cd87fa9098075d1c33e32211d.webp" alt="基于Linux下openssl交叉编译详解" style="width: 100%;">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <a href="/news/article-52307.htm" class="xcblog-blog-url">
+                                            <h3 class="xcblog-blog-title">基于Linux下openssl交叉编译详解</h3>
+                                        </a>
+                                        <p>文章目录  一、openssl-1.1.1下载 二、交叉编译openssl-1.1.1 （本文使用的是openssl-1.1.g版本）     在https://www.openssl.org/sou</p>
+                                    </div>
+                                </div>
+                                
+                                <ul class="pagination"><li><a href="/news/page-5.htm">&laquo;</a></li> <li><a href="/news/">1</a></li><li><a href="/news/page-2.htm">2</a></li><li><a href="/news/page-3.htm">3</a></li><li><a href="/news/page-4.htm">4</a></li><li><a href="/news/page-5.htm">5</a></li><li class="active"><span>6</span></li> <li class="disabled"><span>&raquo;</span></li></ul>                            </div>
+                        </div>
                         <div class="col-md-3">
                             <div class="panel panel-default">
     <div class="panel-heading">
@@ -138,16 +156,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-2-21-clash-v2ray-ss-ssr.htm" title="VPN美国 | 2月21日22.7M/S|免费VPN/Shadowrocket/Clash/SSR/V2ray免费节点链接地址">VPN美国 | 2月21日22.7M/S|免费VPN/Shadowrocket/Clash/SSR/V2ray免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-64030.htm" title="vue【退出登录功能】">vue【退出登录功能】</a></li>
-                        <li class="py-2"><a href="/news/article-56468.htm" title="宠物流浪狗免费领养（流浪狗领养小程序）">宠物流浪狗免费领养（流浪狗领养小程序）</a></li>
-                        <li class="py-2"><a href="/news/article-61030.htm" title="vue elementui点击按钮新增输入框">vue elementui点击按钮新增输入框</a></li>
-                        <li class="py-2"><a href="/news/article-54268.htm" title="佳雯宠物医院总部地址电话（佳雯宠物医院营业时间）">佳雯宠物医院总部地址电话（佳雯宠物医院营业时间）</a></li>
-                        <li class="py-2"><a href="/news/article-58809.htm" title="JAVA时间戳类Instant">JAVA时间戳类Instant</a></li>
+                        <li class="py-2"><a href="/news/article-58167.htm" title="【厦门宠物狗领养】 厦门宠物狗领养中心">【厦门宠物狗领养】 厦门宠物狗领养中心</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-4-free-node-subscribe-links.htm" title="VPN美国 | 3月4日21.8M/S|免费VPN/Clash/Shadowrocket/SSR/V2ray免费节点链接地址">VPN美国 | 3月4日21.8M/S|免费VPN/Clash/Shadowrocket/SSR/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-62820.htm" title="宠物回收站（宠物回收app）">宠物回收站（宠物回收app）</a></li>
+                        <li class="py-2"><a href="/news/article-65271.htm" title="动物疫苗行业龙头股票（动物疫苗相关股票）">动物疫苗行业龙头股票（动物疫苗相关股票）</a></li>
                         <li class="py-2"><a href="/news/article-53187.htm" title="动物疫苗哪里买比较好 动物疫苗哪里买比较好一点">动物疫苗哪里买比较好 动物疫苗哪里买比较好一点</a></li>
-                        <li class="py-2"><a href="/news/article-59884.htm" title="移动式隔断的种类有(移动式隔断墙屏风效果图)">移动式隔断的种类有(移动式隔断墙屏风效果图)</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-8-free-node-subscribe.htm" title="VPN美国 | 2月8日21.4M/S|免费VPN/Clash/Shadowrocket/V2ray/SSR免费节点链接地址">VPN美国 | 2月8日21.4M/S|免费VPN/Clash/Shadowrocket/V2ray/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-25-free-v2ray-subscribe.htm" title="VPN美国 | 2月25日21.1M/S|免费VPN/SSR/Shadowrocket/V2ray/Clash免费节点链接地址">VPN美国 | 2月25日21.1M/S|免费VPN/SSR/Shadowrocket/V2ray/Clash免费节点链接地址</a></li>
                         <li class="py-2"><a href="/news/article-63418.htm" title="宠物贩卖生意怎么做（宠物贩卖生意怎么做好）">宠物贩卖生意怎么做（宠物贩卖生意怎么做好）</a></li>
-                        <li class="py-2"><a href="/news/article-63419.htm" title="学宠物医生报考哪个学校好呢女生（学宠物医生报考哪个学校好呢女生多吗）">学宠物医生报考哪个学校好呢女生（学宠物医生报考哪个学校好呢女生多吗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-18-free-v2ray-subscribe.htm" title="VPN美国 | 2月18日19M/S|免费VPN/SSR/Shadowrocket/V2ray/Clash免费节点链接地址">VPN美国 | 2月18日19M/S|免费VPN/SSR/Shadowrocket/V2ray/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-59884.htm" title="移动式隔断的种类有(移动式隔断墙屏风效果图)">移动式隔断的种类有(移动式隔断墙屏风效果图)</a></li>
                     </ul>
     </div>
 </div>

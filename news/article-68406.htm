@@ -2,23 +2,23 @@
 <html xml:lang="zh-CN" lang="zh-CN">
 
 <head>
-        <link rel="canonical" href="https://vpnamerica.github.io/news/article-66515.htm" />
+        <link rel="canonical" href="https://vpnamerica.github.io/news/article-68406.htm" />
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>spring boot web项目</title>
-        <meta name="description" content="建表sql:    CREATE TABLE employee    (    id INT(8) PRIMARY KEY AUTO_INCREMENT ,    lastName VARCHAR(2" />
+    <title>Mac电脑配置maven，idea配置maven</title>
+        <meta name="description" content="1. 下载maven 本文已安装3.5.2为例 进入官网下载  点击下载即可 2. 解压文件包，配置环境变量   下载之后，把文件放到自己想要放的位置，并进行解压。   本文解压后放在了/Users/" />
         <link rel="icon" href="/assets/website/img/clashforios/favicon.ico" type="image/x-icon"/>
 
     <meta name="author" content="VPN美国 节点官网">
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://vpnamerica.github.io/news/article-66515.htm" />
+    <meta property="og:url" content="https://vpnamerica.github.io/news/article-68406.htm" />
     <meta property="og:site_name" content="VPN美国 节点官网" />
-    <meta property="og:title" content="spring boot web项目" />
-    <meta property="og:image" content="https://vpnamerica.github.io/uploads/20240922-1/26f78b2b6a56c0a29c8cde14c0b21604.webp" />
-        <meta property="og:release_date" content="2025-03-03T08:14:32" />
-    <meta property="og:updated_time" content="2025-03-03T08:14:32" />
-        <meta property="og:description" content="建表sql:    CREATE TABLE employee    (    id INT(8) PRIMARY KEY AUTO_INCREMENT ,    lastName VARCHAR(2" />
+    <meta property="og:title" content="Mac电脑配置maven，idea配置maven" />
+    <meta property="og:image" content="https://vpnamerica.github.io/uploads/20240922-1/3a9aa17cef90880053cf7eaaa374654e.webp" />
+        <meta property="og:release_date" content="2025-03-06T11:02:33" />
+    <meta property="og:updated_time" content="2025-03-06T11:02:33" />
+        <meta property="og:description" content="1. 下载maven 本文已安装3.5.2为例 进入官网下载  点击下载即可 2. 解压文件包，配置环境变量   下载之后，把文件放到自己想要放的位置，并进行解压。   本文解压后放在了/Users/" />
         
     <meta name="applicable-device" content="pc,mobile" />
     <meta name="renderer" content="webkit" />
@@ -27,7 +27,7 @@
     <meta name="robots" content="max-image-preview:large" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="spring boot web项目">
+    <meta name="apple-mobile-web-app-title" content="Mac电脑配置maven，idea配置maven">
     <meta name="format-detection" content="telephone=no">
 
     <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
@@ -105,7 +105,7 @@
         <div class="sub-banner">
             <div class="container">
                 <div class="text text-right">
-                    <h1 class="title">spring boot web项目</h1>
+                    <h1 class="title">Mac电脑配置maven，idea配置maven</h1>
                 </div>
                 <nav class="breadcrumb-outer" aria-label="breadcrumb">
                     <ol class="breadcrumb d-inline-flex">
@@ -125,10 +125,10 @@
                     <div class="row">
                         <div class="col-md-9">
                                             <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
-                  				  				  				<div id="content_views" class="htmledit_views"> <p>建表sql:</p> <pre><code class="language-sql">   CREATE TABLE employee    (    id INT(8) PRIMARY KEY AUTO_INCREMENT ,    lastName VARCHAR(25),    email VARCHAR(64),    gender INT(1),    department_id INT,    birthday DATE,    CONSTRAINT FK_department_id FOREIGN KEY(department_id)  REFERENCES department(id) ON DELETE NO ACTION ON UPDATE NO ACTION     )ENGINE=INNODB DEFAULT CHARSET =utf8;            CREATE TABLE department    (    id INT PRIMARY KEY,    departmentName VARCHAR(64)    )ENGINE=INNODB DEFAULT CHARSET=utf8;</code></pre> <p>&nbsp;</p> <p>&nbsp;</p> <h3><span style="color:#f33b45;">on null context object 异常</span></h3> <p>做查询所有员工功能时，一直报这个错误，网上找了半天，也没搞定。</p> <p>这个错误根本原因还是上下文对象为null导致的。</p> <p>Caused by: org.springframework.expression.spel.SpelEvaluationException<span style="color:#f33b45;">: EL1011E: Method call: Attempted to call method getId() on null context object</span><br /> ------------------</p> <p>2020-04-10 18:21:59.581 ERROR 30800 --- [nio-8088-exec-9] s.e.ErrorMvcAutoConfiguration$StaticView : Cannot render error page for request [/wang/table] and exception [Exception evaluating SpringEL expression: "<span style="color:#f33b45;">emp.getId()"</span> (template: "basic-table" - line 51, col 29)] as the response has already been committed. As a result, the response may have the wrong status code.</p> <pre><code class="language-html">                         &lt;tr th:each="emp : ${employeeList}"&gt;                             &lt;td th:text="${emp.getId()}" &gt;&lt;/td&gt;                             &lt;td th:text="${emp.getLastName()}"&gt;&lt;/td&gt;                             &lt;td th:text="${emp.getEmail()}"&gt;12 May 2017&lt;/td&gt; &lt;!--                            thymeleaf的三元表达式--&gt;                             &lt;td th:text="${emp.getGender()==0?'女':(emp.getGender()==1 ? '男':null)}"&gt;12 May 2017&lt;/td&gt;                             &lt;td th:text="${emp.getDepartment()!=null?emp.getDepartment().getDepartmentName():null}"&gt;12 May 2017&lt;/td&gt; &lt;!--   日期格式转换：  #dates是thymeleaf提供的一个工具，它能帮我们展示想要的日期格式--&gt;                             &lt;td th:text="${#dates.format(emp.getBirthday(),'yyyy-MM-dd HH:mm:ss')}"&gt;Pending&lt;/label&gt;&lt;/td&gt;                              &lt;td &gt; &lt;!--  在修改的时候,我们需要把员工id传递给后台,后台得到员工的详细信息,之后进入修改页面,这里使用的restful风格. --&gt;                                  &lt;a th:href="@{/employee/toUpdatePage/} + ${emp.getId()}"  class="btn btn-sm btn-primary" th:text="修改" &gt;&lt;/a&gt;                                     &lt;a th:href="@{/employee/delete/} + ${emp.getId()}" class="btn btn-sm btn-danger" th:text="删除"&gt;&lt;/a&gt;                                 &lt;/td&gt;                             &lt;/tr&gt;</code></pre> <p>前端代码：之前已经验证过，没有问题，那么根本原因还是在后端，后端没有正确传递数据。</p> <p>最后果然，是因为我的mapper中的sql写的不对。</p> <p>错误版本：</p> <p>由于一开始，我的对象和table的字段一致，我以为就不要写column 和result对应了。其实还是太年轻。。。。</p> <pre><code class="language-html">    &lt;select id="queryAllEmployee" resultMap="employeeMap"&gt;         select e.id as eId,d.id as dId ,e.email,e.birthday,e.gender,e.lastName,d.departmentName          from employee e ,department d          where e.department_id = d.id     &lt;/select&gt;      &lt;resultMap id="employeeMap" type="employee"&gt;                  &lt;association property="department" javaType="department"&gt;                     &lt;/association&gt;     &lt;/resultMap&gt;</code></pre> <p>&nbsp;</p> <p>正确版本：</p> <pre><code class="language-html">    &lt;select id="queryAllEmployee" resultMap="employeeMap"&gt;         select e.id as eId,d.id as dId ,e.email,e.birthday,e.gender,e.lastName,d.departmentName          from employee e ,department d          where e.department_id = d.id     &lt;/select&gt;      &lt;resultMap id="employeeMap" type="employee"&gt;         &lt;result column="eId" property="id"&gt;&lt;/result&gt;         &lt;result column="email" property="email"&gt;&lt;/result&gt;         &lt;result column="lastName" property="lastName"&gt;&lt;/result&gt;         &lt;result column="birthday" property="birthday"&gt;&lt;/result&gt;         &lt;result column="gender" property="gender"&gt;&lt;/result&gt;         &lt;association property="department" javaType="department"&gt;             &lt;result column="dId" property="id"&gt;&lt;/result&gt;             &lt;result column="departmentName" property="departmentName"&gt;&lt;/result&gt;         &lt;/association&gt;     &lt;/resultMap&gt;</code></pre> <p> &nbsp;</p> </p></div> 			                <div class="clearfix"></div>
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> </h1> <h3><a id="1_maven_3" rel="nofollow"></a>1. 下载maven</h3> <p>本文已安装<code>3.5.2</code>为例</p> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://archive.apache.org/dist/maven/maven-3/"  rel="nofollow">进入官网下载</a></p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220603/accfacd9e03a28fd8161f27850d5c23b.jpg" alt="Mac电脑配置maven，idea配置maven"></p> <p><strong>点击下载即可</strong></p> <h3><a id="2__13" rel="nofollow"></a>2. 解压文件包，配置环境变量</h3> <ol> <li> <p>下载之后，把文件放到自己想要放的位置，并进行解压。</p> </li> <li> <p>本文解压后放在了<code>/Users/用户名/Documents/apache-maven-3.5.2</code></p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220603/035700a44278e59af0f882532bd1769b.jpg" alt="Mac电脑配置maven，idea配置maven"></p> </li> <li> <p>编辑配置文件，设置环境变量</p> <pre><code class="prism language-shell"><span class="token comment"># 环境变量进入编辑模式（maven使用的前提是已经安装好jdk，本文安装的是jdk8）</span> vim ~/.bash_profile<span class="token comment"># 配置环境变量</span><span class="token function">export</span> MAVEN_HOME<span class="token operator">=</span>/Users/用户名/Documents/apache-maven-3.5.2<span class="token function">export</span> PATH<span class="token operator">=</span><span class="token variable">$PATH</span><span class="token keyword">:</span><span class="token variable">$MAVEN_HOME</span>/bin<span class="token comment"># 配置好环境变量，退出保存（按esc :wq），使配置文件生效</span><span class="token function">source</span> ~/.bash_profile</code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220603/6dd15fc7a6ecfc94947755d556756d28.jpg" alt="Mac电脑配置maven，idea配置maven"></p> </li> </ol> <h3><a id="3__35" rel="nofollow"></a>3. 验证是否安装成功</h3> <p>打开终端输入命令 mvn -v，出现以下结果，说明安装配置成功</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220603/43c4b0fe81d7470a5b6888afc9c72aee.jpg" alt="Mac电脑配置maven，idea配置maven"></p> <h3><a id="4ideamaven_41" rel="nofollow"></a>4.idea配置maven</h3> <ol> <li> <p>点击idea配置</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220603/427153ed2ce8a640bb8b6802269f3d30.jpg" alt="Mac电脑配置maven，idea配置maven"></p> </li> <li> <p>点击构建相关配置，找到maven，选择maven的文件目录，选择maven的配置文件，点击OK后生效后，项目就可以使用maven了。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220603/860c0810e5c00f0f1b2abe8749ccf79a.jpg" alt="Mac电脑配置maven，idea配置maven"></p> </li> <li> <p>这里正在构建了一个springboot项目检测maven是否搭建成功</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220603/a95fd5a4ee29de28c779e07fbe69e34b.jpg" alt="Mac电脑配置maven，idea配置maven"></p> </li> <li> <p>运行一下，成功，可见maven成功配置</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220603/faa3bf6065731595d5f787c54734ff98.jpg" alt="Mac电脑配置maven，idea配置maven"></p> </li> </ol> <h3><a id="_59" rel="nofollow"></a><strong>完毕</strong></h3> </div> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
-                                        <p>上一个：<a href="/news/article-65889.htm">河南动物疫苗厂家有哪些（河南动物疫苗厂家有哪些名字）</a></p>
-                                        <p>下一个：<a href="/news/article-66517.htm">Springboot2 集成Swagger2，解决配置完成后不显示的坑</a></p>
+                                        <p>上一个：<a href="/news/article-67766.htm">动物医学实训总结500字（动物医学实训报告怎么写）</a></p>
+                                        <p>下一个：<a href="/news/article-68407.htm">狗粮牌子推荐（狗粮牌子推荐排行榜）</a></p>
                                     </div>
                                         </div>
                         <div class="col-md-3">
@@ -138,16 +138,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/news/article-57595.htm" title="青岛南京路动物防疫站宠物医院在哪里（青岛市南京路动物防疫站）">青岛南京路动物防疫站宠物医院在哪里（青岛市南京路动物防疫站）</a></li>
-                        <li class="py-2"><a href="/news/article-56468.htm" title="宠物流浪狗免费领养（流浪狗领养小程序）">宠物流浪狗免费领养（流浪狗领养小程序）</a></li>
-                        <li class="py-2"><a href="/news/article-61029.htm" title="Caused by: java.lang.ClassNotFoundException: springfox.documentation.schema.ModelReference 错误解决">Caused by: java.lang.ClassNotFoundException: springfox.documentation.schema.ModelReference 错误解决</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-2-14-free-node-subscribe-links.htm" title="VPN美国 | 2月14日21.9M/S|免费VPN/Shadowrocket/V2ray/Clash/SSR免费节点链接地址">VPN美国 | 2月14日21.9M/S|免费VPN/Shadowrocket/V2ray/Clash/SSR免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-65888.htm" title="@RequestBody接收实体类时，部分字段丢失的问题">@RequestBody接收实体类时，部分字段丢失的问题</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-2-6-node-share-links.htm" title="VPN美国 | 2月6日22M/S|免费VPN/V2ray/SSR/Clash/Shadowrocket免费节点链接地址">VPN美国 | 2月6日22M/S|免费VPN/V2ray/SSR/Clash/Shadowrocket免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-55925.htm" title="python中repr()函数用法详解">python中repr()函数用法详解</a></li>
-                        <li class="py-2"><a href="/news/article-64650.htm" title="动物医院实践心得怎么写范文大全（动物医院实践心得怎么写范文大全集）">动物医院实践心得怎么写范文大全（动物医院实践心得怎么写范文大全集）</a></li>
+                        <li class="py-2"><a href="/news/article-52307.htm" title="基于Linux下openssl交叉编译详解">基于Linux下openssl交叉编译详解</a></li>
+                        <li class="py-2"><a href="/news/article-53187.htm" title="动物疫苗哪里买比较好 动物疫苗哪里买比较好一点">动物疫苗哪里买比较好 动物疫苗哪里买比较好一点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-19-free-subscribe-node.htm" title="VPN美国 | 2月19日18.9M/S|免费VPN/V2ray/Shadowrocket/SSR/Clash免费节点链接地址">VPN美国 | 2月19日18.9M/S|免费VPN/V2ray/Shadowrocket/SSR/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-67145.htm" title="猫粮生产设备多少钱一套 狗粮制作机器设备">猫粮生产设备多少钱一套 狗粮制作机器设备</a></li>
+                        <li class="py-2"><a href="/news/article-55365.htm" title="C语言读取和存储bmp格式图片">C语言读取和存储bmp格式图片</a></li>
+                        <li class="py-2"><a href="/news/article-66515.htm" title="spring boot web项目">spring boot web项目</a></li>
                         <li class="py-2"><a href="/news/article-65889.htm" title="河南动物疫苗厂家有哪些（河南动物疫苗厂家有哪些名字）">河南动物疫苗厂家有哪些（河南动物疫苗厂家有哪些名字）</a></li>
-                        <li class="py-2"><a href="/news/article-65268.htm" title="孕妇让猫抓破了流了一点点血有事吗（孕期让猫抓了出血有事吗）">孕妇让猫抓破了流了一点点血有事吗（孕期让猫抓了出血有事吗）</a></li>
+                        <li class="py-2"><a href="/news/article-54817.htm" title="床上快速找到跳蚤的方法（跳蚤咬的包什么样图片）">床上快速找到跳蚤的方法（跳蚤咬的包什么样图片）</a></li>
+                        <li class="py-2"><a href="/news/article-59884.htm" title="移动式隔断的种类有(移动式隔断墙屏风效果图)">移动式隔断的种类有(移动式隔断墙屏风效果图)</a></li>
+                        <li class="py-2"><a href="/news/article-58168.htm" title="长沙宠物猫领养中心有哪些 长沙宠物猫领养中心有哪些地方">长沙宠物猫领养中心有哪些 长沙宠物猫领养中心有哪些地方</a></li>
                     </ul>
     </div>
 </div>
@@ -159,7 +159,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">66</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>

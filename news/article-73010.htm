@@ -1,0 +1,208 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnamerica.github.io/news/article-73010.htm" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>C++内存泄漏的定位方法总结</title>
+        <meta name="description" content="一、内存泄漏检测工具Valgrind安装及使用   下载Valgrind工具源码： http://www.valgrind.org/downloads/valgrind-3.14.0.tar.bz2 " />
+        <link rel="icon" href="/assets/website/img/clashforios/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN美国 节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnamerica.github.io/news/article-73010.htm" />
+    <meta property="og:site_name" content="VPN美国 节点官网" />
+    <meta property="og:title" content="C++内存泄漏的定位方法总结" />
+    <meta property="og:image" content="https://vpnamerica.github.io/uploads/20240922-1/a20f654a363bade37fe772c4f150cdf4.webp" />
+        <meta property="og:release_date" content="2025-03-13T09:22:19" />
+    <meta property="og:updated_time" content="2025-03-13T09:22:19" />
+        <meta property="og:description" content="一、内存泄漏检测工具Valgrind安装及使用   下载Valgrind工具源码： http://www.valgrind.org/downloads/valgrind-3.14.0.tar.bz2 " />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="C++内存泄漏的定位方法总结">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/bootstrap.min.css">
+    <!-- Slick Silder CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/slick.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/fontawesome.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/style.css">
+    <!-- Theme Element CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/responsivemenu.css">
+    <!-- Theme Element CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/elements.css">
+    <!-- Color CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/color.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PB3ZYWX2H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5PB3ZYWX2H');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+    
+</head>
+
+<body data-page="detail">
+    <!-- Main Wrapper Start -->
+    <div class="main-wrapper">
+                <header id="header-1" class="header-2">
+            <div class="sticky-header">
+                <div class="container">
+                                        <a href="/" class="logo float-left">
+                        <span>
+                            VPN美国                        </span>
+                    </a>
+                                        <!-- /.logo End -->
+                    <div class="navigation-wrap float-right">
+                        <div class="menu-holder">
+                            <div class="mobile-menu"></div>
+                            <!-- /.mobile-menu End -->
+                            <div class="main-menu navigation">
+                                <nav>
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                            <!-- /.navigation End -->
+                        </div>
+                        <!-- /.menu-holder End -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- /.header-2 End -->
+        <!-- Sub Banner Start -->
+        <div class="sub-banner">
+            <div class="container">
+                <div class="text text-right">
+                    <h1 class="title">C++内存泄漏的定位方法总结</h1>
+                </div>
+                <nav class="breadcrumb-outer" aria-label="breadcrumb">
+                    <ol class="breadcrumb d-inline-flex">
+                        <li class="breadcrumb-item"><a href="/">首页</a></li>
+                        <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">正文</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Sub Banner End -->
+        <!-- Main Content Start -->
+        <div class="main-content">
+            <!-- About us Section Start -->
+            <section class="about-us mb-30">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                                            <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <h3>一、内存泄漏检测工具Valgrind安装及使用</h3> <ul> <li> <p>下载Valgrind工具源码：</p> <p>http://www.valgrind.org/downloads/valgrind-3.14.0.tar.bz2</p> </li> <li> <p>解压缩：</p> <p>tar -jxvf valgrind-3.14.0.tar.bz2</p> </li> <li> <p>进入安装后的目录进行安装：</p> <p>cd valgrind-3.14.0</p> <p>./configure --prefix=/home/NJR/valgrind</p> <p>make</p> <p>make install</p> </li> <li> <p>配置环境变量：</p> <p>vi /etc/profile</p> <p>最后一行加入：export PATH=$PATH:/home/NJR/valgrind/bin</p> <p>生效环境变量：source /etc/profile</p> </li> <li> <p>假设想要检测的执行文件是main,并且想把检测结果输入到文件valgrind_report.log中，就执行下面语句：</p> <p>valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --run-libc-freeres=yes --log-file=./valgrind_report.log ./test</p> <p>如果只想把结果打印到屏幕上，就执行下面语句</p> <p>valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --run-libc-freeres=yes ./test</p> </li> <li> <p>举例子：</p> <pre><code>#include &lt;iostream&gt;  void func(void) {     int *x = (int *)malloc(8 * sizeof(int));     x[9] = 0;              //数组下标越界 }                        //内存未释放    int main(void) {     func();      return 0; }</code></pre> </li> </ul> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 执行编译命令：&nbsp;</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gcc -Wall test.cpp -g -fno-inline -o test</p> <p>运行后的结果，可以看到</p> <pre><code>==56206== Memcheck, a memory error detector ==56206== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al. ==56206== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info ==56206== Command: ./test ==56206== Parent PID: 40069 ==56206==  ==56206== Invalid write of size 4 ==56206==    at 0x400514: getMemory() (test.cpp:6) ==56206==    by 0x400525: main (test.cpp:12) ==56206==  Address 0x5201064 is 4 bytes after a block of size 32 alloc'd ==56206==    at 0x4C2DE4D: malloc (vg_replace_malloc.c:299) ==56206==    by 0x400507: getMemory() (test.cpp:5) ==56206==    by 0x400525: main (test.cpp:12) ==56206==  ==56206==  ==56206== HEAP SUMMARY: ==56206==     in use at exit: 32 bytes in 1 blocks ==56206==   total heap usage: 1 allocs, 0 frees, 32 bytes allocated ==56206==  ==56206== 32 bytes in 1 blocks are definitely lost in loss record 1 of 1 ==56206==    at 0x4C2DE4D: malloc (vg_replace_malloc.c:299) ==56206==    by 0x400507: getMemory() (test.cpp:5) ==56206==    by 0x400525: main (test.cpp:12) ==56206==  ==56206== LEAK SUMMARY: ==56206==    definitely lost: 32 bytes in 1 blocks ==56206==    indirectly lost: 0 bytes in 0 blocks ==56206==      possibly lost: 0 bytes in 0 blocks ==56206==    still reachable: 0 bytes in 0 blocks ==56206==         suppressed: 0 bytes in 0 blocks ==56206==  ==56206== For counts of detected and suppressed errors, rerun with: -v ==56206== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)</code></pre> <h3>二、重载全局或局部类内operator new操作符和delete操作符</h3> <p>原理：</p> <p>1.定义一个全局的内存信息表，用来存储内存申请的文件名及位置</p> <p>2.重载operator new/new[]，保存内存申请信息</p> <p>3.重载operator delete/delete[]，删除内存申请信息</p> <p>4.定义一个全局/静态常量，在程序结束时，核查内存信息表是否还存在内存申请信息，如果存在则说明发生内存泄漏，否则无内存泄漏</p> <pre><code class="language-cpp">struct Info {     void *ptr;     const char *file_name;     long line; };  Info ptr_list[1024]; unsigned int ptr_num = 0;  int find_ptr(void *p) {     for (unsigned int i = 0; i &lt; ptr_num; ++i)     {         if (ptr_list[i].ptr == p)         {             return i;         }     }      return -1; }  void del_ptr(unsigned int i) {     while(i+1 &lt; ptr_num)     {         ptr_list[i] = ptr_list[i+1];         i++;     }      ptr_num--; }  struct ProcEnd {     ~ProcEnd()     {         for (unsigned int i = 0; i &lt; ptr_num; ++i)         {             printf("file: %s, line: %d, memory leak!!!\n", ptr_list[i].file_name, ptr_list[i].line);         }     } };  void* operator new(size_t size, const char *file_name, long line) {     printf("global new\n");     void *p = malloc(size);     ptr_list[ptr_num].ptr = p;     ptr_list[ptr_num].file_name = file_name;     ptr_list[ptr_num].line = line;     ptr_num++;     return p; }  void* operator new[](size_t size, const char *file_name, long line) {     return operator new(size, file_name, line); }  void operator delete(void *p) {     int i = find_ptr(p);     if (i != -1)     {         free(p);         del_ptr(i);     }     else     {         printf("delete unknown pointer!!!\n");     } }  void operator delete[](void *p) {     operator delete(p); }  ProcEnd end;  struct BTNode {     BTNode(char val) : val(val), left(nullptr), right(nullptr) {}      char val;     BTNode *left;     BTNode *right; };</code></pre> <p>检验输出结果：</p> <pre><code class="language-cpp">#include &lt;iostream&gt;  int main() {     int *i = new int(0);     return 0; }</code></pre> <p>控制台打印信息：</p> <p>global new<br /> file: ../src/TEST.cpp, line: 197, memory leak!!!</p> <p>可以看出发生了内存泄漏，并提示对应的文件名称和行号。</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-72342.htm">动物疫苗研制过程简述（动物疫苗的研发过程）</a></p>
+                                        <p>下一个：<a href="/news/article-73011.htm">由浅入深，带你用JavaScript实现响应式原理（Vue2、Vue3响应式原理）</a></p>
+                                    </div>
+                                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-65271.htm" title="动物疫苗行业龙头股票（动物疫苗相关股票）">动物疫苗行业龙头股票（动物疫苗相关股票）</a></li>
+                        <li class="py-2"><a href="/news/article-58168.htm" title="长沙宠物猫领养中心有哪些 长沙宠物猫领养中心有哪些地方">长沙宠物猫领养中心有哪些 长沙宠物猫领养中心有哪些地方</a></li>
+                        <li class="py-2"><a href="/news/article-73011.htm" title="由浅入深，带你用JavaScript实现响应式原理（Vue2、Vue3响应式原理）">由浅入深，带你用JavaScript实现响应式原理（Vue2、Vue3响应式原理）</a></li>
+                        <li class="py-2"><a href="/news/article-67765.htm" title="动物疫苗证书怎么考（动物疫苗证在哪里办）">动物疫苗证书怎么考（动物疫苗证在哪里办）</a></li>
+                        <li class="py-2"><a href="/news/article-58810.htm" title="为MySQL创建高性能索引_Mysql_">为MySQL创建高性能索引_Mysql_</a></li>
+                        <li class="py-2"><a href="/news/article-71020.htm" title="重庆宠物领养平台官网地址（重庆领养宠物在哪领养）">重庆宠物领养平台官网地址（重庆领养宠物在哪领养）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-24-node-share-links.htm" title="VPN美国 | 2月24日19M/S|免费VPN/Shadowrocket/SSR/Clash/V2ray免费节点链接地址">VPN美国 | 2月24日19M/S|免费VPN/Shadowrocket/SSR/Clash/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-58809.htm" title="JAVA时间戳类Instant">JAVA时间戳类Instant</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-19-free-subscribe-node.htm" title="VPN美国 | 2月19日18.9M/S|免费VPN/V2ray/Shadowrocket/SSR/Clash免费节点链接地址">VPN美国 | 2月19日18.9M/S|免费VPN/V2ray/Shadowrocket/SSR/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-10-node-share.htm" title="VPN美国 | 2月10日19.1M/S|免费VPN/V2ray/Clash/SSR/Shadowrocket免费节点链接地址">VPN美国 | 2月10日19.1M/S|免费VPN/V2ray/Clash/SSR/Shadowrocket免费节点链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">39</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">66</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About us Section End -->
+        </div>
+        <!-- Main Content End -->
+                <!-- Copyright Start -->
+        <div class="copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+            <p>
+                <a href="/">VPN美国 节点官网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+        <!-- Copyright End -->
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="/assets/website/js/frontend/clashforios/jquery.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/responsivemenu.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/slick.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/masonry.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/custom.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!-- Main Wrapper End -->
+</body>
+
+</html>

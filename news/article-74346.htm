@@ -1,0 +1,208 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnamerica.github.io/news/article-74346.htm" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>python实现基于smtp发送邮件_在线工具</title>
+        <meta name="description" content="【前言】  在某些项目中，我们需要实现发送邮件的功能，比如：  爬虫结束后，发送邮件通知 定时发送邮件提醒待办事项 某项业务逻辑触发邮件通知   今天我们就分享如何基于smtp借助163邮箱来发送邮件" />
+        <link rel="icon" href="/assets/website/img/clashforios/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN美国 节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnamerica.github.io/news/article-74346.htm" />
+    <meta property="og:site_name" content="VPN美国 节点官网" />
+    <meta property="og:title" content="python实现基于smtp发送邮件_在线工具" />
+    <meta property="og:image" content="https://vpnamerica.github.io/uploads/20240922-1/a20f654a363bade37fe772c4f150cdf4.webp" />
+        <meta property="og:release_date" content="2025-03-15T07:20:38" />
+    <meta property="og:updated_time" content="2025-03-15T07:20:38" />
+        <meta property="og:description" content="【前言】  在某些项目中，我们需要实现发送邮件的功能，比如：  爬虫结束后，发送邮件通知 定时发送邮件提醒待办事项 某项业务逻辑触发邮件通知   今天我们就分享如何基于smtp借助163邮箱来发送邮件" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="python实现基于smtp发送邮件_在线工具">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/bootstrap.min.css">
+    <!-- Slick Silder CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/slick.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/fontawesome.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/style.css">
+    <!-- Theme Element CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/responsivemenu.css">
+    <!-- Theme Element CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/elements.css">
+    <!-- Color CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/color.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PB3ZYWX2H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5PB3ZYWX2H');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+    
+</head>
+
+<body data-page="detail">
+    <!-- Main Wrapper Start -->
+    <div class="main-wrapper">
+                <header id="header-1" class="header-2">
+            <div class="sticky-header">
+                <div class="container">
+                                        <a href="/" class="logo float-left">
+                        <span>
+                            VPN美国                        </span>
+                    </a>
+                                        <!-- /.logo End -->
+                    <div class="navigation-wrap float-right">
+                        <div class="menu-holder">
+                            <div class="mobile-menu"></div>
+                            <!-- /.mobile-menu End -->
+                            <div class="main-menu navigation">
+                                <nav>
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                            <!-- /.navigation End -->
+                        </div>
+                        <!-- /.menu-holder End -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- /.header-2 End -->
+        <!-- Sub Banner Start -->
+        <div class="sub-banner">
+            <div class="container">
+                <div class="text text-right">
+                    <h1 class="title">python实现基于smtp发送邮件_在线工具</h1>
+                </div>
+                <nav class="breadcrumb-outer" aria-label="breadcrumb">
+                    <ol class="breadcrumb d-inline-flex">
+                        <li class="breadcrumb-item"><a href="/">首页</a></li>
+                        <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">正文</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Sub Banner End -->
+        <!-- Main Content Start -->
+        <div class="main-content">
+            <!-- About us Section Start -->
+            <section class="about-us mb-30">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                                            <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<h2 id="前言">【前言】</h2> <blockquote> <p>在某些项目中，我们需要实现发送邮件的功能，比如：</p> <ol> <li>爬虫结束后，发送邮件通知</li> <li>定时发送邮件提醒待办事项</li> <li>某项业务逻辑触发邮件通知</li> </ol> </blockquote> <p>今天我们就分享如何基于smtp借助163邮箱来发送邮件</p> <h2 id="实现过程">【实现过程】</h2> <h4 id="163邮箱配置">163邮箱配置</h4> <p>首先登录163邮箱进行配置（没有请先注册）：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://email.163.com/"  target="_blank" rel="nofollow">https://email.163.com/</a></p> <p>配置SMTP服务开启（需要发送短信验证码进行开通）</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/964fa3aa4b29cdd00e25de2cf0c74c32.jpg" alt="python实现基于smtp发送邮件_在线工具"></p> <h4 id="开始编写脚本">开始编写脚本</h4> <p>新建python脚本 email_163.py<br /> 添加 smtp 模块</p> <pre><code class="language-python">import smtplib from email.mime.text import MIMEText</code></pre> <h4 id="编写代码实现">编写代码实现</h4> <pre><code class="language-python">from datetime import datetime import smtplib from email.mime.text import MIMEText from config import settings as st  def send_mail_plain(receivers, subject, content):     #163邮箱服务器地址     mail_host = 'smtp.163.com'     #163用户名     mail_user = st.mail_user_163     #密码(部分邮箱为授权码)     mail_pass = st.mail_password_163     #邮件发送方邮箱地址     sender = st.mail_sender_163     #邮件接受方邮箱地址，注意需要[]包裹，这意味着你可以写多个邮件地址群发     receivers = receivers     #邮件内容设置     message = MIMEText(content, 'plain', 'utf-8')     #邮件主题     message['Subject'] = subject     #发送方信息     message['From'] = sender     #接收方信息     message['To'] = receivers[0]      #登录并发送邮件     smtpObj = smtplib.SMTP()     #连接到服务器     smtpObj.connect(mail_host, 25)     #登录到服务器     smtpObj.login(mail_user, mail_pass)     #发送     smtpObj.sendmail(sender, receivers, message.as_string())     #退出     smtpObj.quit()   if __name__ == '__main__':     receivers = ['xxxxx@qq.com']     subject = 'SevenTiny通知'     content = f'这是邮件主体内容！发送时间:{datetime.now()}'     send_mail_plain(receivers, subject, content)     print('Sent successfully!')</code></pre> <p>说明：</p> <blockquote> <p>我这里采用了配置文件的方式填充账号密码，这样可以避免在项目中硬编码造成泄露风险<br /> 如果需要了解配置文件的使用方式，请参考：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.cnblogs.com/7tiny/p/16211724.html"  target="_blank" rel="nofollow">https://www.cnblogs.com/7tiny/p/16211724.html</a></p> </blockquote> <p>我们需要配置如下几个关键参数：</p> <ul> <li>163用户名<br /> mail_user = "xxxxx@163.com"</li> <li>密码(部分邮箱为授权码)<br /> mail_pass = "开通smtp服务时，163邮箱设置弹出的授权码（只会弹出一次，如果忘记重新配置）"</li> <li>邮件发送方邮箱地址<br /> sender = "xxxxx@163.com"</li> </ul> <p>然后填写接收邮箱，主题，内容即可（这部分参考代码参数传递即可，非常简单）</p> <h2 id="测试">【测试】</h2> <p>我们运行脚本，可以看到收到发送成功的日志</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/d5e65f3c797130531d36db039550c21a.jpg" alt="python实现基于smtp发送邮件_在线工具"></p> <p>我们打开163邮箱查看已发送邮箱，可以已发送邮箱中有我们刚才发送的邮件</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/a0745a9e705412864205fd7bc52969a4.jpg" alt="python实现基于smtp发送邮件_在线工具"></p> <p>打开接收方qq邮箱（也可以是其他邮箱）查看是否正确收到邮件</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/b828be745a205012d6ec531962e72906.jpg" alt="python实现基于smtp发送邮件_在线工具"></p> <p>可以看到我们已经正确收到了刚才发送的邮件！</p> <h2 id="总结">【总结】</h2> <p>我们已经通过 python smtp 模块借助163邮箱实现简单的邮件发送，如果是自建邮箱服务器，需要自行将163邮箱服务器地址替换成自己邮箱服务器地址：mail_host = 'smtp.163.com'</p> <p>注意：<strong>163服务器作为发送方，每天有50封邮件上限！</strong> 如果超出数量会发送失败。</p> <h2 id="源码地址">【源码地址】</h2> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://github.com/sevenTiny/CodeArts/blob/master/Python/Mail/email_163.py"  target="_blank" rel="nofollow">https://github.com/sevenTiny/CodeArts/blob/master/Python/Mail/email_163.py</a></p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-73679.htm">使用Python实现KNN算法解决简单分类问题</a></p>
+                                        <p>下一个：<a href="/news/article-74347.htm">女人养猫的十大坏处（女人养猫的十大坏处视频播放）</a></p>
+                                    </div>
+                                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-65888.htm" title="@RequestBody接收实体类时，部分字段丢失的问题">@RequestBody接收实体类时，部分字段丢失的问题</a></li>
+                        <li class="py-2"><a href="/news/article-63418.htm" title="宠物贩卖生意怎么做（宠物贩卖生意怎么做好）">宠物贩卖生意怎么做（宠物贩卖生意怎么做好）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-23-clash-v2ray-ss-ssr.htm" title="VPN美国 | 2月23日22.6M/S|免费VPN/V2ray/Shadowrocket/SSR/Clash免费节点链接地址">VPN美国 | 2月23日22.6M/S|免费VPN/V2ray/Shadowrocket/SSR/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-72342.htm" title="动物疫苗研制过程简述（动物疫苗的研发过程）">动物疫苗研制过程简述（动物疫苗的研发过程）</a></li>
+                        <li class="py-2"><a href="/news/article-67144.htm" title="宠物粮食加工厂加盟条件是什么样的（宠物粮食加工厂需要投资多少钱）">宠物粮食加工厂加盟条件是什么样的（宠物粮食加工厂需要投资多少钱）</a></li>
+                        <li class="py-2"><a href="/news/article-60460.htm" title="猫咪疫苗可以自己打吗怎么可以自己（猫咪疫苗自己能打吗）">猫咪疫苗可以自己打吗怎么可以自己（猫咪疫苗自己能打吗）</a></li>
+                        <li class="py-2"><a href="/news/article-65271.htm" title="动物疫苗行业龙头股票（动物疫苗相关股票）">动物疫苗行业龙头股票（动物疫苗相关股票）</a></li>
+                        <li class="py-2"><a href="/news/article-52307.htm" title="基于Linux下openssl交叉编译详解">基于Linux下openssl交叉编译详解</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-16-node-share-links.htm" title="VPN美国 | 3月16日18.8M/S|免费VPN/SSR/V2ray/Shadowrocket/Clash免费节点链接地址">VPN美国 | 3月16日18.8M/S|免费VPN/SSR/V2ray/Shadowrocket/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-74347.htm" title="女人养猫的十大坏处（女人养猫的十大坏处视频播放）">女人养猫的十大坏处（女人养猫的十大坏处视频播放）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">48</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">66</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About us Section End -->
+        </div>
+        <!-- Main Content End -->
+                <!-- Copyright Start -->
+        <div class="copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+            <p>
+                <a href="/">VPN美国 节点官网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+        <!-- Copyright End -->
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="/assets/website/js/frontend/clashforios/jquery.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/responsivemenu.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/slick.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/masonry.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/custom.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!-- Main Wrapper End -->
+</body>
+
+</html>

@@ -1,0 +1,208 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnamerica.github.io/news/article-79808.htm" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Windows配置kubectl,执行yaml配置文件</title>
+        <meta name="description" content="首先需要rancher里面的配置文件 将点击进去之后的config复制到一个文本文档： 复制到新建的文本文档之后，将文件名改成 config，文件没有后缀名，将改文件放到C:\Users\Admini" />
+        <link rel="icon" href="/assets/website/img/clashforios/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN美国 节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnamerica.github.io/news/article-79808.htm" />
+    <meta property="og:site_name" content="VPN美国 节点官网" />
+    <meta property="og:title" content="Windows配置kubectl,执行yaml配置文件" />
+    <meta property="og:image" content="https://vpnamerica.github.io/uploads/20240922-1/2847c9095b9bf0532495525f70075bc6.webp" />
+        <meta property="og:release_date" content="2025-03-23T08:24:09" />
+    <meta property="og:updated_time" content="2025-03-23T08:24:09" />
+        <meta property="og:description" content="首先需要rancher里面的配置文件 将点击进去之后的config复制到一个文本文档： 复制到新建的文本文档之后，将文件名改成 config，文件没有后缀名，将改文件放到C:\Users\Admini" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Windows配置kubectl,执行yaml配置文件">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/bootstrap.min.css">
+    <!-- Slick Silder CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/slick.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/fontawesome.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/style.css">
+    <!-- Theme Element CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/responsivemenu.css">
+    <!-- Theme Element CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/elements.css">
+    <!-- Color CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/color.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PB3ZYWX2H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5PB3ZYWX2H');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+    
+</head>
+
+<body data-page="detail">
+    <!-- Main Wrapper Start -->
+    <div class="main-wrapper">
+                <header id="header-1" class="header-2">
+            <div class="sticky-header">
+                <div class="container">
+                                        <a href="/" class="logo float-left">
+                        <span>
+                            VPN美国                        </span>
+                    </a>
+                                        <!-- /.logo End -->
+                    <div class="navigation-wrap float-right">
+                        <div class="menu-holder">
+                            <div class="mobile-menu"></div>
+                            <!-- /.mobile-menu End -->
+                            <div class="main-menu navigation">
+                                <nav>
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                            <!-- /.navigation End -->
+                        </div>
+                        <!-- /.menu-holder End -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- /.header-2 End -->
+        <!-- Sub Banner Start -->
+        <div class="sub-banner">
+            <div class="container">
+                <div class="text text-right">
+                    <h1 class="title">Windows配置kubectl,执行yaml配置文件</h1>
+                </div>
+                <nav class="breadcrumb-outer" aria-label="breadcrumb">
+                    <ol class="breadcrumb d-inline-flex">
+                        <li class="breadcrumb-item"><a href="/">首页</a></li>
+                        <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">正文</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Sub Banner End -->
+        <!-- Main Content Start -->
+        <div class="main-content">
+            <!-- About us Section Start -->
+            <section class="about-us mb-30">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                                            <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p>首先需要rancher里面的配置文件<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220606/236455d7410269bd24732b76098403e6.jpg" alt="Windows配置kubectl,执行yaml配置文件"><br /> 将点击进去之后的config复制到一个文本文档：<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220606/1d601ec73098f18d7334a32be59d4d60.jpg" alt="Windows配置kubectl,执行yaml配置文件"><br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220606/a293903f3ae2045754193e71baad8940.jpg" alt="Windows配置kubectl,执行yaml配置文件"><br /> 复制到新建的文本文档之后，将文件名改成 config，文件没有后缀名，将改文件放到C:\Users\Administrator.kube 该路径下。对应电脑的上是C:\用户\用户名.kube 文件下。在kubectl中默认是去该路径下找配置文件。<br /> 然后载windows版的kubectl可执行文件，地址是：https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/windows/amd64/kubectl.exe<br /> 下载下来之后放到一个位置，我这里放到了c盘<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220606/5c1d8e02c10bf97966616ed8079c5868.jpg" alt="Windows配置kubectl,执行yaml配置文件"><br /> 配置环境变量：在path中添加kubectl.exe的路径：<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220606/dad055a2f5760bae1d0366799ebd9d48.jpg" alt="Windows配置kubectl,执行yaml配置文件"><br /> 这里配置上自己的路径即可。<br /> 然后打开黑窗口执行：kubectl查看是否配置成功。<br /> 输入命令：kubectl get nodes<br /> 可以查看当前集群下的节点。<br /> （若重新配置环境变量的话，需要重新打开一个命令行黑窗口）</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-79115.htm">动物医院的故事 动物医院的故事喜马拉雅</a></p>
+                                        <p>下一个：<a href="/news/article-79809.htm">动物疫苗接种间隔时间 动物疫苗接种间隔时间是多久</a></p>
+                                    </div>
+                                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-76383.htm" title="动物疫苗使用方法（动物疫苗接种方法有哪些）">动物疫苗使用方法（动物疫苗接种方法有哪些）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-10-clash-v2ray-ss-ssr.htm" title="VPN美国 | 3月10日21M/S|免费VPN/Clash/Shadowrocket/SSR/V2ray免费节点链接地址">VPN美国 | 3月10日21M/S|免费VPN/Clash/Shadowrocket/SSR/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-13-free-node-subscribe.htm" title="VPN美国 | 3月13日22.4M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址">VPN美国 | 3月13日22.4M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-67766.htm" title="动物医学实训总结500字（动物医学实训报告怎么写）">动物医学实训总结500字（动物医学实训报告怎么写）</a></li>
+                        <li class="py-2"><a href="/news/article-75027.htm" title="动物医院连锁店有哪些名字（动物医院有限公司）">动物医院连锁店有哪些名字（动物医院有限公司）</a></li>
+                        <li class="py-2"><a href="/news/article-79809.htm" title="动物疫苗接种间隔时间 动物疫苗接种间隔时间是多久">动物疫苗接种间隔时间 动物疫苗接种间隔时间是多久</a></li>
+                        <li class="py-2"><a href="/news/article-61029.htm" title="Caused by: java.lang.ClassNotFoundException: springfox.documentation.schema.ModelReference 错误解决">Caused by: java.lang.ClassNotFoundException: springfox.documentation.schema.ModelReference 错误解决</a></li>
+                        <li class="py-2"><a href="/news/article-70384.htm" title="动物疫苗接种注意事项包括哪些（动物疫苗注射工作注意事项）">动物疫苗接种注意事项包括哪些（动物疫苗注射工作注意事项）</a></li>
+                        <li class="py-2"><a href="/news/article-73678.htm" title="@NotEmpty、@NotBlank等注解的正确使用 @Validated和@Valid的区别 解决@NotBlank等注解不生效的问题 使用BindingResult进行接口请求参数的统一校验">@NotEmpty、@NotBlank等注解的正确使用 @Validated和@Valid的区别 解决@NotBlank等注解不生效的问题 使用BindingResult进行接口请求参数的统一校验</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-19-free-subscribe-node.htm" title="VPN美国 | 2月19日18.9M/S|免费VPN/V2ray/Shadowrocket/SSR/Clash免费节点链接地址">VPN美国 | 2月19日18.9M/S|免费VPN/V2ray/Shadowrocket/SSR/Clash免费节点链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">72</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">66</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About us Section End -->
+        </div>
+        <!-- Main Content End -->
+                <!-- Copyright Start -->
+        <div class="copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+            <p>
+                <a href="/">VPN美国 节点官网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+        <!-- Copyright End -->
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="/assets/website/js/frontend/clashforios/jquery.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/responsivemenu.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/slick.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/masonry.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/custom.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!-- Main Wrapper End -->
+</body>
+
+</html>

@@ -1,0 +1,208 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnamerica.github.io/news/article-83998.htm" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>vue路由守卫，限制前端页面访问权限</title>
+        <meta name="description" content="今天给大家写一篇关于vue校验登录状态，如果是非法登录就跳转到登录页面的效果 它的具体实现是一个router.beforeEach的钩子，每次路由切换时触发，写法如下 router.beforeEac" />
+        <link rel="icon" href="/assets/website/img/clashforios/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN美国 节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnamerica.github.io/news/article-83998.htm" />
+    <meta property="og:site_name" content="VPN美国 节点官网" />
+    <meta property="og:title" content="vue路由守卫，限制前端页面访问权限" />
+    <meta property="og:image" content="https://vpnamerica.github.io/uploads/20240922-1/d40fdca270516c15a0d4024409bcb77c.webp" />
+        <meta property="og:release_date" content="2025-03-29T09:01:32" />
+    <meta property="og:updated_time" content="2025-03-29T09:01:32" />
+        <meta property="og:description" content="今天给大家写一篇关于vue校验登录状态，如果是非法登录就跳转到登录页面的效果 它的具体实现是一个router.beforeEach的钩子，每次路由切换时触发，写法如下 router.beforeEac" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="vue路由守卫，限制前端页面访问权限">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/bootstrap.min.css">
+    <!-- Slick Silder CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/slick.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/fontawesome.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/style.css">
+    <!-- Theme Element CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/responsivemenu.css">
+    <!-- Theme Element CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/elements.css">
+    <!-- Color CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/color.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PB3ZYWX2H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5PB3ZYWX2H');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+    
+</head>
+
+<body data-page="detail">
+    <!-- Main Wrapper Start -->
+    <div class="main-wrapper">
+                <header id="header-1" class="header-2">
+            <div class="sticky-header">
+                <div class="container">
+                                        <a href="/" class="logo float-left">
+                        <span>
+                            VPN美国                        </span>
+                    </a>
+                                        <!-- /.logo End -->
+                    <div class="navigation-wrap float-right">
+                        <div class="menu-holder">
+                            <div class="mobile-menu"></div>
+                            <!-- /.mobile-menu End -->
+                            <div class="main-menu navigation">
+                                <nav>
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                            <!-- /.navigation End -->
+                        </div>
+                        <!-- /.menu-holder End -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- /.header-2 End -->
+        <!-- Sub Banner Start -->
+        <div class="sub-banner">
+            <div class="container">
+                <div class="text text-right">
+                    <h1 class="title">vue路由守卫，限制前端页面访问权限</h1>
+                </div>
+                <nav class="breadcrumb-outer" aria-label="breadcrumb">
+                    <ol class="breadcrumb d-inline-flex">
+                        <li class="breadcrumb-item"><a href="/">首页</a></li>
+                        <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">正文</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Sub Banner End -->
+        <!-- Main Content Start -->
+        <div class="main-content">
+            <!-- About us Section Start -->
+            <section class="about-us mb-30">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                                            <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>今天给大家写一篇关于vue校验登录状态，如果是非法登录就跳转到登录页面的效果</p> <p>它的具体实现是一个router.beforeEach的钩子，每次路由切换时触发，写法如下</p> <pre class="has"><code class="language-javascript">router.beforeEach((to, from, next) =&gt; {     next() })</code></pre> <h3>beforeEach函数有三个参数：</h3> <ul> <li>to:即将进入的路由对象</li> <li>from:当前导航即将离开的路由</li> <li>next,进行管道中的一个钩子，如果执行完了，则导航的状态就是 confirmed （确认的）；否则为false，终止导航。</li> </ul> <h3>使用案例Demo</h3> <p>限制登陆功能，具体实现思路：每次跳转路由是判断本地 localStorage.getItem('token') 状态</p> <p>路径：找到router-&gt;index.js如下</p> <pre class="has"><code class="language-javascript">import Vue from 'vue' import Router from 'vue-router' Vue.use(Router)  const router = new Router({   routes: [{       path: '/',       name: 'HelloWorld',       component: HelloWorld     },     {       path: '/login',       name: 'login',       component: login     }   ] }) //下面是重点  router.beforeEach((to, from, next) =&gt; {   let token = localStorage.getItem('token')    if (to.path == '/login') {     next()   } else {     if (token == '' || token == null) {       next('/login');     } else {       next()     }   }  })  export default router;</code></pre> <p>解释：index.js写成如上形式，用const router 接受 new Router对象，最后export暴露出去</p> <p>router.beforeEach 在每次路由跳转出发</p> <p>let token = localStorage.getItem('token')&nbsp; 获取本地没有没token 如果没有就跳到login页面 很简单的逻辑</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-83289.htm">动物疫苗检测中心是干嘛的（动物疫苗查询系统）</a></p>
+                                        <p>下一个：<a href="/news/article-83999.htm">java 示例讲解循环语句的使用_java_</a></p>
+                                    </div>
+                                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-62235.htm" title="做宠物粮生意赚钱吗现在 做宠物粮生意赚钱吗现在怎么样">做宠物粮生意赚钱吗现在 做宠物粮生意赚钱吗现在怎么样</a></li>
+                        <li class="py-2"><a href="/news/article-68407.htm" title="狗粮牌子推荐（狗粮牌子推荐排行榜）">狗粮牌子推荐（狗粮牌子推荐排行榜）</a></li>
+                        <li class="py-2"><a href="/news/article-71020.htm" title="重庆宠物领养平台官网地址（重庆领养宠物在哪领养）">重庆宠物领养平台官网地址（重庆领养宠物在哪领养）</a></li>
+                        <li class="py-2"><a href="/news/article-81867.htm" title="南京宠物领养中心在哪个位置好（南京宠物领养中心在哪个位置好点）">南京宠物领养中心在哪个位置好（南京宠物领养中心在哪个位置好点）</a></li>
+                        <li class="py-2"><a href="/news/article-64650.htm" title="动物医院实践心得怎么写范文大全（动物医院实践心得怎么写范文大全集）">动物医院实践心得怎么写范文大全（动物医院实践心得怎么写范文大全集）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-8-free-node-subscribe.htm" title="VPN美国 | 2月8日21.4M/S|免费VPN/Clash/Shadowrocket/V2ray/SSR免费节点链接地址">VPN美国 | 2月8日21.4M/S|免费VPN/Clash/Shadowrocket/V2ray/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-73678.htm" title="@NotEmpty、@NotBlank等注解的正确使用 @Validated和@Valid的区别 解决@NotBlank等注解不生效的问题 使用BindingResult进行接口请求参数的统一校验">@NotEmpty、@NotBlank等注解的正确使用 @Validated和@Valid的区别 解决@NotBlank等注解不生效的问题 使用BindingResult进行接口请求参数的统一校验</a></li>
+                        <li class="py-2"><a href="/news/article-71019.htm" title="宠物狗粮在哪里买好一点（狗粮在什么地方买）">宠物狗粮在哪里买好一点（狗粮在什么地方买）</a></li>
+                        <li class="py-2"><a href="/news/article-83289.htm" title="动物疫苗检测中心是干嘛的（动物疫苗查询系统）">动物疫苗检测中心是干嘛的（动物疫苗查询系统）</a></li>
+                        <li class="py-2"><a href="/news/article-78416.htm" title="私人出售狗狗的网站（个人出售狗狗信息怎么写范文）">私人出售狗狗的网站（个人出售狗狗信息怎么写范文）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">66</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About us Section End -->
+        </div>
+        <!-- Main Content End -->
+                <!-- Copyright Start -->
+        <div class="copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+            <p>
+                <a href="/">VPN美国 节点官网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+        <!-- Copyright End -->
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="/assets/website/js/frontend/clashforios/jquery.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/responsivemenu.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/slick.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/masonry.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/custom.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!-- Main Wrapper End -->
+</body>
+
+</html>

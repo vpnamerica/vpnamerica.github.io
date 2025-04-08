@@ -1,0 +1,210 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnamerica.github.io/news/article-89773.htm" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>C ++程序实施Rabin-Miller素性测试以检查给定数字是否为素数</title>
+        <meta name="description" content="Rabin-Miller素数测试用于检查给定数字是否为素数。它类似于格式素数和Solovay-Stressen检验。这项测试最早是由俄罗斯数学家MM Artjuhov发现的。 算法 Begin &nb" />
+        <link rel="icon" href="/assets/website/img/clashforios/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN美国 节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnamerica.github.io/news/article-89773.htm" />
+    <meta property="og:site_name" content="VPN美国 节点官网" />
+    <meta property="og:title" content="C ++程序实施Rabin-Miller素性测试以检查给定数字是否为素数" />
+    <meta property="og:image" content="https://vpnamerica.github.io/uploads/20240922-1/c875c402fd48d6a3ac3d1e0ee96b8029.webp" />
+        <meta property="og:release_date" content="2025-04-06T10:08:43" />
+    <meta property="og:updated_time" content="2025-04-06T10:08:43" />
+        <meta property="og:description" content="Rabin-Miller素数测试用于检查给定数字是否为素数。它类似于格式素数和Solovay-Stressen检验。这项测试最早是由俄罗斯数学家MM Artjuhov发现的。 算法 Begin &nb" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="C ++程序实施Rabin-Miller素性测试以检查给定数字是否为素数">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/bootstrap.min.css">
+    <!-- Slick Silder CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/slick.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/fontawesome.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/style.css">
+    <!-- Theme Element CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/responsivemenu.css">
+    <!-- Theme Element CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/elements.css">
+    <!-- Color CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/color.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PB3ZYWX2H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5PB3ZYWX2H');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+    
+</head>
+
+<body data-page="detail">
+    <!-- Main Wrapper Start -->
+    <div class="main-wrapper">
+                <header id="header-1" class="header-2">
+            <div class="sticky-header">
+                <div class="container">
+                                        <a href="/" class="logo float-left">
+                        <span>
+                            VPN美国                        </span>
+                    </a>
+                                        <!-- /.logo End -->
+                    <div class="navigation-wrap float-right">
+                        <div class="menu-holder">
+                            <div class="mobile-menu"></div>
+                            <!-- /.mobile-menu End -->
+                            <div class="main-menu navigation">
+                                <nav>
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                            <!-- /.navigation End -->
+                        </div>
+                        <!-- /.menu-holder End -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- /.header-2 End -->
+        <!-- Sub Banner Start -->
+        <div class="sub-banner">
+            <div class="container">
+                <div class="text text-right">
+                    <h1 class="title">C ++程序实施Rabin-Miller素性测试以检查给定数字是否为素数</h1>
+                </div>
+                <nav class="breadcrumb-outer" aria-label="breadcrumb">
+                    <ol class="breadcrumb d-inline-flex">
+                        <li class="breadcrumb-item"><a href="/">首页</a></li>
+                        <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">正文</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Sub Banner End -->
+        <!-- Main Content Start -->
+        <div class="main-content">
+            <!-- About us Section Start -->
+            <section class="about-us mb-30">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                                            <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<p>Rabin-Miller素数测试用于检查给定数字是否为素数。它类似于格式素数和Solovay-Stressen检验。这项测试最早是由俄罗斯数学家MM Artjuhov发现的。</p> <h2>算法</h2> <pre>Begin &nbsp;&nbsp;&nbsp;ll&nbsp;mulmod(ll&nbsp;a,&nbsp;ll&nbsp;b,&nbsp;ll&nbsp;m) &nbsp;&nbsp;&nbsp;ll&nbsp;x&nbsp;=&nbsp;0,y&nbsp;=&nbsp;a&nbsp;mod&nbsp;m &nbsp;&nbsp;&nbsp;while&nbsp;(b&nbsp;&gt;&nbsp;0) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(b&nbsp;mod&nbsp;2&nbsp;==&nbsp;1) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;compute&nbsp;x&nbsp;=&nbsp;(x&nbsp;+&nbsp;y)&nbsp;mod&nbsp;m &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y&nbsp;=&nbsp;(y&nbsp;*&nbsp;2)&nbsp;mod&nbsp;m &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b&nbsp;=&nbsp;b/&nbsp;2 &nbsp;&nbsp;&nbsp;return&nbsp;x&nbsp;mod&nbsp;m. End  Begin &nbsp;&nbsp;&nbsp;ll&nbsp;modulo(ll&nbsp;base,&nbsp;ll&nbsp;e,&nbsp;ll&nbsp;m) &nbsp;&nbsp;&nbsp;Initialize: &nbsp;&nbsp;&nbsp;ll&nbsp;x&nbsp;=&nbsp;1 &nbsp;&nbsp;&nbsp;ll&nbsp;y&nbsp;=&nbsp;base &nbsp;&nbsp;&nbsp;while&nbsp;(e&nbsp;&gt;&nbsp;0) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(e&nbsp;mod&nbsp;2&nbsp;==&nbsp;1) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;=&nbsp;(x&nbsp;*&nbsp;y)&nbsp;mod&nbsp;m &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y&nbsp;=&nbsp;(y&nbsp;*&nbsp;y)&nbsp;mod&nbsp;m &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e&nbsp;=&nbsp;e&nbsp;/&nbsp;2; &nbsp;&nbsp;&nbsp;return&nbsp;x&nbsp;mod&nbsp;m End  Begin &nbsp;&nbsp;&nbsp;bool&nbsp;Miller(ll&nbsp;p,&nbsp;int&nbsp;iteration) &nbsp;&nbsp;&nbsp;if&nbsp;(p&nbsp;&lt;&nbsp;2) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;false &nbsp;&nbsp;&nbsp;if&nbsp;(p&nbsp;!=&nbsp;2&nbsp;and&nbsp;p&nbsp;mod&nbsp;2==0) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;false; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compute:&nbsp;ll&nbsp;s&nbsp;=&nbsp;p&nbsp;-&nbsp;1 &nbsp;&nbsp;&nbsp;while&nbsp;(s&nbsp;mod&nbsp;2&nbsp;==&nbsp;0) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s&nbsp;=&nbsp;s/&nbsp;2; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;i&nbsp;=&nbsp;0&nbsp;to&nbsp;iteration&nbsp;-&nbsp;1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ll&nbsp;a&nbsp;=&nbsp;rand()&nbsp;mod&nbsp;(p&nbsp;-&nbsp;1)&nbsp;+&nbsp;1,&nbsp;temp&nbsp;=&nbsp;s &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ll&nbsp;mod&nbsp;=&nbsp;modulo(a,&nbsp;temp,&nbsp;p) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;(temp&nbsp;!=&nbsp;p&nbsp;-&nbsp;1&nbsp;and&nbsp;mod&nbsp;!=&nbsp;1&nbsp;and&nbsp;mod&nbsp;!=&nbsp;p&nbsp;-&nbsp;1) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mod&nbsp;=&nbsp;mulmod(mod,&nbsp;mod,&nbsp;p); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;temp&nbsp;*=&nbsp;2; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(mod&nbsp;!=&nbsp;p&nbsp;-&nbsp;1&nbsp;&amp;&amp;&nbsp;temp&nbsp;%&nbsp;2&nbsp;==&nbsp;0) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;false &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;true End</pre> <h2>范例程式码</h2> <pre>#include&nbsp;&lt;iostream&gt; #include&lt;stdlib.h&gt; #define&nbsp;ll&nbsp;long&nbsp;long using&nbsp;namespace&nbsp;std; ll&nbsp;mulmod(ll&nbsp;a,&nbsp;ll&nbsp;b,&nbsp;ll&nbsp;m)//It&nbsp;returns&nbsp;true&nbsp;if&nbsp;number&nbsp;is&nbsp;prime&nbsp;otherwise&nbsp;false&nbsp;{ &nbsp;&nbsp;&nbsp;ll&nbsp;x&nbsp;=&nbsp;0,y&nbsp;=&nbsp;a&nbsp;%&nbsp;m; &nbsp;&nbsp;&nbsp;while&nbsp;(b&nbsp;&gt;&nbsp;0)&nbsp;{ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(b&nbsp;%&nbsp;2&nbsp;==&nbsp;1)&nbsp;{ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;=&nbsp;(x&nbsp;+&nbsp;y)&nbsp;%&nbsp;m; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y&nbsp;=&nbsp;(y&nbsp;*&nbsp;2)&nbsp;%&nbsp;m; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b&nbsp;/=&nbsp;2; &nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;&nbsp;return&nbsp;x&nbsp;%&nbsp;m; }  ll&nbsp;modulo(ll&nbsp;base,&nbsp;ll&nbsp;e,&nbsp;ll&nbsp;m)&nbsp;{ &nbsp;&nbsp;&nbsp;ll&nbsp;x&nbsp;=&nbsp;1; &nbsp;&nbsp;&nbsp;ll&nbsp;y&nbsp;=&nbsp;base; &nbsp;&nbsp;&nbsp;while&nbsp;(e&nbsp;&gt;&nbsp;0)&nbsp;{ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(e&nbsp;%&nbsp;2&nbsp;==&nbsp;1) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;=&nbsp;(x&nbsp;*&nbsp;y)&nbsp;%&nbsp;m; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y&nbsp;=&nbsp;(y&nbsp;*&nbsp;y)&nbsp;%&nbsp;m; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e&nbsp;=&nbsp;e&nbsp;/&nbsp;2; &nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;&nbsp;return&nbsp;x&nbsp;%&nbsp;m; }  bool&nbsp;Miller(ll&nbsp;p,&nbsp;int&nbsp;iteration)&nbsp;{ &nbsp;&nbsp;&nbsp;if&nbsp;(p&nbsp;&lt;&nbsp;2)&nbsp;{ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;false; &nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;&nbsp;if&nbsp;(p&nbsp;!=&nbsp;2&nbsp;&amp;&amp;&nbsp;p&nbsp;%&nbsp;2==0)&nbsp;{ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;false; &nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;&nbsp;ll&nbsp;s&nbsp;=&nbsp;p&nbsp;-&nbsp;1; &nbsp;&nbsp;&nbsp;while&nbsp;(s&nbsp;%&nbsp;2&nbsp;==&nbsp;0)&nbsp;{ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s&nbsp;/=&nbsp;2; &nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;&nbsp;for&nbsp;(int&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;iteration;&nbsp;i++)&nbsp;{ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ll&nbsp;a&nbsp;=&nbsp;rand()&nbsp;%&nbsp;(p&nbsp;-&nbsp;1)&nbsp;+&nbsp;1,&nbsp;temp&nbsp;=&nbsp;s; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ll&nbsp;mod&nbsp;=&nbsp;modulo(a,&nbsp;temp,&nbsp;p); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;(temp&nbsp;!=&nbsp;p&nbsp;-&nbsp;1&nbsp;&amp;&amp;&nbsp;mod&nbsp;!=&nbsp;1&nbsp;&amp;&amp;&nbsp;mod&nbsp;!=&nbsp;p&nbsp;-&nbsp;1)&nbsp;{ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mod&nbsp;=&nbsp;mulmod(mod,&nbsp;mod,&nbsp;p); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;temp&nbsp;*=&nbsp;2; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(mod&nbsp;!=&nbsp;p&nbsp;-&nbsp;1&nbsp;&amp;&amp;&nbsp;temp&nbsp;%&nbsp;2&nbsp;==&nbsp;0)&nbsp;{ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;false; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;&nbsp;return&nbsp;true; }  int&nbsp;main()&nbsp;{ &nbsp;&nbsp;&nbsp;int&nbsp;iteration&nbsp;=&nbsp;10; &nbsp;&nbsp;&nbsp;ll&nbsp;num; &nbsp;&nbsp;&nbsp;cout&lt;&lt;"Enter&nbsp;integer&nbsp;to&nbsp;test&nbsp;primality:&nbsp;"; &nbsp;&nbsp;&nbsp;cin&gt;&gt;num; &nbsp;&nbsp;&nbsp;if&nbsp;(Miller(num,&nbsp;iteration)) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&lt;&lt;num&lt;&lt;"&nbsp;is&nbsp;prime"&lt;&lt;endl; &nbsp;&nbsp;&nbsp;else &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&lt;&lt;num&lt;&lt;"&nbsp;is&nbsp;not&nbsp;prime"&lt;&lt;endl; &nbsp;&nbsp;&nbsp;return&nbsp;0; }</pre> <p>输出结果</p> <pre>Enter&nbsp;integer&nbsp;to&nbsp;test&nbsp;primality:&nbsp;26 26&nbsp;is&nbsp;not&nbsp;prime</pre> <div></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-89046.htm">吉泰动物医院怎么样好不好呢（吉泰动物医院怎么样好不好呢）</a></p>
+                                        <p>下一个：<a href="/news/article-89774.htm">宠物领养的平台有哪些呢（宠物领养的平台有哪些呢）</a></p>
+                                    </div>
+                                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-4-4-free-node-subscribe-links.htm" title="VPN美国 | 4月4日21.9M/S|免费VPN/Clash/SSR/V2ray/Shadowrocket免费节点链接地址">VPN美国 | 4月4日21.9M/S|免费VPN/Clash/SSR/V2ray/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-7-node-share-links.htm" title="VPN美国 | 4月7日20.2M/S|免费VPN/V2ray/Shadowrocket/SSR/Clash免费节点链接地址">VPN美国 | 4月7日20.2M/S|免费VPN/V2ray/Shadowrocket/SSR/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-75027.htm" title="动物医院连锁店有哪些名字（动物医院有限公司）">动物医院连锁店有哪些名字（动物医院有限公司）</a></li>
+                        <li class="py-2"><a href="/news/article-71020.htm" title="重庆宠物领养平台官网地址（重庆领养宠物在哪领养）">重庆宠物领养平台官网地址（重庆领养宠物在哪领养）</a></li>
+                        <li class="py-2"><a href="/news/article-83999.htm" title="java 示例讲解循环语句的使用_java_">java 示例讲解循环语句的使用_java_</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-8-clash-v2ray-ss-ssr.htm" title="VPN美国 | 4月8日22.1M/S|免费VPN/V2ray/Clash/SSR/Shadowrocket免费节点链接地址">VPN美国 | 4月8日22.1M/S|免费VPN/V2ray/Clash/SSR/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-89774.htm" title="宠物领养的平台有哪些呢（宠物领养的平台有哪些呢）">宠物领养的平台有哪些呢（宠物领养的平台有哪些呢）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-17-node-share.htm" title="VPN美国 | 3月17日21M/S|免费VPN/Clash/SSR/Shadowrocket/V2ray免费节点链接地址">VPN美国 | 3月17日21M/S|免费VPN/Clash/SSR/Shadowrocket/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-79809.htm" title="动物疫苗接种间隔时间 动物疫苗接种间隔时间是多久">动物疫苗接种间隔时间 动物疫苗接种间隔时间是多久</a></li>
+                        <li class="py-2"><a href="/news/article-87579.htm" title="在我所在的城市有一家宠物医院用英语怎么说写（在我所在的城市有一家宠物医院英文）">在我所在的城市有一家宠物医院用英语怎么说写（在我所在的城市有一家宠物医院英文）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">24</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About us Section End -->
+        </div>
+        <!-- Main Content End -->
+                <!-- Copyright Start -->
+        <div class="copyright">
+                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+            <p>
+                <a href="/">VPN美国 节点官网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+        <!-- Copyright End -->
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="/assets/website/js/frontend/clashforios/jquery.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/responsivemenu.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/slick.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/masonry.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/custom.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!-- Main Wrapper End -->
+</body>
+
+</html>

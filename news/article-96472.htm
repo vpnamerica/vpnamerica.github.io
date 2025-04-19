@@ -1,0 +1,210 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnamerica.github.io/news/article-96472.htm" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Kafka消费者rebalanced异常分析</title>
+        <meta name="description" content="异常 org.apache.kafka.clients.consumer.CommitFailedException: Commit cannot  be completed since the gr" />
+        <link rel="icon" href="/assets/website/img/clashforios/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN美国 节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnamerica.github.io/news/article-96472.htm" />
+    <meta property="og:site_name" content="VPN美国 节点官网" />
+    <meta property="og:title" content="Kafka消费者rebalanced异常分析" />
+    <meta property="og:image" content="https://vpnamerica.github.io/uploads/20240922-1/7619a75e0c34e3cff335df8d42c8ac14.webp" />
+        <meta property="og:release_date" content="2025-04-15T06:01:14" />
+    <meta property="og:updated_time" content="2025-04-15T06:01:14" />
+        <meta property="og:description" content="异常 org.apache.kafka.clients.consumer.CommitFailedException: Commit cannot  be completed since the gr" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Kafka消费者rebalanced异常分析">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/bootstrap.min.css">
+    <!-- Slick Silder CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/slick.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/fontawesome.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/style.css">
+    <!-- Theme Element CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/responsivemenu.css">
+    <!-- Theme Element CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/elements.css">
+    <!-- Color CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/color.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PB3ZYWX2H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5PB3ZYWX2H');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+    
+</head>
+
+<body data-page="detail">
+    <!-- Main Wrapper Start -->
+    <div class="main-wrapper">
+                <header id="header-1" class="header-2">
+            <div class="sticky-header">
+                <div class="container">
+                                        <a href="/" class="logo float-left">
+                        <span>
+                            VPN美国                        </span>
+                    </a>
+                                        <!-- /.logo End -->
+                    <div class="navigation-wrap float-right">
+                        <div class="menu-holder">
+                            <div class="mobile-menu"></div>
+                            <!-- /.mobile-menu End -->
+                            <div class="main-menu navigation">
+                                <nav>
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                            <!-- /.navigation End -->
+                        </div>
+                        <!-- /.menu-holder End -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- /.header-2 End -->
+        <!-- Sub Banner Start -->
+        <div class="sub-banner">
+            <div class="container">
+                <div class="text text-right">
+                    <h1 class="title">Kafka消费者rebalanced异常分析</h1>
+                </div>
+                <nav class="breadcrumb-outer" aria-label="breadcrumb">
+                    <ol class="breadcrumb d-inline-flex">
+                        <li class="breadcrumb-item"><a href="/">首页</a></li>
+                        <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">正文</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Sub Banner End -->
+        <!-- Main Content Start -->
+        <div class="main-content">
+            <!-- About us Section Start -->
+            <section class="about-us mb-30">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                                            <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <h2> <a id="_0" rel="nofollow"></a>异常</h2> <pre><code class="prism language-java"><span class="token class-name"><span class="token namespace">org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>kafka<span class="token punctuation">.</span>clients<span class="token punctuation">.</span>consumer<span class="token punctuation">.</span></span>CommitFailedException</span><span class="token operator">:</span> <span class="token class-name">Commit</span> cannot  be completed since the group has already rebalanced and assigned the  partitions <span class="token keyword">to</span> <span class="token namespace">another</span> <span class="token class-name"><span class="token namespace">member<span class="token punctuation">.</span></span> This</span> means that the time between  subsequent calls <span class="token keyword">to</span> <span class="token namespace">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span> was longer than the configured  max<span class="token punctuation">.</span>poll<span class="token punctuation">.</span>interval<span class="token punctuation">.</span>ms<span class="token punctuation">,</span> which typically implies that the poll loop is  spending too much time message <span class="token class-name"><span class="token namespace">processing<span class="token punctuation">.</span></span> You</span> can address <span class="token keyword">this</span> either  by increasing the session timeout or by reducing the maximum size of   batches returned in <span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">with</span> <span class="token namespace">max<span class="token punctuation">.</span>poll<span class="token punctuation">.</span>records<span class="token punctuation">.</span></span> </code></pre> <p>大概意思：该Consumer不能提交offset了，应为分区已经分配给另一个消费者。是因为你的两次poll的间隔(<strong>poll会发送心跳</strong>)大于你要报告给server的最大时间(<strong>max.poll.interval.ms</strong>)。解决办法是，要么增加超时时间，要么减少每次poll回来的消息个数(<strong>max.poll.records</strong>)。</p> <h2> <a id="_14" rel="nofollow"></a>参数解释</h2> <p>max.poll.interval.ms：两次poll的最大间隔时间，超过该时间则被kafka认为是挂掉了。<br /> 需要注意的是，如果我们采取的是先消费完拉取的任务，再提交offset的模式，要确保消费完这些任务的时间小于max.poll.interval.ms。<br /> 但是一般情况下我们采用的是另起线程或者线程池的方式消费消息。</p> <p>session.timeout.ms：检测心跳的最长时间间隔。如果超过该时间没有检测到心跳，则认为该消费者挂掉。</p> <p>poll(timeout)：timeout的表示，如果主题中有消息，则拉取，否则等待timeout的时间后再拉取。调用poll方法的时候回发送心跳。</p> <p>max.poll.records：最大拉取多少条记录。</p> <p><strong>注</strong>：在0.10.1之后的版本中，poll会启动两个线程，一个用于拉取消息。一个用于专门上报心跳，间隔是heartbeat.interval.ms。注意这个时间要小于session.timeout.ms。<br /> 这样的好处是：就算消费消息的时间超过了max.poll.interval.ms，也会应为有专门的线程在上报心跳，而不会将该消费者移除。</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-95735.htm">宠物免费领养中心官网查询系统（宠物免费领养中心官网查询系统）</a></p>
+                                        <p>下一个：<a href="/news/article-96474.htm">淮北哪里有收养流浪狗的（淮北哪里有领养狗狗的）</a></p>
+                                    </div>
+                                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-3-14-node-share-links.htm" title="VPN美国 | 3月14日20.6M/S|免费VPN/Shadowrocket/V2ray/Clash/SSR免费节点链接地址">VPN美国 | 3月14日20.6M/S|免费VPN/Shadowrocket/V2ray/Clash/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-93470.htm" title="瑞鹏宠物医院价目表疫苗（瑞鹏宠物医院在哪些城市有）">瑞鹏宠物医院价目表疫苗（瑞鹏宠物医院在哪些城市有）</a></li>
+                        <li class="py-2"><a href="/news/article-76382.htm" title="如何修改项目加载包默认的node_modules路径">如何修改项目加载包默认的node_modules路径</a></li>
+                        <li class="py-2"><a href="/news/article-80473.htm" title="动物防疫工作方针以及实施原因（动物防疫工作的方针）">动物防疫工作方针以及实施原因（动物防疫工作的方针）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-23-free-node-subscribe-links.htm" title="VPN美国 | 3月23日22.1M/S|免费VPN/V2ray/Shadowrocket/SSR/Clash免费节点链接地址">VPN美国 | 3月23日22.1M/S|免费VPN/V2ray/Shadowrocket/SSR/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-1-free-node-subscribe.htm" title="VPN美国 | 4月1日21.3M/S|免费VPN/V2ray/Shadowrocket/SSR/Clash免费节点链接地址">VPN美国 | 4月1日21.3M/S|免费VPN/V2ray/Shadowrocket/SSR/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-29-node-share.htm" title="VPN美国 | 3月29日19.3M/S|免费VPN/SSR/Shadowrocket/V2ray/Clash免费节点链接地址">VPN美国 | 3月29日19.3M/S|免费VPN/SSR/Shadowrocket/V2ray/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-91270.htm" title="打动物疫苗有什么过敏反应吗图片（动物疫苗过敏应该用什么药物急救）">打动物疫苗有什么过敏反应吗图片（动物疫苗过敏应该用什么药物急救）</a></li>
+                        <li class="py-2"><a href="/news/article-88314.htm" title="三国杀限定技能（三国杀限定技能大全）">三国杀限定技能（三国杀限定技能大全）</a></li>
+                        <li class="py-2"><a href="/news/article-81867.htm" title="南京宠物领养中心在哪个位置好（南京宠物领养中心在哪个位置好点）">南京宠物领养中心在哪个位置好（南京宠物领养中心在哪个位置好点）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">45</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About us Section End -->
+        </div>
+        <!-- Main Content End -->
+                <!-- Copyright Start -->
+        <div class="copyright">
+                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+            <p>
+                <a href="/">VPN美国 节点官网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+        <!-- Copyright End -->
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="/assets/website/js/frontend/clashforios/jquery.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/responsivemenu.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/slick.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/masonry.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/custom.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!-- Main Wrapper End -->
+</body>
+
+</html>

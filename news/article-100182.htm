@@ -1,0 +1,213 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnamerica.github.io/news/article-100182.htm" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>pyenv与pyenv-virtualenv的安装和使用（Mac）</title>
+        <meta name="description" content="使用Pyenv方便管理/切换Python版本  1、安装 # 通过 Homebrew 安装 brew update brew install pyenv 2、配置  编辑配置文件  # 使用 zsh " />
+        <link rel="icon" href="/assets/website/img/clashforios/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN美国 节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnamerica.github.io/news/article-100182.htm" />
+    <meta property="og:site_name" content="VPN美国 节点官网" />
+    <meta property="og:title" content="pyenv与pyenv-virtualenv的安装和使用（Mac）" />
+    <meta property="og:image" content="https://vpnamerica.github.io/uploads/20240922-1/00185899b2187070469714b47e3ff255.webp" />
+        <meta property="og:release_date" content="2025-04-20T09:03:49" />
+    <meta property="og:updated_time" content="2025-04-20T09:03:49" />
+        <meta property="og:description" content="使用Pyenv方便管理/切换Python版本  1、安装 # 通过 Homebrew 安装 brew update brew install pyenv 2、配置  编辑配置文件  # 使用 zsh " />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="pyenv与pyenv-virtualenv的安装和使用（Mac）">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/bootstrap.min.css">
+    <!-- Slick Silder CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/slick.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/fontawesome.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/style.css">
+    <!-- Theme Element CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/responsivemenu.css">
+    <!-- Theme Element CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/elements.css">
+    <!-- Color CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/color.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/responsive.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PB3ZYWX2H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5PB3ZYWX2H');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+    
+</head>
+
+<body data-page="detail">
+    <!-- Main Wrapper Start -->
+    <div class="main-wrapper">
+                <header id="header-1" class="header-2">
+            <div class="sticky-header">
+                <div class="container">
+                                        <a href="/" class="logo float-left">
+                        <span>
+                            VPN美国                        </span>
+                    </a>
+                                        <!-- /.logo End -->
+                    <div class="navigation-wrap float-right">
+                        <div class="menu-holder">
+                            <div class="mobile-menu"></div>
+                            <!-- /.mobile-menu End -->
+                            <div class="main-menu navigation">
+                                <nav>
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                            <!-- /.navigation End -->
+                        </div>
+                        <!-- /.menu-holder End -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- /.header-2 End -->
+        <!-- Sub Banner Start -->
+        <div class="sub-banner">
+            <div class="container">
+                <div class="text text-right">
+                    <h1 class="title">pyenv与pyenv-virtualenv的安装和使用（Mac）</h1>
+                </div>
+                <nav class="breadcrumb-outer" aria-label="breadcrumb">
+                    <ol class="breadcrumb d-inline-flex">
+                        <li class="breadcrumb-item"><a href="/">首页</a></li>
+                        <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">正文</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Sub Banner End -->
+        <!-- Main Content Start -->
+        <div class="main-content">
+            <!-- About us Section Start -->
+            <section class="about-us mb-30">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                                            <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                <div class="xcblog-blog-detail">
+                      				  				  				<div id="content_views" class="htmledit_views"> <blockquote> <p>使用Pyenv方便管理/切换Python版本</p> </blockquote> <h3>1、安装</h3> <pre># 通过 Homebrew 安装 brew update brew install pyenv</pre> <h3>2、配置</h3> <ol> <li>编辑配置文件</li> </ol> <pre># 使用 zsh shell vim ~/.zshrc  # 使用系统默认 vim ~/.bash_profile</pre> <p>在<strong>.zshrc</strong>&nbsp;或<strong>.bash_profile</strong>&nbsp;文件最后写入：</p> <pre>export PYENV_ROOT="$HOME/.pyenv" export PATH="$PYENV_ROOT/bin:$PATH"  if which pyenv &gt; /dev/null;   then eval "$(pyenv init -)"; fi</pre> <ol> <li>使配置生效</li> </ol> <pre>source ~/.zshrc # or source ~/.bash_profile</pre> <h3>3、使用</h3> <ul> <li>查看可安装的版本</li> </ul> <pre>pyenv install --list</pre> <ul> <li>安装python版本</li> </ul> <pre>pyenv install 3.6.3</pre> <ul> <li>查看当前已安装的python版本</li> </ul> <pre>pyenv versions</pre> <p><a href="http://img.555519.xyz/uploads3/20220904/d6b1d96b943b826ddaf1befba2988db8.jpg" rel="nofollow" class="fancybox" data-fancybox-group="button"><img decoding="async" alt="2017-11-01-14-52-01" class="has" src="http://img.555519.xyz/uploads3/20220904/d6b1d96b943b826ddaf1befba2988db8.jpg"></a></p> <p><em>已安装3.6.2 与 3.6.3 版本, 当前使用的版本: 3.6.3</em></p> <ul> <li>设置python版本</li> </ul> <pre># 对所有的Shell全局有效，会把版本号写入到~/.pyenv/version文件中 pyenv global 3.6.3  # 只对当前目录有效，会在当前目录创建.python-version文件 pyenv local 3.6.3  # 只在当前会话有效 pyenv shell 3.6.3  # 可通过配置PYENV_VERSION环境变量或编辑~/.python-version文件设置会话默认使用的python版本 echo "3.6.3" &gt; ~/.python-version # or echo 'export PYENV_VERSION="3.6.3"' &gt;&gt; ~/.zshrc &amp;&amp; source ~/.zshrc</pre> <ul> <li>重置版本设置</li> </ul> <blockquote> <p>只有 pyenv shell 和 pyenv local 命令有--unset参数</p> </blockquote> <pre>pyenv shell --unset pyenv local --unset</pre> <ul> <li>卸载版本</li> </ul> <pre>pyenv uninstall 3.6.3</pre> <h2><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://github.com/pyenv/pyenv-virtualenv"  rel="nofollow">pyenv-virtualenv</a></h2> <blockquote> <p>pyenv-virtualenv 是pyenv的插件，为pyenv设置的python版本提供隔离的虚拟环境，设置虚拟环境后，在当前目录下面安装的第三方库都不会影响其他环境</p> </blockquote> <h3>1、安装</h3> <pre>brew update brew install pyenv-virtualenv</pre> <h3>2、配置</h3> <ol> <li>编辑配置文件</li> </ol> <pre># 使用 zsh shell vim ~/.zshrc  # 使用系统默认 vim ~/.bash_profile</pre> <p>在<strong>.zshrc</strong>&nbsp;或<strong>.bash_profile</strong>&nbsp;文件最后写入：</p> <pre># pyenv-virtualenv if which pyenv-virtualenv-init &gt; /dev/null;   then eval "$(pyenv virtualenv-init -)"; fi</pre> <ol> <li>使配置生效</li> </ol> <pre>source ~/.zshrc # or source ~/.bash_profile</pre> <h3>3、使用</h3> <ul> <li>从当前版本创建virtualenv</li> </ul> <pre># 当前版本为3.6.3 pyenv virtualenv xxx-3.6.3</pre> <ul> <li>指定版本创建virtualenv</li> </ul> <pre>#pyenv virtualenv 版本号 虚拟环境名 pyenv virtualenv 3.6.3 xxx-3.6.3</pre> <ul> <li>查看已创建的virtualenv</li> </ul> <pre>pyenv versions</pre> <p><a href="http://img.555519.xyz/uploads3/20220904/c5ef1325c441bd8c8f1fe4e7ba22c844.jpg" rel="nofollow" class="fancybox" data-fancybox-group="button"><img decoding="async" alt="2017-11-01-17-20-55" class="has" src="http://img.555519.xyz/uploads3/20220904/c5ef1325c441bd8c8f1fe4e7ba22c844.jpg"></a></p> <ul> <li>激活和停用virtualenv</li> </ul> <pre># 手动激活 pyenv activate 虚拟环境名 pyenv deactivate  # 自动激活 # 使用pyenv local 虚拟环境名 # 会把`虚拟环境名`写入当前目录的.python-version文件中 # 关闭自动激活 -&gt; pyenv deactivate # 启动自动激活 -&gt; pyenv activate xxx-3.6.3 pyenv local xxx-3.6.3</pre> <ul> <li>删除现有virtualenv</li> </ul> <pre>pyenv uninstall 虚拟环境名</pre> </div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-99419.htm">动物疫苗价格查询官网入口网址是什么（动物疫苗的正确使用方法）</a></p>
+                                        <p>下一个：<a href="/news/article-100183.htm">MongoDB利用oplog恢复数据的方法_MongoDB_</a></p>
+                                    </div>
+                                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-4-22-node-share.htm" title="VPN美国 | 4月22日21.4M/S|免费VPN/SSR/Clash/Shadowrocket/V2ray免费节点链接地址">VPN美国 | 4月22日21.4M/S|免费VPN/SSR/Clash/Shadowrocket/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-19-free-node-subscribe-links.htm" title="VPN美国 | 3月19日22.2M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址">VPN美国 | 3月19日22.2M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-77049.htm" title="react实战系列起步（mockjs、第一个模块、docusaurus）">react实战系列起步（mockjs、第一个模块、docusaurus）</a></li>
+                        <li class="py-2"><a href="/news/article-76383.htm" title="动物疫苗使用方法（动物疫苗接种方法有哪些）">动物疫苗使用方法（动物疫苗接种方法有哪些）</a></li>
+                        <li class="py-2"><a href="/news/article-76382.htm" title="如何修改项目加载包默认的node_modules路径">如何修改项目加载包默认的node_modules路径</a></li>
+                        <li class="py-2"><a href="/news/article-77050.htm" title="郭碧婷与向佐街头甜蜜牵手，激发众人羡慕的恩爱氛围！">郭碧婷与向佐街头甜蜜牵手，激发众人羡慕的恩爱氛围！</a></li>
+                        <li class="py-2"><a href="/news/article-98609.htm" title="宠物领养协议文案简短范文 宠物领养协议文案简短范文大全">宠物领养协议文案简短范文 宠物领养协议文案简短范文大全</a></li>
+                        <li class="py-2"><a href="/news/article-79808.htm" title="Windows配置kubectl,执行yaml配置文件">Windows配置kubectl,执行yaml配置文件</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-6-free-node-subscribe.htm" title="VPN美国 | 3月6日22.2M/S|免费VPN/SSR/V2ray/Clash/Shadowrocket免费节点链接地址">VPN美国 | 3月6日22.2M/S|免费VPN/SSR/V2ray/Clash/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-74347.htm" title="女人养猫的十大坏处（女人养猫的十大坏处视频播放）">女人养猫的十大坏处（女人养猫的十大坏处视频播放）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">68</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About us Section End -->
+        </div>
+        <!-- Main Content End -->
+                <!-- Copyright Start -->
+        <div class="copyright">
+                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+            <p>
+                <a href="/">VPN美国 节点官网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+        <!-- Copyright End -->
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="/assets/website/js/frontend/clashforios/jquery.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/responsivemenu.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/slick.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/masonry.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/custom.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!-- Main Wrapper End -->
+</body>
+
+</html>

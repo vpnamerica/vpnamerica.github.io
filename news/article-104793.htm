@@ -1,0 +1,213 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnamerica.github.io/news/article-104793.htm" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Spring Boot整合Kafka的简单用例(@KafkaListener注解)</title>
+        <meta name="description" content="第一步、启动zookeeper server和kafka server 启动zookeeper server：bin/zookeeper-server-start.sh config/zookeepe" />
+        <link rel="icon" href="/assets/website/img/clashforios/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN美国 节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnamerica.github.io/news/article-104793.htm" />
+    <meta property="og:site_name" content="VPN美国 节点官网" />
+    <meta property="og:title" content="Spring Boot整合Kafka的简单用例(@KafkaListener注解)" />
+    <meta property="og:image" content="https://vpnamerica.github.io/uploads/20240922-1/3a9aa17cef90880053cf7eaaa374654e.webp" />
+        <meta property="og:release_date" content="2025-04-26T07:39:57" />
+    <meta property="og:updated_time" content="2025-04-26T07:39:57" />
+        <meta property="og:description" content="第一步、启动zookeeper server和kafka server 启动zookeeper server：bin/zookeeper-server-start.sh config/zookeepe" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Spring Boot整合Kafka的简单用例(@KafkaListener注解)">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/bootstrap.min.css">
+    <!-- Slick Silder CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/slick.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/fontawesome.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/style.css">
+    <!-- Theme Element CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/responsivemenu.css">
+    <!-- Theme Element CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/elements.css">
+    <!-- Color CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/color.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/responsive.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PB3ZYWX2H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5PB3ZYWX2H');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+    
+</head>
+
+<body data-page="detail">
+    <!-- Main Wrapper Start -->
+    <div class="main-wrapper">
+                <header id="header-1" class="header-2">
+            <div class="sticky-header">
+                <div class="container">
+                                        <a href="/" class="logo float-left">
+                        <span>
+                            VPN美国                        </span>
+                    </a>
+                                        <!-- /.logo End -->
+                    <div class="navigation-wrap float-right">
+                        <div class="menu-holder">
+                            <div class="mobile-menu"></div>
+                            <!-- /.mobile-menu End -->
+                            <div class="main-menu navigation">
+                                <nav>
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                            <!-- /.navigation End -->
+                        </div>
+                        <!-- /.menu-holder End -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- /.header-2 End -->
+        <!-- Sub Banner Start -->
+        <div class="sub-banner">
+            <div class="container">
+                <div class="text text-right">
+                    <h1 class="title">Spring Boot整合Kafka的简单用例(@KafkaListener注解)</h1>
+                </div>
+                <nav class="breadcrumb-outer" aria-label="breadcrumb">
+                    <ol class="breadcrumb d-inline-flex">
+                        <li class="breadcrumb-item"><a href="/">首页</a></li>
+                        <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">正文</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Sub Banner End -->
+        <!-- Main Content Start -->
+        <div class="main-content">
+            <!-- About us Section Start -->
+            <section class="about-us mb-30">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                                            <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<div id="content_views" class="markdown_views prism-atom-one-light"> <h2 id="第一步启动zookeeper-server和kafka-server"><strong>第一步、启动zookeeper server和kafka server</strong></h2> <p>启动zookeeper server：bin/zookeeper-server-start.sh config/zookeeper.properties<br /> 启动两个kafka server：bin/kafka-server-start.sh config/server-1.properties；<br /> bin/kafka-server-start.sh config/server.properties<br /> zookeeper会选举一个作为leader，另外一个作为slave</p> <h2 id="第二步创建一个maven项目"><strong>第二步、创建一个maven项目</strong></h2> <p>这一篇中修改了Spring Boot的版本为2.0.0，pom.xml如下：</p> <pre class="prettyprint"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">dependencyManagement</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">dependencies</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>spring-boot-dependencies<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>2.0.0.RELEASE<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">type</span>&gt;</span>pom<span class="hljs-tag">&lt;/<span class="hljs-title">type</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">scope</span>&gt;</span>import<span class="hljs-tag">&lt;/<span class="hljs-title">scope</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">dependencies</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">dependencyManagement</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">dependencies</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>spring-boot-starter-web<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>org.springframework.kafka<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>spring-kafka<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>2.1.4.RELEASE<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span></code></pre> <h2 id="第三步kafka配置"><strong>第三步、kafka配置</strong></h2> <pre class="prettyprint"><code class="hljs java"><span class="hljs-annotation">@Configuration</span><span class="hljs-annotation">@EnableKafka</span><span class="hljs-keyword">public</span><span class="hljs-class"><span class="hljs-keyword">class</span><span class="hljs-title">KafkaConfig</span> {<!-- --></span><span class="hljs-comment">/* --------------producer configuration-----------------**/</span><span class="hljs-annotation">@Bean</span><span class="hljs-keyword">public</span> Map&lt;String, Object&gt;<span class="hljs-title">producerConfigs</span>() {         Map&lt;String, Object&gt; props =<span class="hljs-keyword">new</span> HashMap&lt;&gt;();         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG,<span class="hljs-string">"localhost:9092,localhost:9093"</span>);         props.put(ProducerConfig.RETRIES_CONFIG,<span class="hljs-number">0</span>);         props.put(ProducerConfig.BATCH_SIZE_CONFIG,<span class="hljs-number">16384</span>);         props.put(ProducerConfig.LINGER_MS_CONFIG,<span class="hljs-number">1</span>);         props.put(ProducerConfig.BUFFER_MEMORY_CONFIG,<span class="hljs-number">33554432</span>);         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);<span class="hljs-keyword">return</span> props;     }<span class="hljs-annotation">@Bean</span><span class="hljs-keyword">public</span> ProducerFactory&lt;String, String&gt;<span class="hljs-title">producerFactory</span>() {<span class="hljs-keyword">return</span><span class="hljs-keyword">new</span> DefaultKafkaProducerFactory&lt;&gt;(producerConfigs());     }<span class="hljs-comment">/* --------------consumer configuration-----------------**/</span><span class="hljs-annotation">@Bean</span><span class="hljs-keyword">public</span> Map&lt;String, Object&gt;<span class="hljs-title">consumerConfigs</span>() {         Map&lt;String, Object&gt; props =<span class="hljs-keyword">new</span> HashMap&lt;&gt;();         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,<span class="hljs-string">"localhost:9092,localhost:9093"</span>);         props.put(ConsumerConfig.GROUP_ID_CONFIG,<span class="hljs-string">"0"</span>);         props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG,<span class="hljs-keyword">true</span>);         props.put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG,<span class="hljs-number">100</span>);         props.put(ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG,<span class="hljs-string">"15000"</span>);         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);<span class="hljs-keyword">return</span> props;     }<span class="hljs-annotation">@Bean</span>     ConcurrentKafkaListenerContainerFactory&lt;String, String&gt;     kafkaListenerContainerFactory() {         ConcurrentKafkaListenerContainerFactory&lt;String, String&gt; factory =<span class="hljs-keyword">new</span> ConcurrentKafkaListenerContainerFactory&lt;&gt;();         factory.setConsumerFactory(consumerFactory());<span class="hljs-keyword">return</span> factory;     }<span class="hljs-annotation">@Bean</span><span class="hljs-keyword">public</span> ConsumerFactory&lt;String, String&gt;<span class="hljs-title">consumerFactory</span>() {<span class="hljs-keyword">return</span><span class="hljs-keyword">new</span> DefaultKafkaConsumerFactory&lt;&gt;(consumerConfigs());     }<span class="hljs-annotation">@Bean</span><span class="hljs-comment">//消息监听器</span><span class="hljs-keyword">public</span> MyListener<span class="hljs-title">myListener</span>() {<span class="hljs-keyword">return</span><span class="hljs-keyword">new</span> MyListener();     }<span class="hljs-comment">/* --------------kafka template configuration-----------------**/</span><span class="hljs-annotation">@Bean</span><span class="hljs-keyword">public</span> KafkaTemplate&lt;String,String&gt;<span class="hljs-title">kafkaTemplate</span>() {         KafkaTemplate&lt;String, String&gt; kafkaTemplate =<span class="hljs-keyword">new</span> KafkaTemplate&lt;&gt;(producerFactory());<span class="hljs-keyword">return</span> kafkaTemplate;     }  }</code></pre> <h2 id="第四步topic的配置"><strong>第四步、topic的配置</strong></h2> <p><strong>自动创建的topic分区数是1，复制因子是0</strong></p> <pre class="prettyprint"><code class="hljs java"><span class="hljs-annotation">@Configuration</span><span class="hljs-annotation">@EnableKafka</span><span class="hljs-keyword">public</span><span class="hljs-class"><span class="hljs-keyword">class</span><span class="hljs-title">TopicConfig</span> {<!-- --></span><span class="hljs-annotation">@Bean</span><span class="hljs-keyword">public</span> KafkaAdmin<span class="hljs-title">kafkaAdmin</span>() {         Map&lt;String, Object&gt; configs =<span class="hljs-keyword">new</span> HashMap&lt;&gt;();         configs.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG,<span class="hljs-string">"localhost:9092,localhost:9093"</span>);<span class="hljs-keyword">return</span><span class="hljs-keyword">new</span> KafkaAdmin(configs);     }<span class="hljs-annotation">@Bean</span><span class="hljs-keyword">public</span> NewTopic<span class="hljs-title">foo</span>() {         /第一个是参数是topic名字，第二个参数是分区个数，第三个是topic的复制因子个数<span class="hljs-comment">//当broker个数为1个时会创建topic失败，</span><span class="hljs-comment">//提示：replication factor: 2 larger than available brokers: 1</span><span class="hljs-comment">//只有在集群中才能使用kafka的备份功能</span><span class="hljs-keyword">return</span><span class="hljs-keyword">new</span> NewTopic(<span class="hljs-string">"foo"</span>,<span class="hljs-number">10</span>, (<span class="hljs-keyword">short</span>)<span class="hljs-number">2</span>);     }<span class="hljs-annotation">@Bean</span><span class="hljs-keyword">public</span> NewTopic<span class="hljs-title">bar</span>() {<span class="hljs-keyword">return</span><span class="hljs-keyword">new</span> NewTopic(<span class="hljs-string">"bar"</span>,<span class="hljs-number">10</span>, (<span class="hljs-keyword">short</span>)<span class="hljs-number">2</span>);     }<span class="hljs-annotation">@Bean</span><span class="hljs-keyword">public</span> NewTopic<span class="hljs-title">topic1</span>(){<span class="hljs-keyword">return</span><span class="hljs-keyword">new</span> NewTopic(<span class="hljs-string">"topic1"</span>,<span class="hljs-number">10</span>, (<span class="hljs-keyword">short</span>)<span class="hljs-number">2</span>);     }<span class="hljs-annotation">@Bean</span><span class="hljs-keyword">public</span> NewTopic<span class="hljs-title">topic2</span>(){<span class="hljs-keyword">return</span><span class="hljs-keyword">new</span> NewTopic(<span class="hljs-string">"topic2"</span>,<span class="hljs-number">10</span>, (<span class="hljs-keyword">short</span>)<span class="hljs-number">2</span>);     } }</code></pre> <h2 id="第五步使用kafkalistener注解"><strong>第五步、使用@KafkaListener注解</strong></h2> <p><strong>topicPartitions和topics、topicPattern不能同时使用</strong></p> <pre class="prettyprint"><code class="hljs cs"><span class="hljs-keyword">public</span><span class="hljs-keyword">class</span> MyListener {     @KafkaListener(id =<span class="hljs-string">"myContainer1"</span>,<span class="hljs-comment">//id是消费者监听容器</span>             topicPartitions =<span class="hljs-comment">//配置topic和分区：监听两个topic，分别为topic1、topic2，topic1只接收分区0，3的消息，</span><span class="hljs-comment">//topic2接收分区0和分区1的消息，但是分区1的消费者初始位置为5</span>             { @TopicPartition(topic =<span class="hljs-string">"topic1"</span>, partitions = {<span class="hljs-string">"0"</span>,<span class="hljs-string">"3"</span> }),                     @TopicPartition(topic =<span class="hljs-string">"topic2"</span>, partitions =<span class="hljs-string">"0"</span>,                             partitionOffsets = @PartitionOffset(partition =<span class="hljs-string">"1"</span>, initialOffset =<span class="hljs-string">"4"</span>))             })<span class="hljs-keyword">public</span><span class="hljs-keyword">void</span><span class="hljs-title">listen</span>(ConsumerRecord&lt;?, ?&gt; record) {         System.<span class="hljs-keyword">out</span>.println(<span class="hljs-string">"topic"</span> + record.topic());         System.<span class="hljs-keyword">out</span>.println(<span class="hljs-string">"key:"</span> + record.key());         System.<span class="hljs-keyword">out</span>.println(<span class="hljs-string">"value:"</span>+record.<span class="hljs-keyword">value</span>());     }       @KafkaListener(id =<span class="hljs-string">"myContainer2"</span>,topics = {<!-- --><span class="hljs-string">"foo"</span>,<span class="hljs-string">"bar"</span>})<span class="hljs-keyword">public</span><span class="hljs-keyword">void</span><span class="hljs-title">listen2</span>(ConsumerRecord&lt;?, ?&gt; record){         System.<span class="hljs-keyword">out</span>.println(<span class="hljs-string">"topic："</span> + record.topic());         System.<span class="hljs-keyword">out</span>.println(<span class="hljs-string">"key:"</span> + record.key());         System.<span class="hljs-keyword">out</span>.println(<span class="hljs-string">"value:"</span>+record.<span class="hljs-keyword">value</span>());     } }</code></pre> <h2 id="第六步创建发送消息的接口"><strong>第六步、创建发送消息的接口</strong></h2> <pre class="prettyprint"><code class="hljs java"><span class="hljs-annotation">@RestController</span><span class="hljs-keyword">public</span><span class="hljs-class"><span class="hljs-keyword">class</span><span class="hljs-title">KafkaController</span> {<!-- --></span><span class="hljs-keyword">private</span><span class="hljs-keyword">final</span><span class="hljs-keyword">static</span> Logger logger = LoggerFactory.getLogger(KafkaController.class);<span class="hljs-annotation">@Autowired</span><span class="hljs-keyword">private</span>  KafkaTemplate&lt;String,String&gt; kafkaTemplate;<span class="hljs-annotation">@RequestMapping</span>(value =<span class="hljs-string">"/{topic}/send"</span>,method = RequestMethod.GET)<span class="hljs-keyword">public</span><span class="hljs-keyword">void</span><span class="hljs-title">sendMeessageTotopic1</span>(@PathVariable String topic,@<span class="hljs-title">RequestParam</span>(value =<span class="hljs-string">"partition"</span>,defaultValue =<span class="hljs-string">"0"</span>)<span class="hljs-keyword">int</span> partition) {         logger.info(<span class="hljs-string">"start send message to {}"</span>,topic);         kafkaTemplate.send(topic,partition,<span class="hljs-string">"你"</span>,<span class="hljs-string">"好"</span>);     } }</code></pre> <h2 id="第七步启动程序调用接口"><strong>第七步、启动程序、调用接口</strong></h2> <p>消息监听器只监听订阅的topic的特定分区的消息<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220608/fa489922b53cecdf3b0dd97c50b0845d.jpg" alt="Spring Boot整合Kafka的简单用例(@KafkaListener注解)"><br /> 源码：https://github.com/NapWells/java_framework_learn/tree/master/springkafka2</p> </div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-104788.htm">@NotEmpty、@NotBlank等注解的正确使用 @Validated和@Valid的区别 解决@NotBlank等注解不生效的问题 使用BindingResult进行接口请求参数的统一校验</a></p>
+                                        <p>下一个：<a href="/news/article-105492.htm">中国宠物食品排名（中国宠物食品排名榜）</a></p>
+                                    </div>
+                                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-88314.htm" title="三国杀限定技能（三国杀限定技能大全）">三国杀限定技能（三国杀限定技能大全）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-21-free-subscribe-node.htm" title="VPN美国 | 3月21日19.4M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址">VPN美国 | 3月21日19.4M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-12-node-share.htm" title="VPN美国 | 3月12日19.3M/S|免费VPN/SSR/V2ray/Shadowrocket/Clash免费节点链接地址">VPN美国 | 3月12日19.3M/S|免费VPN/SSR/V2ray/Shadowrocket/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-91997.htm" title="JDK内置锁深入探究">JDK内置锁深入探究</a></li>
+                        <li class="py-2"><a href="/news/article-91270.htm" title="打动物疫苗有什么过敏反应吗图片（动物疫苗过敏应该用什么药物急救）">打动物疫苗有什么过敏反应吗图片（动物疫苗过敏应该用什么药物急救）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-7-node-share-links.htm" title="VPN美国 | 4月7日20.2M/S|免费VPN/V2ray/Shadowrocket/SSR/Clash免费节点链接地址">VPN美国 | 4月7日20.2M/S|免费VPN/V2ray/Shadowrocket/SSR/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-70384.htm" title="动物疫苗接种注意事项包括哪些（动物疫苗注射工作注意事项）">动物疫苗接种注意事项包括哪些（动物疫苗注射工作注意事项）</a></li>
+                        <li class="py-2"><a href="/news/article-98609.htm" title="宠物领养协议文案简短范文 宠物领养协议文案简短范文大全">宠物领养协议文案简短范文 宠物领养协议文案简短范文大全</a></li>
+                        <li class="py-2"><a href="/news/article-96474.htm" title="淮北哪里有收养流浪狗的（淮北哪里有领养狗狗的）">淮北哪里有收养流浪狗的（淮北哪里有领养狗狗的）</a></li>
+                        <li class="py-2"><a href="/news/article-86154.htm" title="动物疫苗合格证怎么办理流程视频（动物疫苗证书）">动物疫苗合格证怎么办理流程视频（动物疫苗证书）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">80</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About us Section End -->
+        </div>
+        <!-- Main Content End -->
+                <!-- Copyright Start -->
+        <div class="copyright">
+                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+            <p>
+                <a href="/">VPN美国 节点官网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+        <!-- Copyright End -->
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="/assets/website/js/frontend/clashforios/jquery.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/responsivemenu.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/slick.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/masonry.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/custom.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!-- Main Wrapper End -->
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnamerica.github.io/news/article-107332.htm" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Spring的注解是如何解析的</title>
+        <meta name="description" content="上一篇https://www.cnblogs.com/redwinter/p/16196359.html 介绍了BeanFactoryPostProcessor的执行过程，这篇文章介绍Spring中配" />
+        <link rel="icon" href="/assets/website/img/clashforios/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN美国 节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnamerica.github.io/news/article-107332.htm" />
+    <meta property="og:site_name" content="VPN美国 节点官网" />
+    <meta property="og:title" content="Spring的注解是如何解析的" />
+    <meta property="og:image" content="https://vpnamerica.github.io/uploads/20240922-1/84a0c82e235b7e6b5727fd001191ae81.webp" />
+        <meta property="og:release_date" content="2025-04-29T08:03:29" />
+    <meta property="og:updated_time" content="2025-04-29T08:03:29" />
+        <meta property="og:description" content="上一篇https://www.cnblogs.com/redwinter/p/16196359.html 介绍了BeanFactoryPostProcessor的执行过程，这篇文章介绍Spring中配" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Spring的注解是如何解析的">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/bootstrap.min.css">
+    <!-- Slick Silder CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/slick.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/fontawesome.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/style.css">
+    <!-- Theme Element CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/responsivemenu.css">
+    <!-- Theme Element CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/elements.css">
+    <!-- Color CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/color.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/assets/website/css/clashforios/responsive.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PB3ZYWX2H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5PB3ZYWX2H');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+    
+</head>
+
+<body data-page="detail">
+    <!-- Main Wrapper Start -->
+    <div class="main-wrapper">
+                <header id="header-1" class="header-2">
+            <div class="sticky-header">
+                <div class="container">
+                                        <a href="/" class="logo float-left">
+                        <span>
+                            VPN美国                        </span>
+                    </a>
+                                        <!-- /.logo End -->
+                    <div class="navigation-wrap float-right">
+                        <div class="menu-holder">
+                            <div class="mobile-menu"></div>
+                            <!-- /.mobile-menu End -->
+                            <div class="main-menu navigation">
+                                <nav>
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                            <!-- /.navigation End -->
+                        </div>
+                        <!-- /.menu-holder End -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- /.header-2 End -->
+        <!-- Sub Banner Start -->
+        <div class="sub-banner">
+            <div class="container">
+                <div class="text text-right">
+                    <h1 class="title">Spring的注解是如何解析的</h1>
+                </div>
+                <nav class="breadcrumb-outer" aria-label="breadcrumb">
+                    <ol class="breadcrumb d-inline-flex">
+                        <li class="breadcrumb-item"><a href="/">首页</a></li>
+                        <li class="breadcrumb-item"><a href="/news/">新闻资讯</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">正文</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Sub Banner End -->
+        <!-- Main Content Start -->
+        <div class="main-content">
+            <!-- About us Section Start -->
+            <section class="about-us mb-30">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                                            <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<p>上一篇https://www.cnblogs.com/redwinter/p/16196359.html 介绍了<code>BeanFactoryPostProcessor</code>的执行过程，这篇文章介绍<code>Spring</code>中配置的注解是如何通过<code>ConfigurationClassPostProcessor</code>解析的，另外分析下<code>Spring Boot</code>自动装配是如何处理的。</p> <h3 id="configurationclasspostprocessor-解析了哪些注解">ConfigurationClassPostProcessor 解析了哪些注解？</h3> <p>在上一篇文章https://www.cnblogs.com/redwinter/p/16196359.html  我们知道<code>ConfigurationClassPostProcessor</code>实际上是<code>BeanFactoryPostProcessor</code>的一个实现类，他特殊的地方是他还实现了<code>BeanDefinitionRegisterPostProcessor</code>接口，所以<code>ConfigurationClassPostProcessor</code> 既要实现<code>BeanFactoryPostProcessor</code>的接口方法<code>postProcessBeanFactory</code>也要实现<code>BeanDefinitionRegisterPostProcessor</code>的接口方法<code>postProcessBeanDefinitionRegistry</code>，并且在解析的时候先执行了<code>postProcessBeanDefinitionRegistry</code>方法，再执行了<code>postProcessBeanDefinitionRegistry</code>方法。</p> <p>接下来我们看看<code>postProcessBeanDefinitionRegistry</code>做了什么？</p> <p>上源码：</p> <pre><code class="language-java">@Override public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) {   int registryId = System.identityHashCode(registry);   if (this.registriesPostProcessed.contains(registryId)) {     throw new IllegalStateException(       "postProcessBeanDefinitionRegistry already called on this post-processor against " + registry);   }   if (this.factoriesPostProcessed.contains(registryId)) {     throw new IllegalStateException(       "postProcessBeanFactory already called on this post-processor against " + registry);   }   this.registriesPostProcessed.add(registryId);   // 处理配置的BeanDefinition   processConfigBeanDefinitions(registry); }</code></pre> <p>整个方法核心是执行了<code>processConfigBeanDefinitions</code>方法，这个方法非常的长并且逻辑也复杂，代码我就不贴了，说一下大概的流程（较详细）：</p> <ul> <li>先进行合格的<code>beanDefinition</code>的检查 <ul> <li>获取到注解的元数据信息</li> <li>判断是包含<code>@Configuration</code>注解，包含则合格，否则判断是否包含了<code>@Component</code>、<code>@ComponentScan</code>、<code>@Import</code>、<code>@ImportResource</code>注解，包含则合格，如果都不包含则不合格</li> </ul> </li> <li>对合格的<code>BeanDefinition</code>排序</li> <li>创建一个解析<code>@Configuration</code>注解的解析器</li> <li>对合格的<code>BeanDefinition</code>集合进行解析 <ul> <li>循环解析，最终调用<code>processConfigurationClass</code>方法</li> <li>判断是否跳过解析，比如配置了<code>@Conditional</code>注解的</li> <li>调用<code>doProcessConfigurationClass</code>方法开始解析（下面的解析中可能会存在递归调用） <ul> <li>解析<code>@Component</code>注解 <ul> <li>判断是否包含内部类标记了<code>@Component</code>，比如在标有<code>@Component</code>注解的类里面创建一个内部类也标记了<code>@Component</code>注解，如果有就会进行递归调用<code>processConfigurationClass</code>方法</li> </ul> </li> <li>解析<code>@PropertySources</code>和<code>@PropertySource</code>注解 <ul> <li>比如标记<code>@PropertySource("classpath:jdbc.properties")</code>，这样就会把这个属性的值全部解析到环境信息的<code>propertySources</code>属性中</li> </ul> </li> <li>解析<code>@ComponetScans</code>和<code>@ComponentScan</code>注解 <ul> <li>比如配置了扫描的包，那么就会扫描出合格的<code>BeanDefinition</code>，然后递归解析</li> </ul> </li> <li>解析<code>@Import</code>注解（<code>Spring Boot</code>自动装配的实现） <ul> <li>递归解析出标记了<code>@Import</code>注解的类放在<code>imports</code>属性中</li> <li>解析<code>ImportSelector</code>接口的实现类</li> <li>调用<code>ImportSelector#selectImports</code>方法解析需要注册的类</li> <li>递归调用<code>processImports</code>方法，然后将需要注册的类注册到<code>importBeanDefinitionRegistrars</code>（这里会在后面进行<code>loadBeanDefinition</code>）</li> </ul> </li> <li>解析<code>@ImportResource</code>注解 <ul> <li>比如解析配置的<code>Spring</code>的<code>xml</code>配置文件，最终放到<code>importedResources</code>属性中（后面会进行<code>loadBeanDefinition</code>）</li> </ul> </li> <li>解析<code>@Bean</code>注解 <ul> <li>比如解析当前类标记了<code>@Bean</code>的方法</li> <li>然后放在<code>beanMethods</code>属性中（后面会进行<code>loadBeanDefinition</code>）</li> </ul> </li> </ul> </li> <li>加载<code>BeanDefinition</code>从上面解析出来的类中 <ul> <li>循环遍历加载<code>BeanDefinition</code></li> <li>判断是否跳过，比如实现了<code>Condition</code>接口的类</li> <li>加载标有<code>@Bean</code>的<code>BeanDefinition</code></li> <li>加载从<code>ImportResource</code>中解析的<code>BeanDefinition</code></li> <li>加载从<code>ImportSelector</code>中配置的解析的<code>BeanDefinition</code></li> </ul> </li> </ul> </li> </ul> <p>整个过程非常复杂，而且存在递归操作，读者可以按照我写的步骤进行<code>debug</code>调试，当然可能会出现到处跳转不知所措的情况，多调几遍就好了，只要知道大致的流程，应该还是不难的。</p> <p>总的来说就是解析了这些注解：<code>@Component</code>、<code>@PropertySource</code>、<code>@PropertySources</code>、<code>@ComponentScan</code>、<code>@ComponentScans</code>、<code>@Import</code>、<code>@ImportResource</code>、<code>@Bean</code>，然后将标有这些注解的解析成<code>BeanDefinition</code>，如果加上了<code>@Conditionnal</code>注解，那么按照条件进行解析。<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/6b603a946de94ea3d2b7c30fad2c3c19.jpg" alt="Spring的注解是如何解析的"></p> <h3 id="自定义自动装配">自定义自动装配</h3> <p>现在开发都是用<code>SpringBoot</code>，原因在于他非常的方便，引入即可使用，那么他是做到的呢？众所周知<code>Spring Boot</code>有几个注解非常重要，比如：<code>@SpringBootApplication</code>、<code>@EnableAutoConfiguration</code>、<code>@SpringBootConfiguration</code>，其中最重要的是<code>@EnableAutoConfiguration</code>，这个注解里面标记了<code>@Import(AutoConfigurationImportSelector.class)</code>，当然还标记了其他的，我们现在只关心这个<code>@Import</code>，里面放入了一个<code>AutoConfigurationImportSelector</code>类。</p> <p><code>AutoConfigurationImportSelector</code>类实现了<code>DeferredImportSelector</code>接口，这个<code>DeferredImportSelector</code>接口是<code>ImportSelector</code>的子接口，表示延迟导入的意思。在上面的分析中，其实最主要的是实现他的接口<code>selectImports</code>，直接源码：</p> <pre><code class="language-java">@Override public String[] selectImports(AnnotationMetadata annotationMetadata) {   if (!isEnabled(annotationMetadata)) {     return NO_IMPORTS;   }   // 获取自动装配的实体   AutoConfigurationEntry autoConfigurationEntry = getAutoConfigurationEntry(annotationMetadata);   return StringUtils.toStringArray(autoConfigurationEntry.getConfigurations()); }  protected AutoConfigurationEntry getAutoConfigurationEntry(AnnotationMetadata annotationMetadata) {   if (!isEnabled(annotationMetadata)) {     return EMPTY_ENTRY;   }   AnnotationAttributes attributes = getAttributes(annotationMetadata);   // 获取合格（候选）的配置   List&lt;String&gt; configurations = getCandidateConfigurations(annotationMetadata, attributes);   configurations = removeDuplicates(configurations);   Set&lt;String&gt; exclusions = getExclusions(annotationMetadata, attributes);   checkExcludedClasses(configurations, exclusions);   configurations.removeAll(exclusions);   configurations = getConfigurationClassFilter().filter(configurations);   fireAutoConfigurationImportEvents(configurations, exclusions);   return new AutoConfigurationEntry(configurations, exclusions); }  protected List&lt;String&gt; getCandidateConfigurations(AnnotationMetadata metadata, AnnotationAttributes attributes) {   // 加载配置，根据factoryType，这里的FactoryType就是@EnableAutoConfiguration注解   List&lt;String&gt; configurations = SpringFactoriesLoader.loadFactoryNames(getSpringFactoriesLoaderFactoryClass(),                                                                        getBeanClassLoader());   Assert.notEmpty(configurations, "No auto configuration classes found in META-INF/spring.factories. If you "                   + "are using a custom packaging, make sure that file is correct.");   return configurations; }  protected Class&lt;?&gt; getSpringFactoriesLoaderFactoryClass() {   // 直接返回@EnableAutoConfiguration 注解   return EnableAutoConfiguration.class; }   public static List&lt;String&gt; loadFactoryNames(Class&lt;?&gt; factoryType, @Nullable ClassLoader classLoader) {   String factoryTypeName = factoryType.getName();   // 加载spring.factories文件并解析   return loadSpringFactories(classLoader).getOrDefault(factoryTypeName, Collections.emptyList()); }  private static Map&lt;String, List&lt;String&gt;&gt; loadSpringFactories(@Nullable ClassLoader classLoader) {   MultiValueMap&lt;String, String&gt; result = cache.get(classLoader);   if (result != null) {     return result;   }    try      // 这里获取的url就是：     // public static final String FACTORIES_RESOURCE_LOCATION = "META-INF/spring.factories";     Enumeration&lt;URL&gt; urls = (classLoader != null ?                              classLoader.getResources(FACTORIES_RESOURCE_LOCATION) :                              ClassLoader.getSystemResources(FACTORIES_RESOURCE_LOCATION));     result = new LinkedMultiValueMap&lt;&gt;();     while (urls.hasMoreElements()) {       URL url = urls.nextElement();       UrlResource resource = new UrlResource(url);       // 读取属性文件，获取到key为EnableAutoConfiguration，value为需要加载的类       Properties properties = PropertiesLoaderUtils.loadProperties(resource);       for (Map.Entry&lt;?, ?&gt; entry : properties.entrySet()) {         String factoryTypeName = ((String) entry.getKey()).trim();         for (String factoryImplementationName : StringUtils.commaDelimitedListToStringArray((String) entry.getValue())) {           result.add(factoryTypeName, factoryImplementationName.trim());         }       }     }     cache.put(classLoader, result);     return result;   }   catch (IOException ex) {     throw new IllegalArgumentException("Unable to load factories from location [" +                                        FACTORIES_RESOURCE_LOCATION + "]", ex);   } }</code></pre> <p>所以我们也可以自己写一个进行自动装配，接下来实现一个简单的自动装配。</p> <h4 id="定义自动装配注解">定义自动装配注解</h4> <pre><code class="language-java">/**  * @author &lt;a href="https://www.cnblogs.com/redwinter/"&gt;redwinter&lt;/a&gt;  * @since 1.0  **/ @Target(ElementType.TYPE) @Retention(RetentionPolicy.RUNTIME) @Import(MyImportSelector.class) public @interface EnableRedwinterAutoConfiguration { }</code></pre> <h4 id="创建myinportselector类">创建MyInportSelector类</h4> <pre><code class="language-java">/**  * @author &lt;a href="https://www.cnblogs.com/redwinter/"&gt;redwinter&lt;/a&gt;  * @since 1.0  **/ public class MyImportSelector implements DeferredImportSelector {   @Override   public String[] selectImports(AnnotationMetadata importingClassMetadata) {     ClassLoader classLoader = this.getClass().getClassLoader();     // 加载需要装配的类     List&lt;String&gt; configurations = SpringFactoriesLoader.loadFactoryNames(getFactoryTypeClass(), classLoader);     return configurations.toArray(new String[configurations.size()]);   }    private Class&lt;?&gt; getFactoryTypeClass() {     return EnableRedwinterAutoConfiguration.class;   }   }</code></pre> <h4 id="创建启动类">创建启动类</h4> <pre><code class="language-java">/**  * @author &lt;a href="https://www.cnblogs.com/redwinter/"&gt;redwinter&lt;/a&gt;  * @since 1.0  **/ @Configuration @EnableRedwinterAutoConfiguration public class RedwinterApplication {   	public static void main(String[] args) { 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(); 		context.scan("com.redwinter.test.config"); 		context.refresh(); 	} }</code></pre> <h4 id="创建需要装配的类">创建需要装配的类</h4> <pre><code class="language-java">/**  * @author &lt;a href=""https://www.cnblogs.com/redwinter/"&gt;redwinter&lt;/a&gt;  * @since 1.0  **/ @Configuration public class MyConfiguration {  	@Bean 	@Conditional(RedwinterStrCondition.class) 	public String myStr() { 		return "redwinter"; 	}  	public static class RedwinterStrCondition implements ConfigurationCondition {  		@Override 		public ConfigurationPhase getConfigurationPhase() { 			return ConfigurationPhase.REGISTER_BEAN; 		}  		@Override 		public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) { 			System.out.println("开始匹配。。。"); 			return true; 		} 	}  }</code></pre> <h4 id="创建springfactories文件">创建spring.factories文件</h4> <pre><code class="language-properties">com.redwinter.test.config.EnableRedwinterAutoConfiguration=\   com.redwinter.test.config.MyConfiguration</code></pre> <h4 id="启动验证">启动验证</h4> <p>debug断点：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/35beb98bc4efe5fc0f40e3ecc0e07b06.jpg" alt="Spring的注解是如何解析的"></p> <p>这就是<code>Spring Boot</code>自动装配的简化版，总得来说我们完成了<code>Spring</code> 对<code>BeanFactoryPostProcessor</code>的执行过程的解析，包括<code>Spring</code>是如何进行注解解析的，其实就是<code>Spring</code>在对<code>BeanDefinition</code>在正式初始化为<code>Bean</code>的前置处理，所以我们可以这个阶段进行很多扩展，比如占位符的处理<code>PropertySourcesPlaceholderConfigurer</code>等。</p> <p>接下来接续解读<code>AbstractApplicationContext#refresh</code>方法对<code>BeanPostProcessor</code>的注册。</p> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-107331.htm">vue 动态追加输入框 下拉框 动态v-model绑定</a></p>
+                                        <p>下一个：<a href="/news/article-108122.htm">宠物粮食厂家有些款不能网上销售吗（宠物粮食供应商真的赚钱吗）</a></p>
+                                    </div>
+                                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-86154.htm" title="动物疫苗合格证怎么办理流程视频（动物疫苗证书）">动物疫苗合格证怎么办理流程视频（动物疫苗证书）</a></li>
+                        <li class="py-2"><a href="/news/article-106317.htm" title="Unity 贝塞尔曲线之美">Unity 贝塞尔曲线之美</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-22-node-share.htm" title="VPN美国 | 4月22日21.4M/S|免费VPN/SSR/Clash/Shadowrocket/V2ray免费节点链接地址">VPN美国 | 4月22日21.4M/S|免费VPN/SSR/Clash/Shadowrocket/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-93471.htm" title="狗粮颗粒机器价格图片（狗粮颗粒机器价格图片及价格）">狗粮颗粒机器价格图片（狗粮颗粒机器价格图片及价格）</a></li>
+                        <li class="py-2"><a href="/news/article-97150.htm" title="动物疫苗接种方法视频教学（动物疫苗接种方法及注意事项）">动物疫苗接种方法视频教学（动物疫苗接种方法及注意事项）</a></li>
+                        <li class="py-2"><a href="/news/article-103904.htm" title="动物疫苗企业名单公布最新消息（动物疫苗生产厂家排名）">动物疫苗企业名单公布最新消息（动物疫苗生产厂家排名）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-26-free-high-speed-nodes.htm" title="VPN美国 | 4月26日23M/S|免费VPN/SSR/Shadowrocket/V2ray/Clash免费节点链接地址">VPN美国 | 4月26日23M/S|免费VPN/SSR/Shadowrocket/V2ray/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-89774.htm" title="宠物领养的平台有哪些呢（宠物领养的平台有哪些呢）">宠物领养的平台有哪些呢（宠物领养的平台有哪些呢）</a></li>
+                        <li class="py-2"><a href="/news/article-93470.htm" title="瑞鹏宠物医院价目表疫苗（瑞鹏宠物医院在哪些城市有）">瑞鹏宠物医院价目表疫苗（瑞鹏宠物医院在哪些城市有）</a></li>
+                        <li class="py-2"><a href="/news/article-104788.htm" title="@NotEmpty、@NotBlank等注解的正确使用 @Validated和@Valid的区别 解决@NotBlank等注解不生效的问题 使用BindingResult进行接口请求参数的统一校验">@NotEmpty、@NotBlank等注解的正确使用 @Validated和@Valid的区别 解决@NotBlank等注解不生效的问题 使用BindingResult进行接口请求参数的统一校验</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">3</span> <a href="/date/2025-05/" title="2025-05 归档">2025-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">89</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About us Section End -->
+        </div>
+        <!-- Main Content End -->
+                <!-- Copyright Start -->
+        <div class="copyright">
+                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+            <p>
+                <a href="/">VPN美国 节点官网</a> 版权所有 Powered by WordPress
+            </p>
+        </div>
+        <!-- Copyright End -->
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="/assets/website/js/frontend/clashforios/jquery.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/responsivemenu.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/slick.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/masonry.min.js"></script>
+        <script src="/assets/website/js/frontend/clashforios/custom.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+    <!-- Main Wrapper End -->
+</body>
+
+</html>

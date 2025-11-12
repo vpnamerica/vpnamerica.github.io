@@ -334,24 +334,9 @@ SS服务器解密请求，将其转发至目标网站，并获取返回数据。
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 订阅被墙或无法下载如何绕过？</h5></div>
+    <div class="panel-heading"><h5>Mihomo 如何启用 TUN 模式？</h5></div>
     <div class="panel-body">
-        若订阅源被直接屏蔽，可尝试先在境外服务器上用代理代理获取订阅并通过中转服务器公开一个新的链接；或者使用 HTTPS 与 CDN 中转、或将订阅以文件形式托管在不易被封的云存储上。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekoray 的订阅更新支持自动导入节点吗？</h5></div>
-    <div class="panel-body">
-        支持。Nekoray 可以通过订阅 URL 自动下载节点，并根据用户配置更新本地节点列表。定期更新确保节点始终可用，减少手动维护的麻烦，提高使用便利性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>QuantumultX 的重写脚本可以实现哪些功能？</h5></div>
-    <div class="panel-body">
-        QuantumultX 支持 JavaScript 重写脚本，可修改请求头、响应内容、跳转 URL、广告屏蔽和定制化流量处理。结合策略组可实现个性化网络访问和优化，提高用户体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 在 iOS 上无法连接时如何调试？</h5></div>
-    <div class="panel-body">
-        检查 iOS 的 VPN 配置权限是否授予，确认订阅链接或手动配置填写无误；查看 Surfboard 的日志或诊断页面，查看是否为 DNS 问题、TLS 错误或节点超时，并尝试切换节点或重启应用。<hr />    </div>
+        在 Mihomo 的配置文件中启用 `tun:` 模块并安装系统驱动即可实现全局代理。TUN 模式可将所有系统流量导向代理核心，实现真正意义上的全局加速。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>SSR 的协议和混淆如何影响连接稳定性？</h5></div>
@@ -359,9 +344,9 @@ SS服务器解密请求，将其转发至目标网站，并获取返回数据。
         不同协议和混淆方式对抗 DPI 和封锁能力不同。合理选择可隐藏真实流量特征，减少被封锁风险，提高连接稳定性和访问速度，确保节点长期可用。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Mellow TUN 模式对游戏流量有何作用？</h5></div>
+    <div class="panel-heading"><h5>Clash 订阅被墙或无法下载如何绕过？</h5></div>
     <div class="panel-body">
-        TUN 模式拦截系统 IP 层流量，实现全局代理。游戏流量通过低延迟节点传输，减少丢包和延迟，提高游戏体验的流畅性和网络稳定性。<hr />    </div>
+        若订阅源被直接屏蔽，可尝试先在境外服务器上用代理代理获取订阅并通过中转服务器公开一个新的链接；或者使用 HTTPS 与 CDN 中转、或将订阅以文件形式托管在不易被封的云存储上。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VMess 的 TLS 选项何时使用最合适？</h5></div>
@@ -369,19 +354,34 @@ SS服务器解密请求，将其转发至目标网站，并获取返回数据。
         TLS 可提供加密和伪装，适合在高封锁或不稳定网络环境使用。结合域名伪装和证书，可让流量看起来像普通 HTTPS 请求，提升抗封锁能力和隐蔽性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Potatso Lite 能否手动添加节点？</h5></div>
-    <div class="panel-body">
-        Potatso Lite 支持手动添加 Shadowsocks 节点。用户在“配置”中选择添加节点，输入服务器、端口、加密方式等信息即可建立连接，适合手动管理单个线路。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Mihomo 如何启用 TUN 模式？</h5></div>
-    <div class="panel-body">
-        在 Mihomo 的配置文件中启用 `tun:` 模块并安装系统驱动即可实现全局代理。TUN 模式可将所有系统流量导向代理核心，实现真正意义上的全局加速。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Sing-box 的策略组支持按延迟选择节点吗？</h5></div>
     <div class="panel-body">
-        支持。Sing-box 会根据节点延迟自动选择最优节点，结合策略组和路由规则，实现智能分流。延迟最低的节点优先被使用，提高网络访问速度和稳定性。    </div>
+        支持。Sing-box 会根据节点延迟自动选择最优节点，结合策略组和路由规则，实现智能分流。延迟最低的节点优先被使用，提高网络访问速度和稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Surfboard 在 iOS 上无法连接时如何调试？</h5></div>
+    <div class="panel-body">
+        检查 iOS 的 VPN 配置权限是否授予，确认订阅链接或手动配置填写无误；查看 Surfboard 的日志或诊断页面，查看是否为 DNS 问题、TLS 错误或节点超时，并尝试切换节点或重启应用。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Nekoray 的订阅更新支持自动导入节点吗？</h5></div>
+    <div class="panel-body">
+        支持。Nekoray 可以通过订阅 URL 自动下载节点，并根据用户配置更新本地节点列表。定期更新确保节点始终可用，减少手动维护的麻烦，提高使用便利性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Mellow TUN 模式对游戏流量有何作用？</h5></div>
+    <div class="panel-body">
+        TUN 模式拦截系统 IP 层流量，实现全局代理。游戏流量通过低延迟节点传输，减少丢包和延迟，提高游戏体验的流畅性和网络稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>QuantumultX 的重写脚本可以实现哪些功能？</h5></div>
+    <div class="panel-body">
+        QuantumultX 支持 JavaScript 重写脚本，可修改请求头、响应内容、跳转 URL、广告屏蔽和定制化流量处理。结合策略组可实现个性化网络访问和优化，提高用户体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Potatso Lite 能否手动添加节点？</h5></div>
+    <div class="panel-body">
+        Potatso Lite 支持手动添加 Shadowsocks 节点。用户在“配置”中选择添加节点，输入服务器、端口、加密方式等信息即可建立连接，适合手动管理单个线路。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -410,16 +410,16 @@ SS服务器解密请求，将其转发至目标网站，并获取返回数据。
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-10-5-free-node-subscribe-links.htm" title="VPN美国 | 10月5日18.3M/S|免费VPN/Clash节点/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点免费节点链接地址">VPN美国 | 10月5日18.3M/S|免费VPN/Clash节点/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-8-node-share-links.htm" title="VPN美国 | 10月8日23M/S|免费VPN/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/SSR节点免费节点链接地址">VPN美国 | 10月8日23M/S|免费VPN/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/SSR节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-12-node-share-links.htm" title="VPN美国 | 10月12日18.6M/S|免费VPN/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/SSR节点免费节点链接地址">VPN美国 | 10月12日18.6M/S|免费VPN/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/SSR节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-11-free-vpn-node.htm" title="VPN美国 | 11月11日20.9M/S|免费VPN/Clash节点/Shadowrocket节点/Singbox节点/SSR节点/V2ray节点免费节点链接地址">VPN美国 | 11月11日20.9M/S|免费VPN/Clash节点/Shadowrocket节点/Singbox节点/SSR节点/V2ray节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-9-node-share.htm" title="VPN美国 | 10月9日19.8M/S|免费VPN/SSR节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点免费节点链接地址">VPN美国 | 10月9日19.8M/S|免费VPN/SSR节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-10-node-share.htm" title="VPN美国 | 11月10日21.9M/S|免费VPN/SSR节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点免费节点链接地址">VPN美国 | 11月10日21.9M/S|免费VPN/SSR节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点免费节点链接地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-10-24-vpn-github.htm" title="VPN美国 | 10月24日22.1M/S|免费VPN/Shadowrocket节点/SSR节点/Clash节点/V2ray节点/Singbox节点免费节点链接地址">VPN美国 | 10月24日22.1M/S|免费VPN/Shadowrocket节点/SSR节点/Clash节点/V2ray节点/Singbox节点免费节点链接地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-10-3-share-vpn.htm" title="VPN美国 | 10月3日19.7M/S|免费VPN/Clash节点/SSR节点/Singbox节点/V2ray节点/Shadowrocket节点免费节点链接地址">VPN美国 | 10月3日19.7M/S|免费VPN/Clash节点/SSR节点/Singbox节点/V2ray节点/Shadowrocket节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-7-vpn-proxy.htm" title="VPN美国 | 10月7日23M/S|免费VPN/V2ray节点/Shadowrocket节点/Clash节点/SSR节点/Singbox节点免费节点链接地址">VPN美国 | 10月7日23M/S|免费VPN/V2ray节点/Shadowrocket节点/Clash节点/SSR节点/Singbox节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-5-vpn-free.htm" title="VPN美国 | 11月5日20.9M/S|免费VPN/Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点免费节点链接地址">VPN美国 | 11月5日20.9M/S|免费VPN/Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-5-free-node-subscribe-links.htm" title="VPN美国 | 10月5日18.3M/S|免费VPN/Clash节点/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点免费节点链接地址">VPN美国 | 10月5日18.3M/S|免费VPN/Clash节点/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-8-node-share-links.htm" title="VPN美国 | 10月8日23M/S|免费VPN/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/SSR节点免费节点链接地址">VPN美国 | 10月8日23M/S|免费VPN/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/SSR节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-27-top-vpn.htm" title="VPN美国 | 10月27日18.9M/S|免费VPN/V2ray节点/SSR节点/Shadowrocket节点/Singbox节点/Clash节点免费节点链接地址">VPN美国 | 10月27日18.9M/S|免费VPN/V2ray节点/SSR节点/Shadowrocket节点/Singbox节点/Clash节点免费节点链接地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-10-17-top-vpn.htm" title="VPN美国 | 10月17日22.2M/S|免费VPN/SSR节点/Clash节点/Singbox节点/Shadowrocket节点/V2ray节点免费节点链接地址">VPN美国 | 10月17日22.2M/S|免费VPN/SSR节点/Clash节点/Singbox节点/Shadowrocket节点/V2ray节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-6-top-vpn-node.htm" title="VPN美国 | 10月6日18.2M/S|免费VPN/Clash节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点免费节点链接地址">VPN美国 | 10月6日18.2M/S|免费VPN/Clash节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-14-share-vpn.htm" title="VPN美国 | 10月14日20.1M/S|免费VPN/Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点免费节点链接地址">VPN美国 | 10月14日20.1M/S|免费VPN/Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-4-free-vpn-node.htm" title="VPN美国 | 10月4日19.7M/S|免费VPN/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点/Clash节点免费节点链接地址">VPN美国 | 10月4日19.7M/S|免费VPN/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点/Clash节点免费节点链接地址</a></li>
                     </ul>
     </div>
 </div>
@@ -431,7 +431,7 @@ SS服务器解密请求，将其转发至目标网站，并获取返回数据。
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+                <h4><span class="badge" style="float: right;">12</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-10/" title="2025-10 归档">2025-10</a></h4>

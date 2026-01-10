@@ -397,44 +397,14 @@ A：理论上可以，但同时运行可能会造成冲突，建议仅启用一�
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>如何为 Trojan 配置 ALPN 与 SNI 提升伪装效果？</h5></div>
-    <div class="panel-body">
-        在服务器与客户端配置中设置合适的 SNI（伪装域名）并启用 ALPN（例如 http/1.1），确保 TLS 握手时使用常见的应用层协议标识，从而增加流量与普通 HTTPS 的相似度，降低被检测概率。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekobox 是否支持多配置文件切换？</h5></div>
-    <div class="panel-body">
-        支持。Nekobox 允许用户创建多个配置文件并快速切换，适合在不同网络环境下使用不同规则。例如家用网络与移动数据可使用独立的配置方案。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 可以在哪些平台使用？</h5></div>
-    <div class="panel-body">
-        Shadowrocket 是一款 iOS 平台专用代理客户端，支持多种协议如 Vmess、Shadowsocks、Trojan 等。用户可通过导入订阅链接快速配置节点，配合规则分流功能实现精准网络代理。由于其强大功能，它是 iPhone 用户常用的科学上网工具。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>V2RayA 在 Linux 系统中如何开机自启？</h5></div>
-    <div class="panel-body">
-        可通过 systemd 创建启动项或在启动脚本中添加 V2RayA 启动命令。编辑 /etc/systemd/system/v2raya.service 文件并设置 `Restart=always`，执行 `systemctl enable v2raya` 使其随系统自动启动。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Trojan 的伪装域名配置有哪些注意事项？</h5></div>
     <div class="panel-body">
         伪装域名必须真实可访问且证书有效，否则无法建立连接。正确配置可隐藏真实流量特征，降低被封锁和检测风险，提高节点安全性和长期可用性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 能否同步 iCloud 配置？</h5></div>
+    <div class="panel-heading"><h5>WinXray 的多出口策略如何提高网络稳定性？</h5></div>
     <div class="panel-body">
-        可以。Surfboard 支持 iCloud 同步功能，用户可在不同苹果设备上共享同一配置文件。这样即使更换手机或重装系统，也能自动恢复节点与分流设置。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Netch 如何结合策略组实现多节点优化？</h5></div>
-    <div class="panel-body">
-        Netch 可按应用和协议设置策略组，将流量分配到最优节点。结合节点延迟检测和自动切换功能，可提高网页浏览、视频播放和游戏访问速度及稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Mellow 的 TUN 模式与 SOCKS5 代理有什么区别？</h5></div>
-    <div class="panel-body">
-        TUN 模式拦截系统 IP 层流量，实现全局代理；SOCKS5 代理通常只影响支持代理的应用。TUN 更适合全局加速和游戏、视频等应用，保证所有流量通过节点，提高网络稳定性。<hr />    </div>
+        WinXray 支持为不同流量类型指定不同出口，通过策略组和路由规则自动选择最佳节点。这样可以分散流量压力，提高连接稳定性，并确保高优先级应用获得最佳速度。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Sing-box 策略组如何优化视频和游戏流量？</h5></div>
@@ -442,9 +412,39 @@ A：理论上可以，但同时运行可能会造成冲突，建议仅启用一�
         Sing-box 可根据策略组和规则文件，将不同应用的流量分配到最佳节点。视频和游戏流量可选择低延迟、高带宽节点，保证流畅播放和操作响应，提高整体网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 的多出口策略如何提高网络稳定性？</h5></div>
+    <div class="panel-heading"><h5>Nekobox 是否支持多配置文件切换？</h5></div>
     <div class="panel-body">
-        WinXray 支持为不同流量类型指定不同出口，通过策略组和路由规则自动选择最佳节点。这样可以分散流量压力，提高连接稳定性，并确保高优先级应用获得最佳速度。    </div>
+        支持。Nekobox 允许用户创建多个配置文件并快速切换，适合在不同网络环境下使用不同规则。例如家用网络与移动数据可使用独立的配置方案。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Surfboard 能否同步 iCloud 配置？</h5></div>
+    <div class="panel-body">
+        可以。Surfboard 支持 iCloud 同步功能，用户可在不同苹果设备上共享同一配置文件。这样即使更换手机或重装系统，也能自动恢复节点与分流设置。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Shadowrocket 可以在哪些平台使用？</h5></div>
+    <div class="panel-body">
+        Shadowrocket 是一款 iOS 平台专用代理客户端，支持多种协议如 Vmess、Shadowsocks、Trojan 等。用户可通过导入订阅链接快速配置节点，配合规则分流功能实现精准网络代理。由于其强大功能，它是 iPhone 用户常用的科学上网工具。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Netch 如何结合策略组实现多节点优化？</h5></div>
+    <div class="panel-body">
+        Netch 可按应用和协议设置策略组，将流量分配到最优节点。结合节点延迟检测和自动切换功能，可提高网页浏览、视频播放和游戏访问速度及稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>V2RayA 在 Linux 系统中如何开机自启？</h5></div>
+    <div class="panel-body">
+        可通过 systemd 创建启动项或在启动脚本中添加 V2RayA 启动命令。编辑 /etc/systemd/system/v2raya.service 文件并设置 `Restart=always`，执行 `systemctl enable v2raya` 使其随系统自动启动。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Mellow 的 TUN 模式与 SOCKS5 代理有什么区别？</h5></div>
+    <div class="panel-body">
+        TUN 模式拦截系统 IP 层流量，实现全局代理；SOCKS5 代理通常只影响支持代理的应用。TUN 更适合全局加速和游戏、视频等应用，保证所有流量通过节点，提高网络稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>如何为 Trojan 配置 ALPN 与 SNI 提升伪装效果？</h5></div>
+    <div class="panel-body">
+        在服务器与客户端配置中设置合适的 SNI（伪装域名）并启用 ALPN（例如 http/1.1），确保 TLS 握手时使用常见的应用层协议标识，从而增加流量与普通 HTTPS 的相似度，降低被检测概率。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -473,16 +473,16 @@ A：理论上可以，但同时运行可能会造成冲突，建议仅启用一�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-11-9-vpn-github.htm" title="VPN美国 | 11月9日21.9M/S|免费VPN/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点免费节点链接地址">VPN美国 | 11月9日21.9M/S|免费VPN/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-19-vpn-proxy.htm" title="VPN美国 | 12月19日20.8M/S|免费VPN/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/SSR节点免费节点链接地址">VPN美国 | 12月19日20.8M/S|免费VPN/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/SSR节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-1-free-vpn.htm" title="VPN美国 | 12月1日20M/S|免费VPN/Shadowrocket节点/V2ray节点/Clash节点/SSR节点/Singbox节点免费节点链接地址">VPN美国 | 12月1日20M/S|免费VPN/Shadowrocket节点/V2ray节点/Clash节点/SSR节点/Singbox节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-10-node-share.htm" title="VPN美国 | 11月10日21.9M/S|免费VPN/SSR节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点免费节点链接地址">VPN美国 | 11月10日21.9M/S|免费VPN/SSR节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-13-vpn-github.htm" title="VPN美国 | 12月13日18.6M/S|免费VPN/SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点免费节点链接地址">VPN美国 | 12月13日18.6M/S|免费VPN/SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-19-free-node-subscribe.htm" title="VPN美国 | 11月19日20.7M/S|免费VPN/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/SSR节点免费节点链接地址">VPN美国 | 11月19日20.7M/S|免费VPN/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/SSR节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-23-free-vpn.htm" title="VPN美国 | 12月23日18.5M/S|免费VPN/Clash节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点免费节点链接地址">VPN美国 | 12月23日18.5M/S|免费VPN/Clash节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-11-node-share.htm" title="VPN美国 | 12月11日18.6M/S|免费VPN/Shadowrocket节点/Clash节点/V2ray节点/SSR节点/Singbox节点免费节点链接地址">VPN美国 | 12月11日18.6M/S|免费VPN/Shadowrocket节点/Clash节点/V2ray节点/SSR节点/Singbox节点免费节点链接地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-12-10-vpn-node.htm" title="VPN美国 | 12月10日18.2M/S|免费VPN/Singbox节点/SSR节点/Shadowrocket节点/V2ray节点/Clash节点免费节点链接地址">VPN美国 | 12月10日18.2M/S|免费VPN/Singbox节点/SSR节点/Shadowrocket节点/V2ray节点/Clash节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-22-vpn-node.htm" title="VPN美国 | 11月22日20.2M/S|免费VPN/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/SSR节点免费节点链接地址">VPN美国 | 11月22日20.2M/S|免费VPN/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/SSR节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-25-share-vpn.htm" title="VPN美国 | 12月25日22.7M/S|免费VPN/Singbox节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点免费节点链接地址">VPN美国 | 12月25日22.7M/S|免费VPN/Singbox节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-5-vpn-free.htm" title="VPN美国 | 11月5日20.9M/S|免费VPN/Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点免费节点链接地址">VPN美国 | 11月5日20.9M/S|免费VPN/Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-1-node-share.htm" title="VPN美国 | 1月1日18.7M/S|免费VPN/V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Singbox节点免费节点链接地址">VPN美国 | 1月1日18.7M/S|免费VPN/V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Singbox节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-5-top-vpn-node.htm" title="VPN美国 | 1月5日20.7M/S|免费VPN/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点/SSR节点免费节点链接地址">VPN美国 | 1月5日20.7M/S|免费VPN/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点/SSR节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-15-node-share.htm" title="VPN美国 | 12月15日21.5M/S|免费VPN/Clash节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点免费节点链接地址">VPN美国 | 12月15日21.5M/S|免费VPN/Clash节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-24-vpn-free.htm" title="VPN美国 | 12月24日20.9M/S|免费VPN/Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点免费节点链接地址">VPN美国 | 12月24日20.9M/S|免费VPN/Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-16-node-share.htm" title="VPN美国 | 12月16日22.1M/S|免费VPN/Clash节点/V2ray节点/Singbox节点/Shadowrocket节点/SSR节点免费节点链接地址">VPN美国 | 12月16日22.1M/S|免费VPN/Clash节点/V2ray节点/Singbox节点/Shadowrocket节点/SSR节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-27-top-vpn-node.htm" title="VPN美国 | 12月27日20.2M/S|免费VPN/Clash节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点免费节点链接地址">VPN美国 | 12月27日20.2M/S|免费VPN/Clash节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-31-node-share-links.htm" title="VPN美国 | 12月31日19.3M/S|免费VPN/V2ray节点/Singbox节点/SSR节点/Clash节点/Shadowrocket节点免费节点链接地址">VPN美国 | 12月31日19.3M/S|免费VPN/V2ray节点/Singbox节点/SSR节点/Clash节点/Shadowrocket节点免费节点链接地址</a></li>
                     </ul>
     </div>
 </div>
@@ -494,13 +494,10 @@ A：理论上可以，但同时运行可能会造成冲突，建议仅启用一�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">3</span> <a href="/date/2026-01/" title="2026-01 归档">2026-01</a></h4>
+                <h4><span class="badge" style="float: right;">7</span> <a href="/date/2026-01/" title="2026-01 归档">2026-01</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
-            </li>
-                        <li class="py-2">
-                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
             </li>
                     </ul>
     </div>

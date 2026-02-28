@@ -1,4 +1,4 @@
-# VPN美国 | 2月23日20.5M/S|免费VPN/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点/Clash节点免费节点链接地址  更新时间 2026-02-23 09:49:50
+# VPN美国 | 2月28日20M/S|免费VPN/SSR节点/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点免费节点链接地址  更新时间 2026-02-28 10:38:03
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://vpnamerica.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://vpnamerica.github.io/uploads/2026/02/0-20260223.yaml
-- https://vpnamerica.github.io/uploads/2026/02/1-20260223.yaml
-- https://vpnamerica.github.io/uploads/2026/02/2-20260223.yaml
-- https://vpnamerica.github.io/uploads/2026/02/3-20260223.yaml
-- https://vpnamerica.github.io/uploads/2026/02/4-20260223.yaml
+- https://vpnamerica.github.io/uploads/2026/02/0-20260228.yaml
+- https://vpnamerica.github.io/uploads/2026/02/1-20260228.yaml
+- https://vpnamerica.github.io/uploads/2026/02/2-20260228.yaml
+- https://vpnamerica.github.io/uploads/2026/02/3-20260228.yaml
+- https://vpnamerica.github.io/uploads/2026/02/4-20260228.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://vpnamerica.github.io/uploads/2026/02/0-20260223.txt
-- https://vpnamerica.github.io/uploads/2026/02/1-20260223.txt
-- https://vpnamerica.github.io/uploads/2026/02/2-20260223.txt
-- https://vpnamerica.github.io/uploads/2026/02/3-20260223.txt
-- https://vpnamerica.github.io/uploads/2026/02/4-20260223.txt
+- https://vpnamerica.github.io/uploads/2026/02/0-20260228.txt
+- https://vpnamerica.github.io/uploads/2026/02/1-20260228.txt
+- https://vpnamerica.github.io/uploads/2026/02/2-20260228.txt
+- https://vpnamerica.github.io/uploads/2026/02/3-20260228.txt
+- https://vpnamerica.github.io/uploads/2026/02/4-20260228.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://vpnamerica.github.io/uploads/2026/02/20260223.json
+- https://vpnamerica.github.io/uploads/2026/02/20260228.json
 
 ## 更多Clash节点订阅 ：
 

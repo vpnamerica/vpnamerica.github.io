@@ -248,9 +248,19 @@ A：关闭不必要的后台应用、定期清理设备内存、确保设备硬�
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 的节点测速如何优化策略组选择？</h5></div>
+    <div class="panel-heading"><h5>WinXray PAC 模式如何提高访问速度和便利性？</h5></div>
     <div class="panel-body">
-        Shadowrocket 会测量节点延迟和丢包率，将低延迟节点优先使用。结合策略组和规则文件，可保证网页、视频和游戏流量走最佳节点，提高访问速度和连接稳定性。<hr />    </div>
+        PAC 模式根据规则动态判断流量是否走代理，无需手动切换节点。适合国内外混合访问场景，提高网页和视频访问速度与稳定性，减少操作错误导致的访问失败。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hiddify Next 如何设置用户带宽与流量配额？</h5></div>
+    <div class="panel-body">
+        管理员可为每个用户单独设置带宽和流量上限。超出限制时，可自动降速或阻止访问，确保服务器资源合理分配，避免单用户占用过多带宽，提高整体网络公平性和效率。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>WinXray 的内核能否替换？</h5></div>
+    <div class="panel-body">
+        可以。WinXray 的内核文件独立存在于程序目录中，用户可替换为最新的 v2ray-core 或 xray-core 文件以获取更好的性能与协议支持，但需保持版本兼容。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Netch 的规则代理与全局代理如何选择？</h5></div>
@@ -263,16 +273,6 @@ A：关闭不必要的后台应用、定期清理设备内存、确保设备硬�
         V2Ray 的核心由 inbound、outbound、routing、policy 等模块组成。Inbound 处理入站请求，Outbound 负责出站连接，Routing 管理流量分流策略。模块化的设计让用户可以自由组合代理方式。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 如何按端口分流流量？</h5></div>
-    <div class="panel-body">
-        Sing-box 支持根据端口匹配流量，将不同应用流量分配到指定节点。结合策略组使用，可精准分流，提高访问速度和网络稳定性，优化整体网络体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray PAC 模式如何提高访问速度和便利性？</h5></div>
-    <div class="panel-body">
-        PAC 模式根据规则动态判断流量是否走代理，无需手动切换节点。适合国内外混合访问场景，提高网页和视频访问速度与稳定性，减少操作错误导致的访问失败。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>VLESS + XTLS 在移动网络的优势是什么？</h5></div>
     <div class="panel-body">
         XTLS 模式减少握手次数和加密开销，适合高延迟或不稳定移动网络。结合策略组和节点切换，可提升网页浏览、视频播放和游戏连接的稳定性和流畅度。<hr />    </div>
@@ -283,19 +283,19 @@ A：关闭不必要的后台应用、定期清理设备内存、确保设备硬�
         通过 V2Ray 的路由规则，可将指定流量通过代理出口，而防火墙限制其他流量直连。结合防火墙规则可以实现对内部网络访问和外部代理流量的精准控制。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Hiddify Next 如何设置用户带宽与流量配额？</h5></div>
+    <div class="panel-heading"><h5>Shadowrocket 的节点测速如何优化策略组选择？</h5></div>
     <div class="panel-body">
-        管理员可为每个用户单独设置带宽和流量上限。超出限制时，可自动降速或阻止访问，确保服务器资源合理分配，避免单用户占用过多带宽，提高整体网络公平性和效率。<hr />    </div>
+        Shadowrocket 会测量节点延迟和丢包率，将低延迟节点优先使用。结合策略组和规则文件，可保证网页、视频和游戏流量走最佳节点，提高访问速度和连接稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 如何按端口分流流量？</h5></div>
+    <div class="panel-body">
+        Sing-box 支持根据端口匹配流量，将不同应用流量分配到指定节点。结合策略组使用，可精准分流，提高访问速度和网络稳定性，优化整体网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Nekobox 可以定时更新订阅节点吗？</h5></div>
     <div class="panel-body">
-        支持。用户可设置定时更新频率，例如每天或每小时，程序会自动下载订阅节点并替换旧节点，确保节点始终可用并保持最新线路信息。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 的内核能否替换？</h5></div>
-    <div class="panel-body">
-        可以。WinXray 的内核文件独立存在于程序目录中，用户可替换为最新的 v2ray-core 或 xray-core 文件以获取更好的性能与协议支持，但需保持版本兼容。    </div>
+        支持。用户可设置定时更新频率，例如每天或每小时，程序会自动下载订阅节点并替换旧节点，确保节点始终可用并保持最新线路信息。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -325,11 +325,11 @@ A：关闭不必要的后台应用、定期清理设备内存、确保设备硬�
     <div class="panel-body">
         <div class="row">
             <div class="text-center">
-                <a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=" data-type="Xingchen" data-code="register&code" target="_blank">
+                <a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=register&code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">
                     <img src="/assets/website/img/G/xingchen.webp" class="avatar" alt="星辰机场">
                 </a>
                 <dl>
-                    <dt><a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=" data-type="Xingchen" data-code="register&code" target="_blank">星辰机场</a></dt>
+                    <dt><a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=register&code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">星辰机场</a></dt>
                     <dd>
                         <p>【包年送2个月】</p><p>1、购买入门版年付套餐额外送2个月，共14个月，只要99元！！！</p><p>2、购买“至尊天皇”年付套餐，额外送2个月，只要299元！！！</p><p>3、购买其他包月类套餐中的年付，同样送2个月！！！</p><p>错过要再等一年！！</p>                    </dd>
                 </dl>
@@ -343,16 +343,16 @@ A：关闭不必要的后台应用、定期清理设备内存、确保设备硬�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2026-6-29-node-share-links.htm" title="VPN美国 | 6月29日19.7M/S|免费VPN/Clash节点/Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Trojan节点免费节点链接地址">VPN美国 | 6月29日19.7M/S|免费VPN/Clash节点/Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Trojan节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-12-top-vpn-node.htm" title="VPN美国 | 6月12日18.9M/S|免费VPN/Trojan节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点免费节点链接地址">VPN美国 | 6月12日18.9M/S|免费VPN/Trojan节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-15-share-vpn.htm" title="VPN美国 | 6月15日20.7M/S|免费VPN/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/SSR节点免费节点链接地址">VPN美国 | 6月15日20.7M/S|免费VPN/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/SSR节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-7-5-vpn-github.htm" title="VPN美国 | 7月5日18.7M/S|免费VPN/V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Singbox节点/Trojan节点免费节点链接地址">VPN美国 | 7月5日18.7M/S|免费VPN/V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Singbox节点/Trojan节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-30-vpn-free.htm" title="VPN美国 | 6月30日18.7M/S|免费VPN/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点/V2ray节点/Clash节点免费节点链接地址">VPN美国 | 6月30日18.7M/S|免费VPN/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点/V2ray节点/Clash节点免费节点链接地址</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-6-14-vpn-node.htm" title="VPN美国 | 6月14日19.2M/S|免费VPN/Clash节点/Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点免费节点链接地址">VPN美国 | 6月14日19.2M/S|免费VPN/Clash节点/Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-5-free-node-subscribe.htm" title="VPN美国 | 5月5日19.8M/S|免费VPN/SSR节点/Shadowrocket节点/Trojan节点/Singbox节点/Clash节点/V2ray节点免费节点链接地址">VPN美国 | 5月5日19.8M/S|免费VPN/SSR节点/Shadowrocket节点/Trojan节点/Singbox节点/Clash节点/V2ray节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-9-vpn-node.htm" title="VPN美国 | 5月9日19.8M/S|免费VPN/SSR节点/Clash节点/Shadowrocket节点/Singbox节点/V2ray节点/Trojan节点免费节点链接地址">VPN美国 | 5月9日19.8M/S|免费VPN/SSR节点/Clash节点/Shadowrocket节点/Singbox节点/V2ray节点/Trojan节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-15-top-vpn.htm" title="VPN美国 | 5月15日19.4M/S|免费VPN/Shadowrocket节点/Clash节点/Singbox节点/SSR节点/V2ray节点/Trojan节点免费节点链接地址">VPN美国 | 5月15日19.4M/S|免费VPN/Shadowrocket节点/Clash节点/Singbox节点/SSR节点/V2ray节点/Trojan节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-4-top-vpn-node.htm" title="VPN美国 | 5月4日20.5M/S|免费VPN/SSR节点/Clash节点/V2ray节点/Singbox节点/Trojan节点/Shadowrocket节点免费节点链接地址">VPN美国 | 5月4日20.5M/S|免费VPN/SSR节点/Clash节点/V2ray节点/Singbox节点/Trojan节点/Shadowrocket节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-16-node-share.htm" title="VPN美国 | 5月16日22.9M/S|免费VPN/Singbox节点/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点免费节点链接地址">VPN美国 | 5月16日22.9M/S|免费VPN/Singbox节点/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-2-vpn-node.htm" title="VPN美国 | 7月2日22.6M/S|免费VPN/Shadowrocket节点/Trojan节点/Clash节点/V2ray节点/Singbox节点/SSR节点免费节点链接地址">VPN美国 | 7月2日22.6M/S|免费VPN/Shadowrocket节点/Trojan节点/Clash节点/V2ray节点/Singbox节点/SSR节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-6-1-top-vpn.htm" title="VPN美国 | 6月1日20.6M/S|免费VPN/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/SSR节点/Trojan节点免费节点链接地址">VPN美国 | 6月1日20.6M/S|免费VPN/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/SSR节点/Trojan节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-6-8-vpn-node.htm" title="VPN美国 | 6月8日20.1M/S|免费VPN/Clash节点/Singbox节点/Trojan节点/SSR节点/Shadowrocket节点/V2ray节点免费节点链接地址">VPN美国 | 6月8日20.1M/S|免费VPN/Clash节点/Singbox节点/Trojan节点/SSR节点/Shadowrocket节点/V2ray节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-25-node-share-links.htm" title="VPN美国 | 6月25日18.3M/S|免费VPN/V2ray节点/SSR节点/Trojan节点/Singbox节点/Shadowrocket节点/Clash节点免费节点链接地址">VPN美国 | 6月25日18.3M/S|免费VPN/V2ray节点/SSR节点/Trojan节点/Singbox节点/Shadowrocket节点/Clash节点免费节点链接地址</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-6-24-free-vpn-node.htm" title="VPN美国 | 6月24日21.8M/S|免费VPN/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/Trojan节点/SSR节点免费节点链接地址">VPN美国 | 6月24日21.8M/S|免费VPN/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/Trojan节点/SSR节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-20-vpn-free.htm" title="VPN美国 | 6月20日19.3M/S|免费VPN/Clash节点/SSR节点/V2ray节点/Shadowrocket节点/Singbox节点/Trojan节点免费节点链接地址">VPN美国 | 6月20日19.3M/S|免费VPN/Clash节点/SSR节点/V2ray节点/Shadowrocket节点/Singbox节点/Trojan节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-9-free-vpn.htm" title="VPN美国 | 6月9日19.5M/S|免费VPN/Trojan节点/SSR节点/Clash节点/Singbox节点/Shadowrocket节点/V2ray节点免费节点链接地址">VPN美国 | 6月9日19.5M/S|免费VPN/Trojan节点/SSR节点/Clash节点/Singbox节点/Shadowrocket节点/V2ray节点免费节点链接地址</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -364,13 +364,10 @@ A：关闭不必要的后台应用、定期清理设备内存、确保设备硬�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2026-07/" title="2026-07 归档">2026-07</a></h4>
+                <h4><span class="badge" style="float: right;">11</span> <a href="/date/2026-07/" title="2026-07 归档">2026-07</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2026-06/" title="2026-06 归档">2026-06</a></h4>
-            </li>
-                        <li class="py-2">
-                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
+                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2026-06/" title="2026-06 归档">2026-06</a></h4>
             </li>
                     </ul>
     </div>
@@ -397,7 +394,7 @@ A：关闭不必要的后台应用、定期清理设备内存、确保设备硬�
                         <a href="/privacy.htm">隐私申明</a> |
                         <a href="/sitemap.xml">网站地图</a>
                     </p>
-                                        <div>特别推荐：<b><a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=" data-type="Xingchen" data-code="register&code" target="_blank">星辰机场</a></b> <p>【包年送2个月】</p><p>1、购买入门版年付套餐额外送2个月，共14个月，只要99元！！！</p><p>2、购买“至尊天皇”年付套餐，额外送2个月，只要299元！！！</p><p>3、购买其他包月类套餐中的年付，同样送2个月！！！</p><p>错过要再等一年！！</p></div>
+                                        <div>特别推荐：<b><a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=register&code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">星辰机场</a></b> <p>【包年送2个月】</p><p>1、购买入门版年付套餐额外送2个月，共14个月，只要99元！！！</p><p>2、购买“至尊天皇”年付套餐，额外送2个月，只要299元！！！</p><p>3、购买其他包月类套餐中的年付，同样送2个月！！！</p><p>错过要再等一年！！</p></div>
                                 <p>
                 <a href="/">VPN美国 节点官网</a> 版权所有 Powered by WordPress
             </p>

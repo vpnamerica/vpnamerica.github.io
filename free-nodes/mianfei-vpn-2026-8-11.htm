@@ -184,34 +184,9 @@ opkg <span class="token function">install</span> luci-app-clash</pre></div><h2>�
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS + XTLS 在移动网络的优势是什么？</h5></div>
-    <div class="panel-body">
-        XTLS 模式减少握手次数和加密开销，适合高延迟或不稳定移动网络。结合策略组和节点切换，可提升网页浏览、视频播放和游戏连接的稳定性和流畅度。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Matsuri 的节点测速结果能影响策略组吗？</h5></div>
     <div class="panel-body">
         可以。Matsuri 会将延迟最低的节点自动标记为优先节点，结合策略组，程序会优先选择最佳节点处理流量，保证访问速度和连接稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekoray 的内置延迟测试为什么与系统 ping 不同？</h5></div>
-    <div class="panel-body">
-        客户端的延迟测试通常基于 TCP 或特定探测包，而系统 ping 使用 ICMP，两者网络路径与优先级可能不同。此外，防火墙或服务器对 ICMP 的响应可能被限制，导致测试结果存在差异。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan TLS 伪装域名如何提高抗封锁能力？</h5></div>
-    <div class="panel-body">
-        通过选择真实可访问域名并使用有效证书，Trojan 流量可以完全模拟 HTTPS 请求。隐藏真实流量特征，降低被封锁和 DPI 检测风险，保证节点长期可用。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>如何用 iptables 限制 V2Ray 服务的访问来源？</h5></div>
-    <div class="panel-body">
-        使用 iptables 规则仅允许可信 IP 或 CDN 的中转 IP 访问服务端口，例如 `iptables -A INPUT -p tcp -s <trusted_ip> --dport 443 -j ACCEPT`，并在默认策略下拒绝其他来源，从而降低被扫描与滥用风险。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Hiddify Next 如何设置不同用户的带宽限制？</h5></div>
-    <div class="panel-body">
-        管理员可为每个用户设置独立的带宽上限和流量配额。超过配额后可自动阻断或降速，确保服务器资源合理分配，避免单个用户占用过多带宽而影响其他用户体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>如何在 Windows 上安装 Clash for Windows？</h5></div>
@@ -219,9 +194,14 @@ opkg <span class="token function">install</span> luci-app-clash</pre></div><h2>�
         在 Windows 上安装 Clash for Windows 十分简单。只需前往官方 GitHub 页面下载最新版安装包，运行安装程序后导入订阅链接或配置文件即可。安装完成后，用户可以通过图形化界面方便地切换节点、编辑规则和控制代理模式。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Mellow TUN 模式适合哪些应用？</h5></div>
+    <div class="panel-heading"><h5>VLESS + XTLS 在移动网络的优势是什么？</h5></div>
     <div class="panel-body">
-        TUN 模式拦截系统 IP 层流量，实现全局代理。适合游戏、视频、浏览器等全局应用，保证所有流量走节点，提高网络稳定性和速度，比普通 SOCKS5 代理覆盖范围更广。<hr />    </div>
+        XTLS 模式减少握手次数和加密开销，适合高延迟或不稳定移动网络。结合策略组和节点切换，可提升网页浏览、视频播放和游戏连接的稳定性和流畅度。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Trojan TLS 伪装域名如何提高抗封锁能力？</h5></div>
+    <div class="panel-body">
+        通过选择真实可访问域名并使用有效证书，Trojan 流量可以完全模拟 HTTPS 请求。隐藏真实流量特征，降低被封锁和 DPI 检测风险，保证节点长期可用。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Netch 的 TUN 模式与 SOCKS 模式有何差异？</h5></div>
@@ -229,9 +209,29 @@ opkg <span class="token function">install</span> luci-app-clash</pre></div><h2>�
         TUN 模式通过虚拟网卡拦截所有流量，更接近系统级代理；SOCKS 模式则仅作用于指定应用。TUN 模式更适合全局代理需求，而 SOCKS 模式轻量快捷，适用于游戏或单软件加速。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Mellow TUN 模式适合哪些应用？</h5></div>
+    <div class="panel-body">
+        TUN 模式拦截系统 IP 层流量，实现全局代理。适合游戏、视频、浏览器等全局应用，保证所有流量走节点，提高网络稳定性和速度，比普通 SOCKS5 代理覆盖范围更广。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Nekoray 的内置延迟测试为什么与系统 ping 不同？</h5></div>
+    <div class="panel-body">
+        客户端的延迟测试通常基于 TCP 或特定探测包，而系统 ping 使用 ICMP，两者网络路径与优先级可能不同。此外，防火墙或服务器对 ICMP 的响应可能被限制，导致测试结果存在差异。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>如何用 iptables 限制 V2Ray 服务的访问来源？</h5></div>
+    <div class="panel-body">
+        使用 iptables 规则仅允许可信 IP 或 CDN 的中转 IP 访问服务端口，例如 `iptables -A INPUT -p tcp -s <trusted_ip> --dport 443 -j ACCEPT`，并在默认策略下拒绝其他来源，从而降低被扫描与滥用风险。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Potatso Lite 显示证书错误，如何修复？</h5></div>
     <div class="panel-body">
-        证书错误通常由域名与证书不匹配或证书链不完整引起。请检查服务器证书是否为有效域名签发并包含完整链，如果使用 Let's Encrypt，请确保证书未过期并已正确安装到反向代理或服务端。    </div>
+        证书错误通常由域名与证书不匹配或证书链不完整引起。请检查服务器证书是否为有效域名签发并包含完整链，如果使用 Let's Encrypt，请确保证书未过期并已正确安装到反向代理或服务端。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hiddify Next 如何设置不同用户的带宽限制？</h5></div>
+    <div class="panel-body">
+        管理员可为每个用户设置独立的带宽上限和流量配额。超过配额后可自动阻断或降速，确保服务器资源合理分配，避免单个用户占用过多带宽而影响其他用户体验。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -279,16 +279,16 @@ opkg <span class="token function">install</span> luci-app-clash</pre></div><h2>�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-7-18-node-share.htm" title="VPN美国 | 7月18日21.3M/S|免费VPN/SSR节点/V2ray节点/Singbox节点/Shadowrocket节点/Trojan节点/Clash节点免费节点链接地址">VPN美国 | 7月18日21.3M/S|免费VPN/SSR节点/V2ray节点/Singbox节点/Shadowrocket节点/Trojan节点/Clash节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-27-vpn-github.htm" title="VPN美国 | 7月27日20.4M/S|免费VPN/V2ray节点/SSR节点/Trojan节点/Singbox节点/Shadowrocket节点/Clash节点免费节点链接地址">VPN美国 | 7月27日20.4M/S|免费VPN/V2ray节点/SSR节点/Trojan节点/Singbox节点/Shadowrocket节点/Clash节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-6-vpn-free.htm" title="VPN美国 | 8月6日21.7M/S|免费VPN/Clash节点/V2ray节点/Singbox节点/SSR节点/Trojan节点/Shadowrocket节点免费节点链接地址">VPN美国 | 8月6日21.7M/S|免费VPN/Clash节点/V2ray节点/Singbox节点/SSR节点/Trojan节点/Shadowrocket节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/top-vpn-2026-8-3.htm" title="VPN美国 | 8月3日18.6M/S|免费VPN/Shadowrocket节点/V2ray节点/Trojan节点/Clash节点/Singbox节点/SSR节点免费节点链接地址">VPN美国 | 8月3日18.6M/S|免费VPN/Shadowrocket节点/V2ray节点/Trojan节点/Clash节点/Singbox节点/SSR节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-13-free-node-subscribe-links.htm" title="VPN美国 | 7月13日18.4M/S|免费VPN/Shadowrocket节点/SSR节点/Trojan节点/Singbox节点/V2ray节点/Clash节点免费节点链接地址">VPN美国 | 7月13日18.4M/S|免费VPN/Shadowrocket节点/SSR节点/Trojan节点/Singbox节点/V2ray节点/Clash节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-21-free-node-subscribe-links.htm" title="VPN美国 | 7月21日18.2M/S|免费VPN/Clash节点/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点/V2ray节点免费节点链接地址">VPN美国 | 7月21日18.2M/S|免费VPN/Clash节点/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点/V2ray节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/top-vpn-2026-8-9.htm" title="VPN美国 | 8月9日21.3M/S|免费VPN/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/SSR节点/Trojan节点免费节点链接地址">VPN美国 | 8月9日21.3M/S|免费VPN/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/SSR节点/Trojan节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-8-15.htm" title="VPN美国 | 8月15日18.2M/S|免费VPN/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Clash节点/Singbox节点免费节点链接地址">VPN美国 | 8月15日18.2M/S|免费VPN/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Clash节点/Singbox节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-10-vpn-node.htm" title="VPN美国 | 8月10日18.9M/S|免费VPN/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点/Singbox节点/Clash节点免费节点链接地址">VPN美国 | 8月10日18.9M/S|免费VPN/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点/Singbox节点/Clash节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-2-node-share.htm" title="VPN美国 | 8月2日20.1M/S|免费VPN/V2ray节点/Singbox节点/Shadowrocket节点/Trojan节点/Clash节点/SSR节点免费节点链接地址">VPN美国 | 8月2日20.1M/S|免费VPN/V2ray节点/Singbox节点/Shadowrocket节点/Trojan节点/Clash节点/SSR节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-28-vpn-node.htm" title="VPN美国 | 8月28日18.9M/S|免费VPN/Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Trojan节点/Clash节点免费节点链接地址">VPN美国 | 8月28日18.9M/S|免费VPN/Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Trojan节点/Clash节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/top-vpn-2026-9-1.htm" title="VPN美国 | 9月1日19M/S|免费VPN/Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/SSR节点免费节点链接地址">VPN美国 | 9月1日19M/S|免费VPN/Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/SSR节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-2-top-vpn-node.htm" title="VPN美国 | 9月2日18.6M/S|免费VPN/Clash节点/Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点/SSR节点免费节点链接地址">VPN美国 | 9月2日18.6M/S|免费VPN/Clash节点/Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点/SSR节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/share-vpn-2026-8-13.htm" title="VPN美国 | 8月13日21.9M/S|免费VPN/SSR节点/Trojan节点/Shadowrocket节点/V2ray节点/Singbox节点/Clash节点免费节点链接地址">VPN美国 | 8月13日21.9M/S|免费VPN/SSR节点/Trojan节点/Shadowrocket节点/V2ray节点/Singbox节点/Clash节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-24-free-vpn-node.htm" title="VPN美国 | 8月24日21.1M/S|免费VPN/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点/Trojan节点免费节点链接地址">VPN美国 | 8月24日21.1M/S|免费VPN/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点/Trojan节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-4-free-node-subscribe.htm" title="VPN美国 | 9月4日20.4M/S|免费VPN/Trojan节点/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点/SSR节点免费节点链接地址">VPN美国 | 9月4日20.4M/S|免费VPN/Trojan节点/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点/SSR节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/mianfei-vpn-2026-8-7.htm" title="VPN美国 | 8月7日21M/S|免费VPN/Trojan节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点免费节点链接地址">VPN美国 | 8月7日21M/S|免费VPN/Trojan节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-26-node-share.htm" title="VPN美国 | 8月26日20.4M/S|免费VPN/V2ray节点/Trojan节点/Singbox节点/SSR节点/Clash节点/Shadowrocket节点免费节点链接地址">VPN美国 | 8月26日20.4M/S|免费VPN/V2ray节点/Trojan节点/Singbox节点/SSR节点/Clash节点/Shadowrocket节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-9-3.htm" title="VPN美国 | 9月3日18.7M/S|免费VPN/Trojan节点/SSR节点/V2ray节点/Singbox节点/Shadowrocket节点/Clash节点免费节点链接地址">VPN美国 | 9月3日18.7M/S|免费VPN/Trojan节点/SSR节点/V2ray节点/Singbox节点/Shadowrocket节点/Clash节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-22-node-share.htm" title="VPN美国 | 8月22日21.1M/S|免费VPN/Clash节点/SSR节点/V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点免费节点链接地址">VPN美国 | 8月22日21.1M/S|免费VPN/Clash节点/SSR节点/V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点免费节点链接地址</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -300,10 +300,10 @@ opkg <span class="token function">install</span> luci-app-clash</pre></div><h2>�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
+                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2026-07/" title="2026-07 归档">2026-07</a></h4>
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
             </li>
                     </ul>
     </div>

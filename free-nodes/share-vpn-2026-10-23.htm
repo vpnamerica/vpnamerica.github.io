@@ -374,9 +374,9 @@ sudo systemctl </span><span><span class="hljs-built_in">enable</span></span><spa
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>QuantumultX 如何通过策略组优化多应用分流？</h5></div>
+    <div class="panel-heading"><h5>VMess MUX 功能如何改善短连接延迟？</h5></div>
     <div class="panel-body">
-        QuantumultX 可以根据应用类型、端口和协议设置策略组，自动选择最优节点处理不同流量。这样可保证网页浏览、视频播放和游戏访问顺畅，提高整体网络效率。<hr />    </div>
+        VMess MUX 多路复用可以将多个短连接共享同一 TCP 或 QUIC 隧道，减少重复握手和连接延迟，特别适合游戏、即时通讯或频繁请求的场景，有效提升响应速度。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Hysteria2 如何提升网速？</h5></div>
@@ -384,9 +384,9 @@ sudo systemctl </span><span><span class="hljs-built_in">enable</span></span><spa
         Hysteria2 利用 QUIC 协议的低延迟特性，并通过自适应拥塞控制算法在高丢包网络下维持高速连接。配置合适的带宽参数与 TLS 证书，可显著提升跨境访问速度。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 的节点延迟测量如何帮助选择节点？</h5></div>
+    <div class="panel-heading"><h5>VLESS + XTLS 模式能减少握手延迟吗？</h5></div>
     <div class="panel-body">
-        Shadowrocket 会测试节点延迟和丢包率，并根据结果排序。用户可快速选择延迟最低的节点访问网站或视频，提高连接速度和稳定性，优化整体网络体验。<hr />    </div>
+        XTLS 通过减少握手次数和加密开销，降低延迟，特别适合短连接或高并发场景。结合策略组，可保证连接稳定性和访问速度，适用于移动网络和游戏环境。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VLESS 相比 VMess 的主要改进是什么？</h5></div>
@@ -399,19 +399,14 @@ sudo systemctl </span><span><span class="hljs-built_in">enable</span></span><spa
         Hiddify Next 自带 Web 管理面板，管理员可通过浏览器管理用户、监控流量、生成订阅链接并部署节点。无需命令行操作，极大提高管理效率。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess MUX 功能如何改善短连接延迟？</h5></div>
-    <div class="panel-body">
-        VMess MUX 多路复用可以将多个短连接共享同一 TCP 或 QUIC 隧道，减少重复握手和连接延迟，特别适合游戏、即时通讯或频繁请求的场景，有效提升响应速度。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Hysteria2 多路复用如何降低延迟？</h5></div>
-    <div class="panel-body">
-        多路复用允许多个短连接共享同一通道，减少握手和加密开销，降低延迟。适用于高频短连接场景，如游戏和即时通讯，提升吞吐量和网络稳定性，保证流量快速传输。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>PassWall2 在路由器中如何更新节点订阅？</h5></div>
     <div class="panel-body">
         在 PassWall2 面板中点击“订阅管理”，输入或更新订阅链接后，点击“手动更新”即可自动下载最新节点数据。也可设置定时任务每日自动更新，保持配置最新。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>QuantumultX 如何通过策略组优化多应用分流？</h5></div>
+    <div class="panel-body">
+        QuantumultX 可以根据应用类型、端口和协议设置策略组，自动选择最优节点处理不同流量。这样可保证网页浏览、视频播放和游戏访问顺畅，提高整体网络效率。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Potatso Lite 如何结合手动节点选择优化访问？</h5></div>
@@ -419,9 +414,14 @@ sudo systemctl </span><span><span class="hljs-built_in">enable</span></span><spa
         用户可根据网络延迟和用途手动切换节点，选择最优节点处理不同流量。虽然不支持自动更新，但在节点不稳定或特定需求下可以灵活调整，提高访问效率。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS + XTLS 模式能减少握手延迟吗？</h5></div>
+    <div class="panel-heading"><h5>Shadowrocket 的节点延迟测量如何帮助选择节点？</h5></div>
     <div class="panel-body">
-        XTLS 通过减少握手次数和加密开销，降低延迟，特别适合短连接或高并发场景。结合策略组，可保证连接稳定性和访问速度，适用于移动网络和游戏环境。    </div>
+        Shadowrocket 会测试节点延迟和丢包率，并根据结果排序。用户可快速选择延迟最低的节点访问网站或视频，提高连接速度和稳定性，优化整体网络体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hysteria2 多路复用如何降低延迟？</h5></div>
+    <div class="panel-body">
+        多路复用允许多个短连接共享同一通道，减少握手和加密开销，降低延迟。适用于高频短连接场景，如游戏和即时通讯，提升吞吐量和网络稳定性，保证流量快速传输。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -451,11 +451,11 @@ sudo systemctl </span><span><span class="hljs-built_in">enable</span></span><spa
     <div class="panel-body">
         <div class="row">
             <div class="text-center">
-                <a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=register&code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">
+                <a href="javascript:;" class="js_to" data-url="https://xc1.luniu8.com/?code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">
                     <img src="/assets/website/img/G/xingchen.webp" class="avatar" alt="星辰机场">
                 </a>
                 <dl>
-                    <dt><a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=register&code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">星辰机场</a></dt>
+                    <dt><a href="javascript:;" class="js_to" data-url="https://xc1.luniu8.com/?code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">星辰机场</a></dt>
                     <dd>
                         <p>【包年送2个月】</p><p>1、购买入门版年付套餐额外送2个月，共14个月，只要99元！！！</p><p>2、购买“至尊天皇”年付套餐，额外送2个月，只要299元！！！</p><p>3、购买其他包月类套餐中的年付，同样送2个月！！！</p><p>错过要再等一年！！</p>                    </dd>
                 </dl>
@@ -469,16 +469,16 @@ sudo systemctl </span><span><span class="hljs-built_in">enable</span></span><spa
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-9-7.htm" title="VPN美国 | 9月7日18M/S|免费VPN/V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Trojan节点/Clash节点免费节点链接地址">VPN美国 | 9月7日18M/S|免费VPN/V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Trojan节点/Clash节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-12-top-vpn-node.htm" title="VPN美国 | 9月12日22.6M/S|免费VPN/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点/Clash节点免费节点链接地址">VPN美国 | 9月12日22.6M/S|免费VPN/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点/Clash节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-vpn-2026-10-29.htm" title="VPN美国 | 10月29日18.9M/S|免费VPN/Trojan节点/Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Clash节点免费节点链接地址">VPN美国 | 10月29日18.9M/S|免费VPN/Trojan节点/Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Clash节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-16-top-vpn-node.htm" title="VPN美国 | 10月16日20.4M/S|免费VPN/Clash节点/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点/V2ray节点免费节点链接地址">VPN美国 | 10月16日20.4M/S|免费VPN/Clash节点/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点/V2ray节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-6-vpn-proxy.htm" title="VPN美国 | 10月6日21.1M/S|免费VPN/Trojan节点/Singbox节点/V2ray节点/SSR节点/Clash节点/Shadowrocket节点免费节点链接地址">VPN美国 | 10月6日21.1M/S|免费VPN/Trojan节点/Singbox节点/V2ray节点/SSR节点/Clash节点/Shadowrocket节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-14-vpn-proxy.htm" title="VPN美国 | 9月14日20.5M/S|免费VPN/Trojan节点/V2ray节点/Clash节点/Singbox节点/SSR节点/Shadowrocket节点免费节点链接地址">VPN美国 | 9月14日20.5M/S|免费VPN/Trojan节点/V2ray节点/Clash节点/Singbox节点/SSR节点/Shadowrocket节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-14-vpn-proxy.htm" title="VPN美国 | 10月14日18.6M/S|免费VPN/Singbox节点/SSR节点/Trojan节点/Shadowrocket节点/V2ray节点/Clash节点免费节点链接地址">VPN美国 | 10月14日18.6M/S|免费VPN/Singbox节点/SSR节点/Trojan节点/Shadowrocket节点/V2ray节点/Clash节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/top-vpn-2026-10-3.htm" title="VPN美国 | 10月3日20.5M/S|免费VPN/Clash节点/Trojan节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点免费节点链接地址">VPN美国 | 10月3日20.5M/S|免费VPN/Clash节点/Trojan节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点免费节点链接地址</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/top-vpn-2026-9-15.htm" title="VPN美国 | 9月15日18.6M/S|免费VPN/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点/Singbox节点/Clash节点免费节点链接地址">VPN美国 | 9月15日18.6M/S|免费VPN/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点/Singbox节点/Clash节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-vpn-2026-9-19.htm" title="VPN美国 | 9月19日22.2M/S|免费VPN/SSR节点/Trojan节点/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点免费节点链接地址">VPN美国 | 9月19日22.2M/S|免费VPN/SSR节点/Trojan节点/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-2-top-vpn-node.htm" title="VPN美国 | 9月2日18.6M/S|免费VPN/Clash节点/Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点/SSR节点免费节点链接地址">VPN美国 | 9月2日18.6M/S|免费VPN/Clash节点/Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点/SSR节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-24-vpn-node.htm" title="VPN美国 | 9月24日19.7M/S|免费VPN/Singbox节点/V2ray节点/Trojan节点/SSR节点/Clash节点/Shadowrocket节点免费节点链接地址">VPN美国 | 9月24日19.7M/S|免费VPN/Singbox节点/V2ray节点/Trojan节点/SSR节点/Clash节点/Shadowrocket节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-10-22-top-vpn-node.htm" title="VPN美国 | 10月22日18.1M/S|免费VPN/Clash节点/Singbox节点/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点免费节点链接地址">VPN美国 | 10月22日18.1M/S|免费VPN/Clash节点/Singbox节点/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/vpn-github-2026-9-5.htm" title="VPN美国 | 9月5日19.2M/S|免费VPN/Singbox节点/V2ray节点/Clash节点/Trojan节点/Shadowrocket节点/SSR节点免费节点链接地址">VPN美国 | 9月5日19.2M/S|免费VPN/Singbox节点/V2ray节点/Clash节点/Trojan节点/Shadowrocket节点/SSR节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-22-vpn-node.htm" title="VPN美国 | 9月22日18.7M/S|免费VPN/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点/Clash节点/Trojan节点免费节点链接地址">VPN美国 | 9月22日18.7M/S|免费VPN/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点/Clash节点/Trojan节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/top-vpn-2026-10-13.htm" title="VPN美国 | 10月13日23M/S|免费VPN/Clash节点/Shadowrocket节点/Singbox节点/SSR节点/V2ray节点/Trojan节点免费节点链接地址">VPN美国 | 10月13日23M/S|免费VPN/Clash节点/Shadowrocket节点/Singbox节点/SSR节点/V2ray节点/Trojan节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/share-vpn-2026-10-23.htm" title="VPN美国 | 10月23日18.3M/S|免费VPN/Shadowrocket节点/SSR节点/Trojan节点/V2ray节点/Clash节点/Singbox节点免费节点链接地址">VPN美国 | 10月23日18.3M/S|免费VPN/Shadowrocket节点/SSR节点/Trojan节点/V2ray节点/Clash节点/Singbox节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/top-vpn-2026-9-17.htm" title="VPN美国 | 9月17日18.7M/S|免费VPN/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点/Clash节点免费节点链接地址">VPN美国 | 9月17日18.7M/S|免费VPN/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点/Clash节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-26-vpn-proxy.htm" title="VPN美国 | 10月26日18.6M/S|免费VPN/Clash节点/SSR节点/Singbox节点/Trojan节点/V2ray节点/Shadowrocket节点免费节点链接地址">VPN美国 | 10月26日18.6M/S|免费VPN/Clash节点/SSR节点/Singbox节点/Trojan节点/V2ray节点/Shadowrocket节点免费节点链接地址</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -490,7 +490,10 @@ sudo systemctl </span><span><span class="hljs-built_in">enable</span></span><spa
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">24</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
+                <h4><span class="badge" style="float: right;">1</span> <a href="/date/2026-11/" title="2026-11 归档">2026-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
@@ -520,7 +523,7 @@ sudo systemctl </span><span><span class="hljs-built_in">enable</span></span><spa
                         <a href="/privacy.htm">隐私申明</a> |
                         <a href="/sitemap.xml">网站地图</a>
                     </p>
-                                        <div>特别推荐：<b><a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=register&code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">星辰机场</a></b> <p>【包年送2个月】</p><p>1、购买入门版年付套餐额外送2个月，共14个月，只要99元！！！</p><p>2、购买“至尊天皇”年付套餐，额外送2个月，只要299元！！！</p><p>3、购买其他包月类套餐中的年付，同样送2个月！！！</p><p>错过要再等一年！！</p></div>
+                                        <div>特别推荐：<b><a href="javascript:;" class="js_to" data-url="https://xc1.luniu8.com/?code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">星辰机场</a></b> <p>【包年送2个月】</p><p>1、购买入门版年付套餐额外送2个月，共14个月，只要99元！！！</p><p>2、购买“至尊天皇”年付套餐，额外送2个月，只要299元！！！</p><p>3、购买其他包月类套餐中的年付，同样送2个月！！！</p><p>错过要再等一年！！</p></div>
                                 <p>
                 <a href="/">VPN美国 节点官网</a> 版权所有 Powered by WordPress
             </p>
